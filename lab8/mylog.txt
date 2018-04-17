@@ -1,0 +1,2 @@
+There are no JTAG cables available on your system which match the --cable
+option you provided (USB-Blaster on localhost [USB-0]).
