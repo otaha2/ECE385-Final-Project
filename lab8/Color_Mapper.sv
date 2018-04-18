@@ -14,14 +14,17 @@
 //-------------------------------------------------------------------------
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
-module  color_mapper ( input              is_ball,            // Whether current pixel belongs to ball 
+module  color_mapper ( //input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
-                       input 			[9:0] p1x,p1y;    
+							  input			[9:0] p1_h, p1_w, //player height and width
+                       input 			[9:0] p1x, p1y;
+							  input			[0:4978][0:23] p1_stand, //sprite standing
 							  output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
     
     logic [7:0] Red, Green, Blue;
+	 logic [0:23] color;
     
     // Output colors to VGA
     assign VGA_R = Red;
@@ -31,19 +34,27 @@ module  color_mapper ( input              is_ball,            // Whether current
     // Assign color based on is_ball signal
     always_comb
     begin
-        if (is_ball == 1'b1) 
+        if (DrawX > p1x && DrawX < (p1x + p1_w) && DrawY > p1y && DrawY < (p1y + p1_h))
         begin
-            // White ball
-            Red = 8'hff;
-            Green = 8'hff;
-            Blue = 8'hff;
+            //get color from sprite
+				
+				color = p1_stand[DrawX + DrawY*p1_w];
+				
+            Red = color[23:16];
+            Green = color[15:8];
+            Blue = color[7:0];
         end
         else 
         begin
             // Background with nice color gradient
-            Red = 8'h3f; 
-            Green = 8'h00;
-            Blue = 8'h7f - {1'b0, DrawX[9:3]};
+            //Red = 8'h3f; 
+            //Green = 8'h00;
+            //Blue = 8'h7f - {1'b0, DrawX[9:3]};
+				
+				// White Background
+            Red = 8'hff; 
+            Green = 8'hff;
+            Blue = 8'hff;
         end
     end 
     
