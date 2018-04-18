@@ -1,4 +1,4 @@
-
+/*
 module sprite_table( input logic clk,
 							output logic [0:4978][0:23] p1_stand
 							
@@ -4991,5 +4991,7 @@ a290  ,
 33d42 ,
 33d42 ,
 33d42 ,
-33d42 ,
-}   
+33d42 
+};   
+
+*/

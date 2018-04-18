@@ -70,6 +70,9 @@ module lab8( input               CLOCK_50,
 	 logic [0:4978][0:23] p1_stand;
 	 logic is_player1;
 	 
+	 logic [18:0] read_address;
+	 logic [23:0] data_Out;
+	
 	 
 	 logic [7:0] keyCode; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
 	 logic press;     //press indicates whether the key was pressed or released.
@@ -93,8 +96,7 @@ module lab8( input               CLOCK_50,
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
     
 	 
-	 //player 1 logic 
-	 logic [9:0] p1x, p1y;
+	 
 	 
 	 
 	 
@@ -122,7 +124,7 @@ module lab8( input               CLOCK_50,
     color_mapper color_instance(
 										.DrawX(DrawX),		//might not be write
 										.DrawY(DrawY),		//
-										.p1_stand(p1_stand),
+										//.p1_stand(p1_stand),
 										.p1_w(10'd60),
 										.p1_h(10'd83),
 										.is_player1(is_player1),
@@ -130,16 +132,18 @@ module lab8( input               CLOCK_50,
 										.p1y(p1y),
 										.VGA_R(VGA_R),
 										.VGA_G(VGA_G), 
-										.VGA_B(VGA_B)
+										.VGA_B(VGA_B),
+										.data(data_Out),
+										.read_address(read_address)
 										);   
 		
 		
 
 
-		sprite_table         (
+	/*	sprite_table         (
 									.clk(Clk),
 									.p1_stand(p1_stand)
-									);
+									);    */
 		
 		
 		player1       		p1(
@@ -154,7 +158,11 @@ module lab8( input               CLOCK_50,
 		
 		
 		
-		
+		ram 					rom(
+									.read_address(read_address),
+									.Clk(Clk),
+									.data_Out(data_Out)
+									);
 		
 		
 		

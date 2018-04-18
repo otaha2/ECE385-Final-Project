@@ -99,11 +99,13 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 				  end
 				 else
 				  begin
-					if(py_mot = (~(py_step) + 1'b1)) //if the last motion was an up motion, the player must come back down (gravity)
+					if(py_mot == (~(py_step) + 1'b1)) //if the last motion was an up motion, the player must come back down (gravity)
 						py_mot_in = py_step;
 					else
+						begin
 						py_mot_in = 10'd0;
-					
+						end
+						
 					px_mot_in = 10'd0;
 				  end
 				
@@ -141,7 +143,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
             px_pos_in = px_pos + px_mot;
             py_pos_in = py_pos + py_mot;
         end
-	 
+	  end
 	  // Compute whether the pixel corresponds to Player or background
     /* Since the multiplicants are required to be signed, we have to first cast them
        from logic to int (signed by default) before they are multiplied. */

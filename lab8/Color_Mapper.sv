@@ -19,9 +19,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 							  input			is_player1,
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
-                       input 			[9:0] p1x, p1y;
-							  input			[0:4978][0:23] p1_stand, //sprite standing
-							  output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
+                       input 			[9:0] p1x, p1y,
+							  //input			[0:4978][0:23] p1_stand, //sprite standing
+							  input        [23:0] data,
+							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
+							  output logic [18:0] read_address
                      );
     
     logic [7:0] Red, Green, Blue;
@@ -44,6 +46,9 @@ module  color_mapper ( //input              is_ball,            // Whether curre
             Red = color[23:16];
             Green = color[15:8];
             Blue = color[7:0];
+				
+				read_address = DrawX + DrawY*p1_w;
+
         end
         else 
         begin
