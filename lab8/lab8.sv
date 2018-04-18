@@ -66,8 +66,9 @@ module lab8( input               CLOCK_50,
     
 	 logic frame_clk;
 	 //logic is_ball;
-	 logic [9:0] DrawX, DrawY, p1x, p1y;
-	 logic [0:4978][0:23] p1_stand;
+	 logic [9:0] DrawX, DrawY;
+	 //p1x, p1y;
+	 //logic [0:4978][0:23] p1_stand;
 	 logic is_player1;
 	 
 	 logic [18:0] read_address;
@@ -150,15 +151,15 @@ module lab8( input               CLOCK_50,
 									.frame_clk(frame_clk),
 									.Reset(Reset),
 									.Clk(Clk),
-									.p1x(p1x),
-									.ply(p1y),
+									//.p1x(p1x),
+									//.ply(p1y),
 									.is_player(is_player1),
 									.keycode(keyCode)
 									);
 		
 		
 		
-		ram 					rom(
+		frameROM 			 rom(
 									.read_address(read_address),
 									.Clk(Clk),
 									.data_Out(data_Out)
@@ -193,8 +194,8 @@ module lab8( input               CLOCK_50,
 		
     
     // Display keycode on hex display
-    HexDriver hex_inst_0 (keycode[3:0], HEX0);
-    HexDriver hex_inst_1 (keycode[7:4], HEX1);
+    HexDriver hex_inst_0 (keyCode[3:0], HEX0);
+    HexDriver hex_inst_1 (keyCode[7:4], HEX1);
     
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

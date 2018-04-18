@@ -1,4 +1,4 @@
-PLL_Name	vga_clk:vga_clk_instance|vga_clk_altpll_0:altpll_0|vga_clk_altpll_0_altpll_m342:sd1|pll7
+PLL_Name	vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated|pll1
 PLLJITTER	30
 PLLSPEmax	84
 PLLSPEmin	-53

@@ -13,7 +13,7 @@ module  frameROM
 		output logic [23:0] data_Out
 );
 
-// mem has width of 3 bits and a total of 400 addresses
+// mem has width of 24 bits and a total of 4980 addresses
 logic [23:0] p1_stand [0:4979];
 
 initial
@@ -22,9 +22,9 @@ begin
 end
 
 
-always_ff @ (posedge Clk) begin
-	
-	data_Out<= pl_stand[read_address];
+always_ff @ (posedge Clk) 
+begin
+	data_Out <= p1_stand[read_address];
 end
 
 endmodule

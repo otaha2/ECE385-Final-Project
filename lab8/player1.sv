@@ -1,7 +1,7 @@
 module player1(input frame_clk, Reset, Clk, 
 					input [7:0] keycode,
 					input [9:0] DrawX, DrawY,
-					output logic [9:0] p1x, p1y,
+					//output logic [9:0] p1x, p1y,
 					output logic is_player
 					);
 					
@@ -47,8 +47,10 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
         end
         else
         begin
-			  px_mot <= 10'd0;
-			  py_mot <= 10'd0; 
+			  px_pos <= px_pos_in;
+			  py_pos <= py_pos_in;
+			  px_mot <= px_mot_in;
+			  py_mot <= py_mot_in; 
 			  //px_pos <= px_c;
 			  //py_pos <= py_center; 
         end
@@ -74,7 +76,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 				
 				//update keypress
 				//unique case(keycode[7:0])
-				if(keycode == 8'h1A)			//w, up!!
+				if(keycode == 8'h1D)			//w, up!!
 				  begin
 					px_mot_in = 10'd0;
 					py_mot_in = (~(py_step) + 1'b1); //why + 1'b1?? Answer: 2's complmenet!
@@ -87,19 +89,19 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 					//Ball_Y_Motion_in = Ball_Y_Step;
 				  //end
 				  
-				 else if(keycode == 8'h04)			//a, left!!
+				 else if(keycode == 8'h1C)			//a, left!!
 				  begin
-					py_mot = 10'd0;
+					py_mot_in = 10'd0;
 					px_mot_in = (~(px_step) + 1'b1); //why + 1'b1?? // 2's complement.
 				  end
-				 else if(keycode == 8'h07)			//d, Right!!
+				 else if(keycode == 8'h23)			//d, Right!!
 				  begin
-					Ball_Y_Motion_in = 10'd0;
-					Ball_X_Motion_in = px_step;
+					py_mot_in = 10'd0;
+					px_mot_in = px_step;
 				  end
 				 else
 				  begin
-					if(py_mot == (~(py_step) + 1'b1)) //if the last motion was an up motion, the player must come back down (gravity)
+					if(py_mot_in == (~(py_step) + 1'b1)) //if the last motion was an up motion, the player must come back down (gravity)
 						py_mot_in = py_step;
 					else
 						begin
@@ -112,10 +114,10 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 				
 				
 				
-            if( py_pos + Player_Size >= py_max )  // person is at the bottom edge, stop y motion
+            if( py_pos + Player_Height >= py_max )  // person is at the bottom edge, stop y motion
 				  begin
                 py_mot_in = 10'd0;    
-					 Ball_X_Motion_in = 10'd0; //my addition
+					 px_mot_in = 10'd0; //my addition
 				  end
 				else if ( py_pos <= py_min )  // Player is at the top edge, go down
 				  begin
@@ -127,13 +129,13 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 				//X boundary conditions 
 				else if( px_pos + Player_Width >= px_max )  // Player is at the right edge, stop moving
 				   begin
-                Ball_X_Motion_in = 10'd0;  
-					 Ball_Y_Motion_in = 10'd0; //my addition
+                px_mot_in = 10'd0;  
+					 py_mot_in = 10'd0; //my addition
 					end
 			   else if ( px_pos <= px_min )  // Ball is at the left edge, stop moving
 				   begin
-                Ball_X_Motion_in = 10'd0;
-					 Ball_Y_Motion_in = 10'd0; //my addition
+                px_mot_in = 10'd0;
+					 py_mot_in = 10'd0; //my addition
 					end
 					 
 				
@@ -151,7 +153,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
     assign Width = Player_Width;
 	 assign Height = Player_Height;
     always_comb begin
-        if ( DrawX >= px_pos && DrawX <= px_pos + Width && DrawY >= py_pos && DrawY <= py_pos + Height ) 
+        if ( (DrawX >= px_pos) && (DrawX <= (px_pos + Width)) && (DrawY >= py_pos) && (DrawY <= py_pos + Height) ) 
             is_player = 1'b1;
         else
             is_player = 1'b0;
