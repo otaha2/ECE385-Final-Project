@@ -68,7 +68,7 @@ module lab8( input               CLOCK_50,
 	 //logic is_ball;
 	 logic [9:0] DrawX, DrawY, p1x, p1y;
 	 logic [0:4978][0:23] p1_stand;
-	
+	 logic is_player1;
 	 
 	 
 	 logic [7:0] keyCode; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
@@ -125,6 +125,7 @@ module lab8( input               CLOCK_50,
 										.p1_stand(p1_stand),
 										.p1_w(10'd60),
 										.p1_h(10'd83),
+										.is_player1(is_player1),
 										.p1x(p1x),
 										.p1y(p1y),
 										.VGA_R(VGA_R),
@@ -147,6 +148,7 @@ module lab8( input               CLOCK_50,
 									.Clk(Clk),
 									.p1x(p1x),
 									.ply(p1y),
+									.is_player(is_player1),
 									.keycode(keyCode)
 									);
 		
