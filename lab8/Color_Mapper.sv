@@ -43,19 +43,25 @@ module  color_mapper ( //input              is_ball,            // Whether curre
         if (is_player1 == 1'b1)
         begin
             //get color from sprite
-				
-					
-            Red = data[23:16];
-            Green = data[15:8];
-            Blue = data[7:0];
+				//if color is green, pick the background color
+				if(data == 24'h33d42)
+				begin
+					Red = 8'hff; 
+					Green = 8'hff;
+					Blue = 8'hff;
+				end
+				//otherwise get the color of the sprite
+				else
+				begin
+					Red = data[23:16];
+					Green = data[15:8];
+					Blue = data[7:0];
+				end
 				
         end
         else 
         begin
             // Background with nice color gradient
-            //Red = 8'h3f; 
-            //Green = 8'h00;
-            //Blue = 8'h7f - {1'b0, DrawX[9:3]};
 				
 				// White Background
             Red = 8'hff; 

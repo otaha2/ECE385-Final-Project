@@ -154,7 +154,9 @@ module lab8( input               CLOCK_50,
 									//.p1x(p1x),
 									//.ply(p1y),
 									.is_player(is_player1),
-									.keycode(keyCode)
+									.keycode(keyCode),
+									.DrawX(DrawX),
+									.DrawY(DrawY)
 									);
 		
 		

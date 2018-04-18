@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab8
-Wed Apr 18 17:57:14 2018
+Wed Apr 18 18:22:05 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -30,15 +30,14 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
  22. altpll Parameter Settings by Entity Instance
  23. altsyncram Parameter Settings by Entity Instance
  24. lpm_mult Parameter Settings by Entity Instance
- 25. Port Connectivity Checks: "player1:p1"
- 26. Port Connectivity Checks: "color_mapper:color_instance"
- 27. Port Connectivity Checks: "keyboard:keyB|reg_11:reg_A"
- 28. Port Connectivity Checks: "keyboard:keyB|reg_11:reg_B"
- 29. Port Connectivity Checks: "keyboard:keyB"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
- 33. Analysis & Synthesis Suppressed Messages
+ 25. Port Connectivity Checks: "color_mapper:color_instance"
+ 26. Port Connectivity Checks: "keyboard:keyB|reg_11:reg_A"
+ 27. Port Connectivity Checks: "keyboard:keyB|reg_11:reg_B"
+ 28. Port Connectivity Checks: "keyboard:keyB"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -65,13 +64,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 18 17:57:14 2018      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 18 18:22:05 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; lab8                                       ;
 ; Top-level Entity Name              ; lab8                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 184                                        ;
-;     Total combinational functions  ; 154                                        ;
+; Total logic elements               ; 222                                        ;
+;     Total combinational functions  ; 192                                        ;
 ;     Dedicated logic registers      ; 78                                         ;
 ; Total registers                    ; 78                                         ;
 ; Total pins                         ; 107                                        ;
@@ -178,12 +177,11 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -249,16 +247,16 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 184            ;
+; Estimated Total logic elements              ; 222            ;
 ;                                             ;                ;
-; Total combinational functions               ; 154            ;
+; Total combinational functions               ; 192            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 61             ;
+;     -- 4 input functions                    ; 75             ;
 ;     -- 3 input functions                    ; 33             ;
-;     -- <=2 input functions                  ; 60             ;
+;     -- <=2 input functions                  ; 84             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 105            ;
+;     -- normal mode                          ; 143            ;
 ;     -- arithmetic mode                      ; 49             ;
 ;                                             ;                ;
 ; Total registers                             ; 78             ;
@@ -275,8 +273,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 60             ;
-; Total fan-out                               ; 1196           ;
-; Average fan-out                             ; 2.38           ;
+; Total fan-out                               ; 1300           ;
+; Average fan-out                             ; 2.40           ;
 +---------------------------------------------+----------------+
 
 
@@ -285,13 +283,13 @@ agreement for further details.
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |lab8                                             ; 154 (1)           ; 78 (1)       ; 119520      ; 0            ; 0       ; 0         ; 107  ; 0            ; |lab8                                                                                                                                                    ; work         ;
+; |lab8                                             ; 192 (1)           ; 78 (1)       ; 119520      ; 0            ; 0       ; 0         ; 107  ; 0            ; |lab8                                                                                                                                                    ; work         ;
 ;    |HexDriver:hex_inst_0|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|HexDriver:hex_inst_0                                                                                                                               ; work         ;
 ;    |HexDriver:hex_inst_1|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|HexDriver:hex_inst_1                                                                                                                               ; work         ;
 ;    |VGA_controller:vga_controller_instance|       ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|VGA_controller:vga_controller_instance                                                                                                             ; work         ;
-;    |color_mapper:color_instance|                  ; 36 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance                                                                                                                        ; work         ;
-;       |lpm_mult:Mult0|                            ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0                                                                                                         ; work         ;
-;          |multcore:mult_core|                     ; 25 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
+;    |color_mapper:color_instance|                  ; 73 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance                                                                                                                        ; work         ;
+;       |lpm_mult:Mult0|                            ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0                                                                                                         ; work         ;
+;          |multcore:mult_core|                     ; 24 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
 ;             |mpar_add:padder|                     ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
 ;                |lpm_add_sub:adder[0]|             ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
 ;                   |add_sub_jgh:auto_generated|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_jgh:auto_generated                      ; work         ;
@@ -306,6 +304,7 @@ agreement for further details.
 ;       |Dreg:Dreg_instance2|                       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                                                                  ; work         ;
 ;       |reg_11:reg_A|                              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|keyboard:keyB|reg_11:reg_A                                                                                                                         ; work         ;
 ;       |reg_11:reg_B|                              ; 0 (0)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|keyboard:keyB|reg_11:reg_B                                                                                                                         ; work         ;
+;    |player1:p1|                                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|player1:p1                                                                                                                                         ; work         ;
 ;    |vga_clk:vga_clk_instance|                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|vga_clk:vga_clk_instance                                                                                                                           ; work         ;
 ;       |altpll:altpll_component|                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                                                                   ; work         ;
 ;          |vga_clk_altpll:auto_generated|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                                                                     ; work         ;
@@ -407,10 +406,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lab8|VGA_controller:vga_controller_instance|h_counter[1]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lab8|VGA_controller:vga_controller_instance|h_counter[0]    ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |lab8|keyboard:keyB|Count[4]                                 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |lab8|keyboard:keyB|Data[2]                                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |lab8|keyboard:keyB|Data[7]                                  ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |lab8|keyboard:keyB|Typematic_Keycode[7]                     ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |lab8|color_mapper:color_instance|VGA_G[1]                   ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |lab8|VGA_controller:vga_controller_instance|v_counter_in[9] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
@@ -981,16 +981,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+--------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "player1:p1"                                                                                                                                  ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; DrawX ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; DrawY ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "color_mapper:color_instance"                                                                                                                      ;
 +------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1058,21 +1048,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 4                           ;
 ;     plain             ; 20                          ;
 ; cycloneiii_io_obuf    ; 32                          ;
-; cycloneiii_lcell_comb ; 157                         ;
+; cycloneiii_lcell_comb ; 195                         ;
 ;     arith             ; 49                          ;
 ;         2 data inputs ; 35                          ;
 ;         3 data inputs ; 14                          ;
-;     normal            ; 108                         ;
+;     normal            ; 146                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 18                          ;
+;         2 data inputs ; 42                          ;
 ;         3 data inputs ; 19                          ;
-;         4 data inputs ; 61                          ;
+;         4 data inputs ; 75                          ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.80                        ;
-; Average LUT depth     ; 2.95                        ;
+; Average LUT depth     ; 3.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1091,7 +1081,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Apr 18 17:56:57 2018
+    Info: Processing started: Wed Apr 18 18:21:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 4 design units, including 4 entities, in source file muxes.sv
@@ -1379,7 +1369,7 @@ Info (12131): Elaborated megafunction instantiation "color_mapper:color_instance
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ngh.tdf
     Info (12023): Found entity 1: add_sub_ngh
 Info (12131): Elaborated megafunction instantiation "color_mapper:color_instance|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "color_mapper:color_instance|lpm_mult:Mult0"
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver
     Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver
@@ -1611,17 +1601,17 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 317 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 355 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 68 output pins
     Info (21060): Implemented 32 bidirectional pins
-    Info (21061): Implemented 185 logic cells
+    Info (21061): Implemented 223 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 244 warnings
-    Info: Peak virtual memory: 770 megabytes
-    Info: Processing ended: Wed Apr 18 17:57:14 2018
-    Info: Elapsed time: 00:00:17
+    Info: Peak virtual memory: 772 megabytes
+    Info: Processing ended: Wed Apr 18 18:22:05 2018
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:35
 
 
