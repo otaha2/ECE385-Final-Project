@@ -17,8 +17,7 @@
 module  color_mapper ( input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
-                       input 			[9:0] p1x,p1y;    
-							  output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
+                       output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
     
     logic [7:0] Red, Green, Blue;

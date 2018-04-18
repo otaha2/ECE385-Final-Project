@@ -138,6 +138,18 @@ module lab8( input               CLOCK_50,
     // You will have to generate it on your own in simulation.
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
     
+	 
+	 //player 1 logic 
+	 logic [9:0] p1x, p1y;
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
     // TODO: Fill in the connections for the rest of the modules 
     VGA_controller vga_controller_instance(
 														.Clk(Clk),        
@@ -177,6 +189,13 @@ module lab8( input               CLOCK_50,
 		sprite_table         (
 									.clk(Clk),
 									.
+									);
+		
+		
+		player1       		p1(
+									.p1x(p1x),
+									.ply(p1y),
+									.Clk(Clk),
 									);
 		
 		
