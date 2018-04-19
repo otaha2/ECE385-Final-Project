@@ -14,17 +14,20 @@ module  frameROM
 );
 
 // mem has width of 24 bits and a total of 4980 addresses
-logic [23:0] p1_stand [0:4979];
+//logic [23:0] stick_figure [0:80408];
+logic [23:0] stand1 [0:4979];
 
 initial
 begin
-	 $readmemh("Sprites/naruto_stand1.txt", p1_stand);
+	 //$readmemh("Sprites/stick_figure_sprite.txt", stick_figure);
+	 $readmemh("Sprites/naruto_stand1.txt", stand1);
 end
 
 
 always_ff @ (posedge Clk) 
 begin
-	data_Out <= p1_stand[read_address];
+	//data_Out <= stick_figure[read_address];
+	data_Out <= stand1[read_address];
 end
 
 endmodule

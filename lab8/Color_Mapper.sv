@@ -35,11 +35,12 @@ module  color_mapper ( //input              is_ball,            // Whether curre
     assign VGA_R = Red;
     assign VGA_G = Green;
     assign VGA_B = Blue;
-    assign read_address = DrawX + DrawY*p1_w;
+    
 	 
     // Assign color based on is_ball signal
     always_comb
     begin
+		read_address = (DrawX-p1x) + (DrawY-p1y)*p1_w;
         if (is_player1 == 1'b1)
         begin
             //get color from sprite
@@ -53,10 +54,17 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 				//otherwise get the color of the sprite
 				else
 				begin
-					Red = data[23:16];
-					Green = data[15:8];
-					Blue = data[7:0];
+						Red = data[23:16];
+						Green = data[15:8];
+						Blue = data[7:0];
 				end
+				/*
+				else
+				begin
+						Red = 8'h00;
+						Green = 8'h00;
+						Blue = 8'h00;
+				end*/
 				
         end
         else 

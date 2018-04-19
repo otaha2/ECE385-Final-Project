@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab8
-Wed Apr 18 18:22:05 2018
+Thu Apr 19 10:54:16 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -21,11 +21,11 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
  13. Inverted Register Statistics
  14. Registers Packed Into Inferred Megafunctions
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated
+ 16. Source assignments for frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated
  17. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
  18. Parameter Settings for User Entity Instance: VGA_controller:vga_controller_instance
  19. Parameter Settings for User Entity Instance: player1:p1
- 20. Parameter Settings for Inferred Entity Instance: frameROM:rom|altsyncram:p1_stand_rtl_0
+ 20. Parameter Settings for Inferred Entity Instance: frameROM:rom|altsyncram:stand1_rtl_0
  21. Parameter Settings for Inferred Entity Instance: color_mapper:color_instance|lpm_mult:Mult0
  22. altpll Parameter Settings by Entity Instance
  23. altsyncram Parameter Settings by Entity Instance
@@ -64,7 +64,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 18 18:22:05 2018      ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 19 10:54:16 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; lab8                                       ;
 ; Top-level Entity Name              ; lab8                                       ;
@@ -177,11 +177,12 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -297,8 +298,8 @@ agreement for further details.
 ;                   |lpm_add_sub:adder[0]|          ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                      |add_sub_ngh:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated ; work         ;
 ;    |frameROM:rom|                                 ; 0 (0)             ; 0 (0)        ; 119520      ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|frameROM:rom                                                                                                                                       ; work         ;
-;       |altsyncram:p1_stand_rtl_0|                 ; 0 (0)             ; 0 (0)        ; 119520      ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|frameROM:rom|altsyncram:p1_stand_rtl_0                                                                                                             ; work         ;
-;          |altsyncram_ho61:auto_generated|         ; 0 (0)             ; 0 (0)        ; 119520      ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated                                                                              ; work         ;
+;       |altsyncram:stand1_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 119520      ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|frameROM:rom|altsyncram:stand1_rtl_0                                                                                                               ; work         ;
+;          |altsyncram_ho61:auto_generated|         ; 0 (0)             ; 0 (0)        ; 119520      ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated                                                                                ; work         ;
 ;    |keyboard:keyB|                                ; 43 (43)           ; 54 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|keyboard:keyB                                                                                                                                      ; work         ;
 ;       |Dreg:Dreg_instance1|                       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|keyboard:keyB|Dreg:Dreg_instance1                                                                                                                  ; work         ;
 ;       |Dreg:Dreg_instance2|                       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                                                                  ; work         ;
@@ -312,13 +313,13 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                             ;
-+----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+----------------------------------------+
-; Name                                                                             ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                    ;
-+----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+----------------------------------------+
-; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4980         ; 24           ; --           ; --           ; 119520 ; db/lab8.ram0_frameROM_6483c0a0.hdl.mif ;
-+----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
++--------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+----------------------------------------+
+; Name                                                                           ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                    ;
++--------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+----------------------------------------+
+; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4980         ; 24           ; --           ; --           ; 119520 ; db/lab8.ram0_frameROM_6483c0a0.hdl.mif ;
++--------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+----------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -392,13 +393,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                      ;
-+------------------------------+-----------------------------+------+
-; Register Name                ; Megafunction                ; Type ;
-+------------------------------+-----------------------------+------+
-; frameROM:rom|data_Out[0..23] ; frameROM:rom|p1_stand_rtl_0 ; RAM  ;
-+------------------------------+-----------------------------+------+
++-----------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                    ;
++------------------------------+---------------------------+------+
+; Register Name                ; Megafunction              ; Type ;
++------------------------------+---------------------------+------+
+; frameROM:rom|data_Out[0..23] ; frameROM:rom|stand1_rtl_0 ; RAM  ;
++------------------------------+---------------------------+------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -415,13 +416,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Source assignments for frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated ;
-+---------------------------------+--------------------+------+--------------------------------+
-; Assignment                      ; Value              ; From ; To                             ;
-+---------------------------------+--------------------+------+--------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                              ;
-+---------------------------------+--------------------+------+--------------------------------+
++--------------------------------------------------------------------------------------------+
+; Source assignments for frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated ;
++---------------------------------+--------------------+------+------------------------------+
+; Assignment                      ; Value              ; From ; To                           ;
++---------------------------------+--------------------+------+------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                            ;
++---------------------------------+--------------------+------+------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -829,7 +830,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: frameROM:rom|altsyncram:p1_stand_rtl_0      ;
+; Parameter Settings for Inferred Entity Instance: frameROM:rom|altsyncram:stand1_rtl_0        ;
 +------------------------------------+----------------------------------------+----------------+
 ; Parameter Name                     ; Value                                  ; Type           ;
 +------------------------------------+----------------------------------------+----------------+
@@ -941,24 +942,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                   ;
-+-------------------------------------------+----------------------------------------+
-; Name                                      ; Value                                  ;
-+-------------------------------------------+----------------------------------------+
-; Number of entity instances                ; 1                                      ;
-; Entity Instance                           ; frameROM:rom|altsyncram:p1_stand_rtl_0 ;
-;     -- OPERATION_MODE                     ; ROM                                    ;
-;     -- WIDTH_A                            ; 24                                     ;
-;     -- NUMWORDS_A                         ; 4980                                   ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
-;     -- WIDTH_B                            ; 1                                      ;
-;     -- NUMWORDS_B                         ; 1                                      ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                 ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ;
-+-------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                 ;
++-------------------------------------------+--------------------------------------+
+; Name                                      ; Value                                ;
++-------------------------------------------+--------------------------------------+
+; Number of entity instances                ; 1                                    ;
+; Entity Instance                           ; frameROM:rom|altsyncram:stand1_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                  ;
+;     -- WIDTH_A                            ; 24                                   ;
+;     -- NUMWORDS_A                         ; 4980                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                         ;
+;     -- WIDTH_B                            ; 1                                    ;
+;     -- NUMWORDS_B                         ; 1                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                            ;
++-------------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -1081,7 +1082,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Apr 18 18:21:49 2018
+    Info: Processing started: Thu Apr 19 10:53:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 4 design units, including 4 entities, in source file muxes.sv
@@ -1316,12 +1317,12 @@ Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:
 Info (12128): Elaborating entity "color_mapper" for hierarchy "color_mapper:color_instance"
 Info (12128): Elaborating entity "player1" for hierarchy "player1:p1"
 Info (12128): Elaborating entity "frameROM" for hierarchy "frameROM:rom"
-Warning (10030): Net "p1_stand.data_a" at ram.sv(17) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "p1_stand.waddr_a" at ram.sv(17) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "p1_stand.we_a" at ram.sv(17) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "stand1.data_a" at ram.sv(18) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "stand1.waddr_a" at ram.sv(18) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "stand1.we_a" at ram.sv(18) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:hex_inst_0"
 Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "frameROM:rom|p1_stand_rtl_0" 
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "frameROM:rom|stand1_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
         Info (286033): Parameter WIDTH_A set to 24
         Info (286033): Parameter WIDTHAD_A set to 13
@@ -1334,8 +1335,8 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INIT_FILE set to db/lab8.ram0_frameROM_6483c0a0.hdl.mif
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "color_mapper:color_instance|Mult0"
-Info (12130): Elaborated megafunction instantiation "frameROM:rom|altsyncram:p1_stand_rtl_0"
-Info (12133): Instantiated megafunction "frameROM:rom|altsyncram:p1_stand_rtl_0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "frameROM:rom|altsyncram:stand1_rtl_0"
+Info (12133): Instantiated megafunction "frameROM:rom|altsyncram:stand1_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
     Info (12134): Parameter "WIDTH_A" = "24"
     Info (12134): Parameter "WIDTHAD_A" = "13"
@@ -1609,10 +1610,10 @@ Info (21057): Implemented 355 device resources after synthesis - the final resou
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 244 warnings
-    Info: Peak virtual memory: 772 megabytes
-    Info: Processing ended: Wed Apr 18 18:22:05 2018
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 779 megabytes
+    Info: Processing ended: Thu Apr 19 10:54:16 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+

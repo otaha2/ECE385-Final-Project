@@ -76,7 +76,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 				
 				//update keypress
 				//unique case(keycode[7:0])
-				if(keycode == 8'h1D)			//w, up!!
+				if(keycode == 8'h1d)			//w, up!!
 				  begin
 					px_mot_in = 10'd0;
 					py_mot_in = (~(py_step) + 1'b1); //why + 1'b1?? Answer: 2's complmenet!
@@ -89,7 +89,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in;
 					//Ball_Y_Motion_in = Ball_Y_Step;
 				  //end
 				  
-				 else if(keycode == 8'h1C)			//a, left!!
+				 else if(keycode == 8'h1c)			//a, left!!
 				  begin
 					py_mot_in = 10'd0;
 					px_mot_in = (~(px_step) + 1'b1); //why + 1'b1?? // 2's complement.

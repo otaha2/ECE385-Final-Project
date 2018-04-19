@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lab8
-Wed Apr 18 18:22:51 2018
+Thu Apr 19 10:55:10 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -160,8 +160,8 @@ agreement for further details.
 +-------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                     ; Status ; Read at                  ;
 +-------------------------------------------------------------------+--------+--------------------------+
-; nios_system/synthesis/submodules/altera_reset_controller.sdc      ; OK     ; Wed Apr 18 18:22:48 2018 ;
-; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc ; OK     ; Wed Apr 18 18:22:48 2018 ;
+; nios_system/synthesis/submodules/altera_reset_controller.sdc      ; OK     ; Thu Apr 19 10:55:07 2018 ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc ; OK     ; Thu Apr 19 10:55:07 2018 ;
 +-------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -939,112 +939,112 @@ HTML report is unavailable in plain text report export.
 +--------+--------------+----------------+------------------+---------+------------+-----------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width: 'CLOCK_50'                                                                                                                                     ;
-+-------+--------------+----------------+------------------+----------+------------+--------------------------------------------------------------------------------------------------------+
-; Slack ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                                 ;
-+-------+--------------+----------------+------------------+----------+------------+--------------------------------------------------------------------------------------------------------+
-; 9.625 ; 9.860        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a17~porta_address_reg0 ;
-; 9.626 ; 9.861        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a5~porta_address_reg0  ;
-; 9.628 ; 9.863        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a14~porta_address_reg0 ;
-; 9.628 ; 9.863        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a18~porta_address_reg0 ;
-; 9.628 ; 9.863        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a3~porta_address_reg0  ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a21~porta_address_reg0 ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a22~porta_address_reg0 ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a2~porta_address_reg0  ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a8~porta_address_reg0  ;
-; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a9~porta_address_reg0  ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a13~porta_address_reg0 ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a23~porta_address_reg0 ;
-; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a7~porta_address_reg0  ;
-; 9.632 ; 9.867        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
-; 9.632 ; 9.867        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
-; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                                 ;
-; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                                 ;
-; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                                 ;
-; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                                 ;
-; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                                 ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                    ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                    ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                               ;
-; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                   ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; Reset_h                                                                                                ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                  ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                     ;
-; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; Reset_h                                                                                                ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                  ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                     ;
-; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                     ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                                 ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                                 ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                                 ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                                 ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                                 ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                    ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                    ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                               ;
-; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                   ;
-; 9.877 ; 10.112       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
-; 9.877 ; 10.112       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
-; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
-; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
-; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
-; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
-+-------+--------------+----------------+------------------+----------+------------+--------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'CLOCK_50'                                                                                                                                   ;
++-------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                               ;
++-------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------+
+; 9.625 ; 9.860        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a17~porta_address_reg0 ;
+; 9.626 ; 9.861        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a5~porta_address_reg0  ;
+; 9.628 ; 9.863        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a14~porta_address_reg0 ;
+; 9.628 ; 9.863        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a18~porta_address_reg0 ;
+; 9.628 ; 9.863        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a3~porta_address_reg0  ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a21~porta_address_reg0 ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a22~porta_address_reg0 ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a2~porta_address_reg0  ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a8~porta_address_reg0  ;
+; 9.629 ; 9.864        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a9~porta_address_reg0  ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a13~porta_address_reg0 ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a23~porta_address_reg0 ;
+; 9.630 ; 9.865        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a7~porta_address_reg0  ;
+; 9.632 ; 9.867        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
+; 9.632 ; 9.867        ; 0.235          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                               ;
+; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                               ;
+; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                               ;
+; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                               ;
+; 9.752 ; 9.940        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                               ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                  ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                  ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                             ;
+; 9.753 ; 9.941        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                 ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; Reset_h                                                                                              ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                   ;
+; 9.754 ; 9.942        ; 0.188          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; Reset_h                                                                                              ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                   ;
+; 9.837 ; 10.057       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                   ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                               ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                               ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                               ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                               ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                               ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                  ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                  ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                             ;
+; 9.838 ; 10.058       ; 0.220          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                 ;
+; 9.877 ; 10.112       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
+; 9.877 ; 10.112       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
+; 9.879 ; 10.114       ; 0.235          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
++-------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2108,112 +2108,112 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------+----------------+------------------+---------+------------+-----------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'                                                                                                                                      ;
-+-------+--------------+----------------+------------------+----------+------------+--------------------------------------------------------------------------------------------------------+
-; Slack ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                                 ;
-+-------+--------------+----------------+------------------+----------+------------+--------------------------------------------------------------------------------------------------------+
-; 9.646 ; 9.879        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a17~porta_address_reg0 ;
-; 9.646 ; 9.879        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a5~porta_address_reg0  ;
-; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a13~porta_address_reg0 ;
-; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a14~porta_address_reg0 ;
-; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
-; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a21~porta_address_reg0 ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a18~porta_address_reg0 ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a22~porta_address_reg0 ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a23~porta_address_reg0 ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a2~porta_address_reg0  ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a3~porta_address_reg0  ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a8~porta_address_reg0  ;
-; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a9~porta_address_reg0  ;
-; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
-; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
-; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
-; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
-; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
-; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
-; 9.650 ; 9.883        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
-; 9.650 ; 9.883        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a7~porta_address_reg0  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; Reset_h                                                                                                ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                                 ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                                 ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                                 ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                                 ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                                 ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                  ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                    ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                    ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                     ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                               ;
-; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                   ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; Reset_h                                                                                                ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                                 ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                                 ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                                 ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                                 ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                                 ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                  ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                     ;
-; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                     ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                    ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                    ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                               ;
-; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                   ;
-; 9.881 ; 10.114       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
-; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
-; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
-; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
-; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
-; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
-+-------+--------------+----------------+------------------+----------+------------+--------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'                                                                                                                                    ;
++-------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                               ;
++-------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------+
+; 9.646 ; 9.879        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a17~porta_address_reg0 ;
+; 9.646 ; 9.879        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a5~porta_address_reg0  ;
+; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a13~porta_address_reg0 ;
+; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a14~porta_address_reg0 ;
+; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
+; 9.647 ; 9.880        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a21~porta_address_reg0 ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a18~porta_address_reg0 ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a22~porta_address_reg0 ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a23~porta_address_reg0 ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a2~porta_address_reg0  ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a3~porta_address_reg0  ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a8~porta_address_reg0  ;
+; 9.648 ; 9.881        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a9~porta_address_reg0  ;
+; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
+; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
+; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
+; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
+; 9.649 ; 9.882        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
+; 9.650 ; 9.883        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
+; 9.650 ; 9.883        ; 0.233          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a7~porta_address_reg0  ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; Reset_h                                                                                              ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                               ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                               ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                               ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                               ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                               ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                  ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                  ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                   ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                             ;
+; 9.776 ; 9.962        ; 0.186          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                 ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; Reset_h                                                                                              ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                               ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                               ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                               ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                               ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                               ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                   ;
+; 9.818 ; 10.036       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                   ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                  ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                  ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                             ;
+; 9.819 ; 10.037       ; 0.218          ; High Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                 ;
+; 9.881 ; 10.114       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
+; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
+; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
+; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
+; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
+; 9.882 ; 10.115       ; 0.233          ; High Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
++-------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -3265,112 +3265,112 @@ No synchronizer chains to report.
 +--------+--------------+----------------+------------------+---------+------------+-----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'                                                                                                                                     ;
-+-------+--------------+----------------+-----------------+----------+------------+--------------------------------------------------------------------------------------------------------+
-; Slack ; Actual Width ; Required Width ; Type            ; Clock    ; Clock Edge ; Target                                                                                                 ;
-+-------+--------------+----------------+-----------------+----------+------------+--------------------------------------------------------------------------------------------------------+
-; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a17~porta_address_reg0 ;
-; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
-; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
-; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a5~porta_address_reg0  ;
-; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
-; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a7~porta_address_reg0  ;
-; 9.373 ; 9.603        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
-; 9.373 ; 9.603        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
-; 9.373 ; 9.603        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a13~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a14~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a18~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a21~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a22~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a23~porta_address_reg0 ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a2~porta_address_reg0  ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a3~porta_address_reg0  ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
-; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a9~porta_address_reg0  ;
-; 9.375 ; 9.605        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:p1_stand_rtl_0|altsyncram_ho61:auto_generated|ram_block1a8~porta_address_reg0  ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; Reset_h                                                                                                ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                                 ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                                 ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                                 ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                                 ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                                 ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                    ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                    ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                               ;
-; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                   ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                  ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                     ;
-; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                     ;
-; 9.574 ; 9.574        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]                                           ;
-; 9.574 ; 9.574        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; vga_clk_instance|altpll_component|auto_generated|pll1|observablevcoout                                 ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; Reset_h|clk                                                                                            ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[0]|clk                                                                                      ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[1]|clk                                                                                      ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[2]|clk                                                                                      ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[3]|clk                                                                                      ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[4]|clk                                                                                      ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[0]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[1]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[2]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[3]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[4]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[5]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[6]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[7]|clk                                                                                       ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Dreg_instance1|Q|clk                                                                              ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Dreg_instance2|Q|clk                                                                              ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[0]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[1]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[2]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[3]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[4]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[5]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[6]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[7]|clk                                                                          ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[0]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[1]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[2]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[3]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[4]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[5]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[6]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[7]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[8]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[9]|clk                                                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|enable|clk                                                                                        ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|p1_stand_rtl_0|auto_generated|ram_block1a17|clk0                                                   ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|p1_stand_rtl_0|auto_generated|ram_block1a1|clk0                                                    ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|p1_stand_rtl_0|auto_generated|ram_block1a20|clk0                                                   ;
-; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|p1_stand_rtl_0|auto_generated|ram_block1a5|clk0                                                    ;
-+-------+--------------+----------------+-----------------+----------+------------+--------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'                                                                                                                                   ;
++-------+--------------+----------------+-----------------+----------+------------+------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type            ; Clock    ; Clock Edge ; Target                                                                                               ;
++-------+--------------+----------------+-----------------+----------+------------+------------------------------------------------------------------------------------------------------+
+; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a17~porta_address_reg0 ;
+; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a1~porta_address_reg0  ;
+; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a20~porta_address_reg0 ;
+; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a5~porta_address_reg0  ;
+; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a6~porta_address_reg0  ;
+; 9.372 ; 9.602        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a7~porta_address_reg0  ;
+; 9.373 ; 9.603        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 9.373 ; 9.603        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a15~porta_address_reg0 ;
+; 9.373 ; 9.603        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a10~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a11~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a13~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a14~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a18~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a19~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a21~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a22~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a23~porta_address_reg0 ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a2~porta_address_reg0  ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a3~porta_address_reg0  ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 9.374 ; 9.604        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a9~porta_address_reg0  ;
+; 9.375 ; 9.605        ; 0.230          ; Low Pulse Width ; CLOCK_50 ; Rise       ; frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a8~porta_address_reg0  ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; Reset_h                                                                                              ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[0]                                                                               ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[1]                                                                               ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[2]                                                                               ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[3]                                                                               ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Count[4]                                                                               ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance1|Q                                                                  ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Dreg:Dreg_instance2|Q                                                                  ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[0]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[1]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[2]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[3]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[4]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[5]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[6]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[7]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[8]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|counter[9]                                                                             ;
+; 9.436 ; 9.620        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|enable                                                                                 ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[0]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[1]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[2]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[3]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[4]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[5]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[6]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Data[7]                                                                                ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[0]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[1]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[2]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[3]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[4]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[5]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[6]                                                                   ;
+; 9.437 ; 9.621        ; 0.184          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyboard:keyB|Typematic_Keycode[7]                                                                   ;
+; 9.574 ; 9.574        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]                                         ;
+; 9.574 ; 9.574        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; vga_clk_instance|altpll_component|auto_generated|pll1|observablevcoout                               ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; Reset_h|clk                                                                                          ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[0]|clk                                                                                    ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[1]|clk                                                                                    ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[2]|clk                                                                                    ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[3]|clk                                                                                    ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Count[4]|clk                                                                                    ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[0]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[1]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[2]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[3]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[4]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[5]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[6]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Data[7]|clk                                                                                     ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Dreg_instance1|Q|clk                                                                            ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Dreg_instance2|Q|clk                                                                            ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[0]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[1]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[2]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[3]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[4]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[5]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[6]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|Typematic_Keycode[7]|clk                                                                        ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[0]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[1]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[2]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[3]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[4]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[5]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[6]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[7]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[8]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|counter[9]|clk                                                                                  ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; keyB|enable|clk                                                                                      ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|stand1_rtl_0|auto_generated|ram_block1a17|clk0                                                   ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|stand1_rtl_0|auto_generated|ram_block1a1|clk0                                                    ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|stand1_rtl_0|auto_generated|ram_block1a20|clk0                                                   ;
+; 9.616 ; 9.616        ; 0.000          ; Low Pulse Width ; CLOCK_50 ; Rise       ; rom|stand1_rtl_0|auto_generated|ram_block1a5|clk0                                                    ;
++-------+--------------+----------------+-----------------+----------+------------+------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -4457,7 +4457,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Apr 18 18:22:47 2018
+    Info: Processing started: Thu Apr 19 10:55:06 2018
 Info: Command: quartus_sta lab8 -c lab8
 Info: qsta_default_script.tcl version: #11
 Warning (20013): Ignored assignments for entity "DE2_115_Default" -- entity does not exist in design
@@ -4774,8 +4774,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 194 warnings
-    Info: Peak virtual memory: 855 megabytes
-    Info: Processing ended: Wed Apr 18 18:22:51 2018
+    Info: Peak virtual memory: 854 megabytes
+    Info: Processing ended: Thu Apr 19 10:55:10 2018
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
