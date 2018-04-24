@@ -595,7 +595,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE ram.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Ps2/keyboard.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Ps2/Dreg.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Ps2/11_reg.sv
-set_global_assignment -name QIP_FILE nios_system/synthesis/nios_system.qip
 set_global_assignment -name SYSTEMVERILOG_FILE hpi_io_intf.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA_controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE lab8.sv

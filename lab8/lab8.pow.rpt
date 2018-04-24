@@ -1,5 +1,5 @@
 PowerPlay Power Analyzer report for lab8
-Thu Apr 19 10:55:03 2018
+Tue Apr 24 14:55:46 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -66,17 +66,17 @@ agreement for further details.
 +-------------------------------------------------------------------------------------------+
 ; PowerPlay Power Analyzer Summary                                                          ;
 +----------------------------------------+--------------------------------------------------+
-; PowerPlay Power Analyzer Status        ; Successful - Thu Apr 19 10:55:03 2018            ;
+; PowerPlay Power Analyzer Status        ; Successful - Tue Apr 24 14:55:46 2018            ;
 ; Quartus II 64-Bit Version              ; 15.0.0 Build 145 04/22/2015 SJ Web Edition       ;
 ; Revision Name                          ; lab8                                             ;
 ; Top-level Entity Name                  ; lab8                                             ;
 ; Family                                 ; Cyclone IV E                                     ;
 ; Device                                 ; EP4CE115F29C7                                    ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 160.44 mW                                        ;
-; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
-; Core Static Thermal Power Dissipation  ; 101.72 mW                                        ;
-; I/O Thermal Power Dissipation          ; 58.72 mW                                         ;
+; Total Thermal Power Dissipation        ; 215.98 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 40.61 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 102.02 mW                                        ;
+; I/O Thermal Power Dissipation          ; 73.35 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -107,52 +107,48 @@ agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Indeterminate Toggle Rates                                                                                                    ;
-+-------------------------------------------------------------------------------------------------+-----------------------------+
-; Node                                                                                            ; Reason                      ;
-+-------------------------------------------------------------------------------------------------+-----------------------------+
-; vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated|wire_pll1_clk[0] ; No valid clock domain found ;
-; KEY[1]                                                                                          ; No valid clock domain found ;
-; KEY[2]                                                                                          ; No valid clock domain found ;
-; KEY[3]                                                                                          ; No valid clock domain found ;
-; DRAM_DQ[0]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[1]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[2]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[3]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[4]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[5]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[6]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[7]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[8]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[9]                                                                                      ; No valid clock domain found ;
-; DRAM_DQ[10]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[11]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[12]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[13]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[14]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[15]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[16]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[17]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[18]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[19]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[20]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[21]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[22]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[23]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[24]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[25]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[26]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[27]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[28]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[29]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[30]                                                                                     ; No valid clock domain found ;
-; DRAM_DQ[31]                                                                                     ; No valid clock domain found ;
-; CLOCK_50                                                                                        ; No valid clock domain found ;
-; PS2_CLK                                                                                         ; No valid clock domain found ;
-; KEY[0]                                                                                          ; No valid clock domain found ;
-; PS2_DAT                                                                                         ; No valid clock domain found ;
-+-------------------------------------------------------------------------------------------------+-----------------------------+
++-------------------------------------------+
+; Indeterminate Toggle Rates                ;
++-------------+-----------------------------+
+; Node        ; Reason                      ;
++-------------+-----------------------------+
+; KEY[1]      ; No valid clock domain found ;
+; KEY[2]      ; No valid clock domain found ;
+; KEY[3]      ; No valid clock domain found ;
+; DRAM_DQ[0]  ; No valid clock domain found ;
+; DRAM_DQ[1]  ; No valid clock domain found ;
+; DRAM_DQ[2]  ; No valid clock domain found ;
+; DRAM_DQ[3]  ; No valid clock domain found ;
+; DRAM_DQ[4]  ; No valid clock domain found ;
+; DRAM_DQ[5]  ; No valid clock domain found ;
+; DRAM_DQ[6]  ; No valid clock domain found ;
+; DRAM_DQ[7]  ; No valid clock domain found ;
+; DRAM_DQ[8]  ; No valid clock domain found ;
+; DRAM_DQ[9]  ; No valid clock domain found ;
+; DRAM_DQ[10] ; No valid clock domain found ;
+; DRAM_DQ[11] ; No valid clock domain found ;
+; DRAM_DQ[12] ; No valid clock domain found ;
+; DRAM_DQ[13] ; No valid clock domain found ;
+; DRAM_DQ[14] ; No valid clock domain found ;
+; DRAM_DQ[15] ; No valid clock domain found ;
+; DRAM_DQ[16] ; No valid clock domain found ;
+; DRAM_DQ[17] ; No valid clock domain found ;
+; DRAM_DQ[18] ; No valid clock domain found ;
+; DRAM_DQ[19] ; No valid clock domain found ;
+; DRAM_DQ[20] ; No valid clock domain found ;
+; DRAM_DQ[21] ; No valid clock domain found ;
+; DRAM_DQ[22] ; No valid clock domain found ;
+; DRAM_DQ[23] ; No valid clock domain found ;
+; DRAM_DQ[24] ; No valid clock domain found ;
+; DRAM_DQ[25] ; No valid clock domain found ;
+; DRAM_DQ[26] ; No valid clock domain found ;
+; DRAM_DQ[27] ; No valid clock domain found ;
+; DRAM_DQ[28] ; No valid clock domain found ;
+; DRAM_DQ[29] ; No valid clock domain found ;
+; DRAM_DQ[30] ; No valid clock domain found ;
+; DRAM_DQ[31] ; No valid clock domain found ;
+; PS2_DAT     ; No valid clock domain found ;
++-------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -168,7 +164,7 @@ agreement for further details.
 ;     VCCD                                    ; 1.20 V                    ;
 ;     2.5 V I/O Standard                      ; 2.5 V                     ;
 ;                                             ;                           ;
-; Auto computed junction temperature          ; 26.0 degrees Celsius      ;
+; Auto computed junction temperature          ; 26.4 degrees Celsius      ;
 ;     Ambient temperature                     ; 25.0 degrees Celsius      ;
 ;     Junction-to-Case thermal resistance     ; 3.90 degrees Celsius/Watt ;
 ;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt ;
@@ -186,53 +182,53 @@ agreement for further details.
 (1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Block Type                                                                                                                                                                            ;
-+---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
-; Block Type          ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
-+---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
-; PLL                 ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; M9K                 ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; Combinational cell  ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; Clock control block ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; Register cell       ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; I/O                 ; 28.72 mW                          ; 0.00 mW                     ; 28.72 mW                       ; 0.00 mW                       ;    0.000                                                  ;
-+---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                                   ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type                 ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; PLL                        ; 1.45 mW                           ; 1.45 mW                     ; --                             ; 0.00 mW                       ;    3.125                                                  ;
+; M9K                        ; 8.58 mW                           ; 7.77 mW                     ; --                             ; 0.82 mW                       ;    2.777                                                  ;
+; Embedded multiplier block  ; 0.11 mW                           ; 0.11 mW                     ; --                             ; 0.00 mW                       ;    1.172                                                  ;
+; Embedded multiplier output ; 0.01 mW                           ; 0.00 mW                     ; --                             ; 0.01 mW                       ;    1.563                                                  ;
+; Combinational cell         ; 5.01 mW                           ; 0.58 mW                     ; --                             ; 4.43 mW                       ;    4.052                                                  ;
+; Clock control block        ; 24.23 mW                          ; 0.00 mW                     ; --                             ; 24.23 mW                      ;   53.125                                                  ;
+; Register cell              ; 1.16 mW                           ; 0.52 mW                     ; --                             ; 0.64 mW                       ;    5.345                                                  ;
+; I/O                        ; 43.40 mW                          ; 1.39 mW                     ; 41.96 mW                       ; 0.05 mW                       ;    1.568                                                  ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                              ;
-+---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Compilation Hierarchy Node                              ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                      ;
-+---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |lab8                                                   ; 28.72 mW (28.72 mW)                  ; 0.00 mW (0.00 mW)               ; 28.72 mW (28.72 mW)               ; 0.00 mW (0.00 mW)                 ; |lab8                                                                                                                                                    ;
-;     |hard_block:auto_generated_inst                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|hard_block:auto_generated_inst                                                                                                                     ;
-;     |color_mapper:color_instance                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance                                                                                                                        ;
-;         |lpm_mult:Mult0                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0                                                                                                         ;
-;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core                                                                                      ;
-;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ;
-;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;
-;                         |add_sub_jgh:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_jgh:auto_generated                      ;
-;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;
-;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;
-;                             |add_sub_ngh:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated ;
-;     |HexDriver:hex_inst_0                               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|HexDriver:hex_inst_0                                                                                                                               ;
-;     |HexDriver:hex_inst_1                               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|HexDriver:hex_inst_1                                                                                                                               ;
-;     |keyboard:keyB                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB                                                                                                                                      ;
-;         |Dreg:Dreg_instance1                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance1                                                                                                                  ;
-;         |Dreg:Dreg_instance2                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                                                                  ;
-;         |reg_11:reg_A                                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_A                                                                                                                         ;
-;         |reg_11:reg_B                                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_B                                                                                                                         ;
-;     |player1:p1                                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|player1:p1                                                                                                                                         ;
-;     |frameROM:rom                                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|frameROM:rom                                                                                                                                       ;
-;         |altsyncram:stand1_rtl_0                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stand1_rtl_0                                                                                                               ;
-;             |altsyncram_ho61:auto_generated             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated                                                                                ;
-;     |vga_clk:vga_clk_instance                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance                                                                                                                           ;
-;         |altpll:altpll_component                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                                                                   ;
-;             |vga_clk_altpll:auto_generated              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                                                                     ;
-;     |VGA_controller:vga_controller_instance             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|VGA_controller:vga_controller_instance                                                                                                             ;
-+---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                  ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                    ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------+
+; |lab8                                       ; 83.96 mW (67.48 mW)                  ; 11.82 mW (1.40 mW)              ; 41.96 mW (41.96 mW)               ; 30.18 mW (24.12 mW)               ; |lab8                                                                                                  ;
+;     |hard_block:auto_generated_inst         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|hard_block:auto_generated_inst                                                                   ;
+;     |color_mapper:color_instance            ; 4.20 mW (4.08 mW)                    ; 0.28 mW (0.17 mW)               ; --                                ; 3.92 mW (3.91 mW)                 ; |lab8|color_mapper:color_instance                                                                      ;
+;         |lpm_mult:Mult7                     ; 0.12 mW (0.00 mW)                    ; 0.11 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult7                                                       ;
+;             |mult_pgt:auto_generated        ; 0.12 mW (0.12 mW)                    ; 0.11 mW (0.11 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult7|mult_pgt:auto_generated                               ;
+;     |HexDriver:hex_inst_0                   ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|HexDriver:hex_inst_0                                                                             ;
+;     |HexDriver:hex_inst_1                   ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|HexDriver:hex_inst_1                                                                             ;
+;     |HexDriver:hex_inst_2                   ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|HexDriver:hex_inst_2                                                                             ;
+;     |HexDriver:hex_inst_3                   ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|HexDriver:hex_inst_3                                                                             ;
+;     |keyboard:keyB                          ; 0.16 mW (0.15 mW)                    ; 0.14 mW (0.12 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|keyboard:keyB                                                                                    ;
+;         |Dreg:Dreg_instance1                ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance1                                                                ;
+;         |Dreg:Dreg_instance2                ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                ;
+;         |reg_11:reg_A                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_A                                                                       ;
+;         |reg_11:reg_B                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_B                                                                       ;
+;     |player1:p1                             ; 0.92 mW (0.92 mW)                    ; 0.51 mW (0.51 mW)               ; --                                ; 0.41 mW (0.41 mW)                 ; |lab8|player1:p1                                                                                       ;
+;     |frameROM:rom                           ; 9.20 mW (0.00 mW)                    ; 7.94 mW (0.00 mW)               ; --                                ; 1.26 mW (0.00 mW)                 ; |lab8|frameROM:rom                                                                                     ;
+;         |altsyncram:stick_figure_rtl_0      ; 9.20 mW (0.00 mW)                    ; 7.94 mW (0.00 mW)               ; --                                ; 1.26 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0                                                       ;
+;             |altsyncram_5q61:auto_generated ; 9.20 mW (8.78 mW)                    ; 7.94 mW (7.79 mW)               ; --                                ; 1.26 mW (1.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_5q61:auto_generated                        ;
+;                 |mux_3qb:mux2               ; 0.24 mW (0.24 mW)                    ; 0.14 mW (0.14 mW)               ; --                                ; 0.10 mW (0.10 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_5q61:auto_generated|mux_3qb:mux2           ;
+;                 |decode_u9a:rden_decode     ; 0.17 mW (0.17 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.16 mW (0.16 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_5q61:auto_generated|decode_u9a:rden_decode ;
+;     |vga_clk:vga_clk_instance               ; 1.61 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.17 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance                                                                         ;
+;         |altpll:altpll_component            ; 1.61 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.17 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ;
+;             |vga_clk_altpll:auto_generated  ; 1.61 mW (1.61 mW)                    ; 1.45 mW (1.45 mW)               ; --                                ; 0.17 mW (0.17 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                   ;
+;     |VGA_controller:vga_controller_instance ; 0.29 mW (0.29 mW)                    ; 0.07 mW (0.07 mW)               ; --                                ; 0.23 mW (0.23 mW)                 ; |lab8|VGA_controller:vga_controller_instance                                                           ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
@@ -243,7 +239,8 @@ agreement for further details.
 +-----------------+-----------------------+--------------------------+
 ; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
 +-----------------+-----------------------+--------------------------+
-; No clock domain ; 0.00                  ; 0.00                     ;
+; CLOCK_50        ; 50.00                 ; 40.50                    ;
+; No clock domain ; 0.00                  ; 0.11                     ;
 +-----------------+-----------------------+--------------------------+
 
 
@@ -252,10 +249,10 @@ agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCINT         ; 29.57 mA                ; 0.00 mA                   ; 29.57 mA                 ; 29.57 mA                         ;
-; VCCIO          ; 12.44 mA                ; 0.00 mA                   ; 12.44 mA                 ; 12.44 mA                         ;
-; VCCA           ; 35.55 mA                ; 0.00 mA                   ; 35.55 mA                 ; 35.55 mA                         ;
-; VCCD           ; 4.23 mA                 ; 0.00 mA                   ; 4.23 mA                  ; 4.23 mA                          ;
+; VCCINT         ; 73.31 mA                ; 32.83 mA                  ; 40.48 mA                 ; 73.31 mA                         ;
+; VCCIO          ; 13.03 mA                ; 0.46 mA                   ; 12.57 mA                 ; 13.03 mA                         ;
+; VCCA           ; 35.84 mA                ; 0.27 mA                   ; 35.57 mA                 ; 35.84 mA                         ;
+; VCCD           ; 4.92 mA                 ; 0.64 mA                   ; 4.29 mA                  ; 4.92 mA                          ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -267,13 +264,13 @@ agreement for further details.
 ; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 ; 1        ; 2.5V          ; 1.57 mA             ; 0.00 mA               ; 1.57 mA              ;
-; 2        ; 2.5V          ; 1.68 mA             ; 0.00 mA               ; 1.68 mA              ;
+; 2        ; 2.5V          ; 1.71 mA             ; 0.03 mA               ; 1.68 mA              ;
 ; 3        ; 2.5V          ; 1.50 mA             ; 0.00 mA               ; 1.50 mA              ;
-; 4        ; 2.5V          ; 1.50 mA             ; 0.00 mA               ; 1.50 mA              ;
-; 5        ; 2.5V          ; 1.53 mA             ; 0.00 mA               ; 1.53 mA              ;
-; 6        ; 2.5V          ; 1.53 mA             ; 0.00 mA               ; 1.53 mA              ;
-; 7        ; 2.5V          ; 1.51 mA             ; 0.00 mA               ; 1.51 mA              ;
-; 8        ; 2.5V          ; 1.61 mA             ; 0.00 mA               ; 1.61 mA              ;
+; 4        ; 2.5V          ; 1.64 mA             ; 0.03 mA               ; 1.60 mA              ;
+; 5        ; 2.5V          ; 1.66 mA             ; 0.10 mA               ; 1.56 mA              ;
+; 6        ; 2.5V          ; 1.57 mA             ; 0.03 mA               ; 1.53 mA              ;
+; 7        ; 2.5V          ; 1.53 mA             ; 0.02 mA               ; 1.51 mA              ;
+; 8        ; 2.5V          ; 1.85 mA             ; 0.24 mA               ; 1.61 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
 
@@ -282,37 +279,37 @@ agreement for further details.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 2.5V          ; 12.44 mA                ; 0.00 mA                   ; 12.44 mA                 ; 12.44 mA                         ;
+; 2.5V          ; 13.03 mA                ; 0.46 mA                   ; 12.57 mA                 ; 13.03 mA                         ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Confidence Metric Details                                                                                                                        ;
-+----------------------------------------------------------------------------------------+-------------+-------------+-------------+---------------+
-; Data Source                                                                            ; Total       ; Pin         ; Registered  ; Combinational ;
-+----------------------------------------------------------------------------------------+-------------+-------------+-------------+---------------+
-; Simulation (from file)                                                                 ;             ;             ;             ;               ;
-;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)      ;
-;                                                                                        ;             ;             ;             ;               ;
-; Node, entity or clock assignment                                                       ;             ;             ;             ;               ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)      ;
-;                                                                                        ;             ;             ;             ;               ;
-; Vectorless estimation                                                                  ;             ;             ;             ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 580 (93.2%) ; 103 (71.5%) ; 78 (100.0%) ; 399 (99.8%)   ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 187 (30.1%) ; 61 (42.4%)  ; 21 (26.9%)  ; 105 (26.3%)   ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 580 (93.2%) ; 103 (71.5%) ; 78 (100.0%) ; 399 (99.8%)   ;
-;                                                                                        ;             ;             ;             ;               ;
-; Default assignment                                                                     ;             ;             ;             ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 42 (6.8%)   ; 41 (28.5%)  ; 0 (0.0%)    ; 1 (0.3%)      ;
-;                                                                                        ;             ;             ;             ;               ;
-; Assumed 0                                                                              ;             ;             ;             ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 42 (6.8%)   ; 41 (28.5%)  ; 0 (0.0%)    ; 1 (0.3%)      ;
-+----------------------------------------------------------------------------------------+-------------+-------------+-------------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                          ;
++----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
+; Data Source                                                                            ; Total        ; Pin         ; Registered   ; Combinational ;
++----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
+; Simulation (from file)                                                                 ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)     ; 0 (0.0%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;              ;             ;              ;               ;
+; Node, entity or clock assignment                                                       ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 1 (0.1%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.1%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;              ;             ;              ;               ;
+; Vectorless estimation                                                                  ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1592 (97.4%) ; 138 (77.1%) ; 145 (100.0%) ; 1309 (99.9%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 218 (13.3%)  ; 81 (45.3%)  ; 20 (13.8%)   ; 117 (8.9%)    ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 1592 (97.4%) ; 138 (77.1%) ; 145 (100.0%) ; 1309 (99.9%)  ;
+;                                                                                        ;              ;             ;              ;               ;
+; Default assignment                                                                     ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.1%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 1 (0.1%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 41 (2.5%)    ; 40 (22.3%)  ; 0 (0.0%)     ; 1 (0.1%)      ;
+;                                                                                        ;              ;             ;              ;               ;
+; Assumed 0                                                                              ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 39 (2.4%)    ; 39 (21.8%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -329,70 +326,415 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit PowerPlay Power Analyzer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Apr 19 10:54:54 2018
+    Info: Processing started: Tue Apr 24 14:55:35 2018
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off lab8 -c lab8
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (332104): Reading SDC File: 'nios_system/synthesis/submodules/altera_reset_controller.sdc'
-Info (332104): Reading SDC File: 'nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc'
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(46): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_nios2_oci_break:the_nios_system_nios2_gen2_0_cpu_nios2_oci_break|break_readreg* could not be matched with a keeper
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(46): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|*sr* could not be matched with a keeper
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(46): Argument <from> is an empty collection
-    Info (332050): set_false_path -from [get_keepers *$nios_system_nios2_gen2_0_cpu_oci_break_path|break_readreg*] -to [get_keepers *$nios_system_nios2_gen2_0_cpu_jtag_sr*]
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(46): Argument <to> is an empty collection
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(47): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_nios2_oci_debug:the_nios_system_nios2_gen2_0_cpu_nios2_oci_debug|*resetlatch could not be matched with a keeper
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(47): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|*sr[33] could not be matched with a keeper
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(47): Argument <from> is an empty collection
-    Info (332050): set_false_path -from [get_keepers *$nios_system_nios2_gen2_0_cpu_oci_debug_path|*resetlatch]     -to [get_keepers *$nios_system_nios2_gen2_0_cpu_jtag_sr[33]]
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(47): Argument <to> is an empty collection
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(48): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_nios2_oci_debug:the_nios_system_nios2_gen2_0_cpu_nios2_oci_debug|monitor_ready could not be matched with a keeper
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(48): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|*sr[0] could not be matched with a keeper
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(48): Argument <from> is an empty collection
-    Info (332050): set_false_path -from [get_keepers *$nios_system_nios2_gen2_0_cpu_oci_debug_path|monitor_ready]  -to [get_keepers *$nios_system_nios2_gen2_0_cpu_jtag_sr[0]]
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(48): Argument <to> is an empty collection
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(49): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_nios2_oci_debug:the_nios_system_nios2_gen2_0_cpu_nios2_oci_debug|monitor_error could not be matched with a keeper
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(49): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|*sr[34] could not be matched with a keeper
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(49): Argument <from> is an empty collection
-    Info (332050): set_false_path -from [get_keepers *$nios_system_nios2_gen2_0_cpu_oci_debug_path|monitor_error]  -to [get_keepers *$nios_system_nios2_gen2_0_cpu_jtag_sr[34]]
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(49): Argument <to> is an empty collection
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(50): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_nios2_ocimem:the_nios_system_nios2_gen2_0_cpu_nios2_ocimem|*MonDReg* could not be matched with a keeper
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(50): Argument <from> is an empty collection
-    Info (332050): set_false_path -from [get_keepers *$nios_system_nios2_gen2_0_cpu_ocimem_path|*MonDReg*] -to [get_keepers *$nios_system_nios2_gen2_0_cpu_jtag_sr*]
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(50): Argument <to> is an empty collection
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(51): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|*sr* could not be matched with a clock or keeper or register or port or pin or cell or partition
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(51): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_sysclk:the_nios_system_nios2_gen2_0_cpu_debug_slave_sysclk|*jdo* could not be matched with a clock or keeper or register or port or pin or cell or partition
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(51): Argument <from> is not an object ID
-    Info (332050): set_false_path -from *$nios_system_nios2_gen2_0_cpu_jtag_sr*    -to *$nios_system_nios2_gen2_0_cpu_jtag_sysclk_path|*jdo*
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(51): Argument <to> is not an object ID
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(52): sld_hub:*|irf_reg* could not be matched with a clock or keeper or register or port or pin or cell or partition
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(52): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_sysclk:the_nios_system_nios2_gen2_0_cpu_debug_slave_sysclk|ir* could not be matched with a clock or keeper or register or port or pin or cell or partition
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(52): Argument <from> is not an object ID
-    Info (332050): set_false_path -from sld_hub:*|irf_reg* -to *$nios_system_nios2_gen2_0_cpu_jtag_sysclk_path|ir*
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(52): Argument <to> is not an object ID
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(53): sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1] could not be matched with a clock or keeper or register or port or pin or cell or partition
-Warning (332174): Ignored filter at nios_system_nios2_gen2_0_cpu.sdc(53): *nios_system_nios2_gen2_0_cpu:*|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_nios2_oci_debug:the_nios_system_nios2_gen2_0_cpu_nios2_oci_debug|monitor_go could not be matched with a clock or keeper or register or port or pin or cell or partition
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(53): Argument <from> is not an object ID
-    Info (332050): set_false_path -from sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1] -to *$nios_system_nios2_gen2_0_cpu_oci_debug_path|monitor_go
-Warning (332049): Ignored set_false_path at nios_system_nios2_gen2_0_cpu.sdc(53): Argument <to> is not an object ID
-Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register frameROM:rom|altsyncram:stand1_rtl_0|altsyncram_ho61:auto_generated|ram_block1a16~porta_address_reg0 is being clocked by CLOCK_50
+Info (332104): Reading SDC File: 'lab8.sdc'
+Warning (332174): Ignored filter at lab8.sdc(42): altera_reserved_tck could not be matched with a port
+Warning (332049): Ignored create_clock at lab8.sdc(42): Argument <targets> is an empty collection
+    Info (332050): create_clock -name {altera_reserved_tck} -period 100.000 -waveform { 0.000 50.000 } [get_ports {altera_reserved_tck}]
+Warning (332174): Ignored filter at lab8.sdc(50): m_lab7_soc|sdram_pll|sd1|pll7|inclk[0] could not be matched with a pin
+Warning (332174): Ignored filter at lab8.sdc(50): m_lab7_soc|sdram_pll|sd1|pll7|clk[0] could not be matched with a pin
+Critical Warning (332049): Ignored create_generated_clock at lab8.sdc(50): Argument <targets> is an empty collection
+    Info (332050): create_generated_clock -name {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]} -source [get_pins {m_lab7_soc|sdram_pll|sd1|pll7|inclk[0]}] -duty_cycle 50.000 -multiply_by 1 -phase -54.000 -master_clock {main_clk_50} [get_pins {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}] 
+Warning (332049): Ignored create_generated_clock at lab8.sdc(50): Argument -source is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(51): m_lab7_soc|sdram_pll|sd1|pll7|clk[1] could not be matched with a pin
+Critical Warning (332049): Ignored create_generated_clock at lab8.sdc(51): Argument <targets> is an empty collection
+    Info (332050): create_generated_clock -name {m_lab7_soc|sdram_pll|sd1|pll7|clk[1]} -source [get_pins {m_lab7_soc|sdram_pll|sd1|pll7|inclk[0]}] -duty_cycle 50.000 -multiply_by 1 -phase -54.000 -master_clock {main_clk_50} [get_pins {m_lab7_soc|sdram_pll|sd1|pll7|clk[1]}] 
+Warning (332049): Ignored create_generated_clock at lab8.sdc(51): Argument -source is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(70): m_lab7_soc|sdram_pll|sd1|pll7|clk[0] could not be matched with a clock
+Warning (332049): Ignored set_input_delay at lab8.sdc(70): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[0]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(71): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[0]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(72): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[1]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(73): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[1]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(74): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[2]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(75): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[2]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(76): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[3]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(77): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[3]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(78): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[4]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(79): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[4]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(80): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[5]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(81): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[5]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(82): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[6]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(83): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[6]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(84): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[7]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(85): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[7]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(86): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[8]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(87): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[8]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(88): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[9]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(89): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[9]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(90): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[10]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(91): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[10]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(92): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[11]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(93): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[11]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(94): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[12]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(95): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[12]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(96): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[13]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(97): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[13]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(98): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[14]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(99): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[14]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(100): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[15]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(101): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[15]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(102): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[16]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(103): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[16]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(104): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[17]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(105): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[17]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(106): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[18]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(107): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[18]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(108): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[19]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(109): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[19]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(110): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[20]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(111): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[20]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(112): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[21]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(113): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[21]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(114): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[22]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(115): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[22]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(116): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[23]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(117): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[23]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(118): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[24]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(119): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[24]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(120): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[25]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(121): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[25]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(122): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[26]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(123): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[26]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(124): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[27]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(125): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[27]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(126): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[28]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(127): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[28]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(128): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[29]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(129): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[29]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(130): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[30]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(131): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[30]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(132): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  3.000 [get_ports {DRAM_DQ[31]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(133): Argument -clock is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[31]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(142): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {altera_reserved_tck}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(143): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {altera_reserved_tck}]
+Warning (332174): Ignored filter at lab8.sdc(144): altera_reserved_tdi could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(144): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {altera_reserved_tdi}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(145): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {altera_reserved_tdi}]
+Warning (332174): Ignored filter at lab8.sdc(146): altera_reserved_tms could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(146): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {altera_reserved_tms}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(147): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {altera_reserved_tms}]
+Warning (332174): Ignored filter at lab8.sdc(148): SW[0] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(148): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[0]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(149): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[0]}]
+Warning (332174): Ignored filter at lab8.sdc(150): SW[1] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(150): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[1]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(151): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[1]}]
+Warning (332174): Ignored filter at lab8.sdc(152): SW[2] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(152): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[2]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(153): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[2]}]
+Warning (332174): Ignored filter at lab8.sdc(154): SW[3] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(154): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[3]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(155): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[3]}]
+Warning (332174): Ignored filter at lab8.sdc(156): SW[4] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(156): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[4]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(157): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[4]}]
+Warning (332174): Ignored filter at lab8.sdc(158): SW[5] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(158): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[5]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(159): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[5]}]
+Warning (332174): Ignored filter at lab8.sdc(160): SW[6] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(160): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[6]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(161): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[6]}]
+Warning (332174): Ignored filter at lab8.sdc(162): SW[7] could not be matched with a port
+Warning (332049): Ignored set_input_delay at lab8.sdc(162): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[7]}]
+Warning (332049): Ignored set_input_delay at lab8.sdc(163): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[7]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(173): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[0]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(174): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[1]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(175): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[2]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(176): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[3]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(177): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[4]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(178): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[5]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(179): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[6]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(180): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[7]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(181): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[8]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(182): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[9]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(183): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[10]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(184): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[11]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(185): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_ADDR[12]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(186): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_BA[0]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(187): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_BA[1]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(188): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_CAS_N}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(189): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_CKE}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(190): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_CS_N}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(191): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQM[0]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(192): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQM[1]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(193): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQM[2]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(194): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQM[3]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(195): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[0]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(196): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[1]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(197): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[2]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(198): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[3]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(199): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[4]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(200): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[5]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(201): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[6]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(202): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[7]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(203): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[8]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(204): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[9]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(205): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[10]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(206): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[11]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(207): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[12]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(208): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[13]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(209): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[14]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(210): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[15]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(211): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[16]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(212): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[17]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(213): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[18]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(214): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[19]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(215): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[20]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(216): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[21]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(217): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[22]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(218): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[23]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(219): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[24]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(220): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[25]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(221): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[26]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(222): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[27]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(223): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[28]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(224): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[29]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(225): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[30]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(226): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_DQ[31]}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(227): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_RAS_N}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(228): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_WE_N}]
+Warning (332049): Ignored set_output_delay at lab8.sdc(229): Argument -clock is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {m_lab7_soc|sdram_pll|sd1|pll7|clk[0]}]  2.000 [get_ports {DRAM_CLK}]
+Warning (332174): Ignored filter at lab8.sdc(230): LEDG[0] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(230): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[0]}]
+Warning (332174): Ignored filter at lab8.sdc(231): LEDG[1] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(231): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[1]}]
+Warning (332174): Ignored filter at lab8.sdc(232): LEDG[2] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(232): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[2]}]
+Warning (332174): Ignored filter at lab8.sdc(233): LEDG[3] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(233): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[3]}]
+Warning (332174): Ignored filter at lab8.sdc(234): LEDG[4] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(234): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[4]}]
+Warning (332174): Ignored filter at lab8.sdc(235): LEDG[5] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(235): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[5]}]
+Warning (332174): Ignored filter at lab8.sdc(236): LEDG[6] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(236): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[6]}]
+Warning (332174): Ignored filter at lab8.sdc(237): LEDG[7] could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(237): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {LEDG[7]}]
+Warning (332174): Ignored filter at lab8.sdc(239): altera_reserved_tdo could not be matched with a port
+Warning (332049): Ignored set_output_delay at lab8.sdc(239): Argument <targets> is an empty collection
+    Info (332050): set_output_delay -add_delay  -clock [get_clocks {main_clk_50}]  2.000 [get_ports {altera_reserved_tdo}]
+Warning (332174): Ignored filter at lab8.sdc(246): altera_reserved_tck could not be matched with a clock
+Warning (332174): Ignored filter at lab8.sdc(254): *altera_avalon_st_clock_crosser:*|in_data_buffer* could not be matched with a register
+Warning (332174): Ignored filter at lab8.sdc(254): *altera_avalon_st_clock_crosser:*|out_data_buffer* could not be matched with a register
+Warning (332049): Ignored set_false_path at lab8.sdc(254): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_registers {*altera_avalon_st_clock_crosser:*|in_data_buffer*}] -to [get_registers {*altera_avalon_st_clock_crosser:*|out_data_buffer*}]
+Warning (332049): Ignored set_false_path at lab8.sdc(254): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(255): *altera_std_synchronizer:*|din_s1 could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(255): Argument <to> is an empty collection
+    Info (332050): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+Warning (332174): Ignored filter at lab8.sdc(256): *|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain*|clrn could not be matched with a pin
+Warning (332049): Ignored set_false_path at lab8.sdc(256): Argument <to> is an empty collection
+    Info (332050): set_false_path -to [get_pins -nocase -compatibility_mode {*|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain*|clrn}]
+Warning (332174): Ignored filter at lab8.sdc(257): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_break:the_lab7_soc_nios2_qsys_0_nios2_oci_break|break_readreg* could not be matched with a keeper
+Warning (332174): Ignored filter at lab8.sdc(257): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr* could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(257): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_break:the_lab7_soc_nios2_qsys_0_nios2_oci_break|break_readreg*}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr*}]
+Warning (332049): Ignored set_false_path at lab8.sdc(257): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(258): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|*resetlatch could not be matched with a keeper
+Warning (332174): Ignored filter at lab8.sdc(258): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr[33] could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(258): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|*resetlatch}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr[33]}]
+Warning (332049): Ignored set_false_path at lab8.sdc(258): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(259): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_ready could not be matched with a keeper
+Warning (332174): Ignored filter at lab8.sdc(259): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr[0] could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(259): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_ready}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr[0]}]
+Warning (332049): Ignored set_false_path at lab8.sdc(259): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(260): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_error could not be matched with a keeper
+Warning (332174): Ignored filter at lab8.sdc(260): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr[34] could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(260): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_error}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr[34]}]
+Warning (332049): Ignored set_false_path at lab8.sdc(260): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(261): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_ocimem:the_lab7_soc_nios2_qsys_0_nios2_ocimem|*MonDReg* could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(261): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_ocimem:the_lab7_soc_nios2_qsys_0_nios2_ocimem|*MonDReg*}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr*}]
+Warning (332049): Ignored set_false_path at lab8.sdc(261): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(262): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk:the_lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk|*jdo* could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(262): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr*}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk:the_lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk|*jdo*}]
+Warning (332049): Ignored set_false_path at lab8.sdc(262): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(263): sld_hub:*|irf_reg* could not be matched with a keeper
+Warning (332174): Ignored filter at lab8.sdc(263): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk:the_lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk|ir* could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(263): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {sld_hub:*|irf_reg*}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk:the_lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk|ir*}]
+Warning (332049): Ignored set_false_path at lab8.sdc(263): Argument <to> is an empty collection
+Warning (332174): Ignored filter at lab8.sdc(264): sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1] could not be matched with a keeper
+Warning (332174): Ignored filter at lab8.sdc(264): *lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_go could not be matched with a keeper
+Warning (332049): Ignored set_false_path at lab8.sdc(264): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers {sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1]}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_go}]
+Warning (332049): Ignored set_false_path at lab8.sdc(264): Argument <to> is an empty collection
 Warning (332060): Node: PS2_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register keyboard:keyB|reg_11:reg_A|Data_Out[7] is being clocked by PS2_CLK
-Warning (332068): No clocks defined in design.
+    Info (13166): Register keyboard:keyB|reg_11:reg_A|Data_Out[9] is being clocked by PS2_CLK
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: vga_clk_instance|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From main_clk_50 (Rise) to main_clk_50 (Rise) (setup and hold)
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
 Info (223001): Completed Vectorless Power Activity Estimation
 Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 160.44 mW
-Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 826 megabytes
-    Info: Processing ended: Thu Apr 19 10:55:03 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+Info (215049): Average toggle rate for this design is 3.687 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 215.98 mW
+Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 226 warnings
+    Info: Peak virtual memory: 849 megabytes
+    Info: Processing ended: Tue Apr 24 14:55:47 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 

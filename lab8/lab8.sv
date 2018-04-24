@@ -15,7 +15,7 @@
 
 module lab8( input               CLOCK_50,
              input        [3:0]  KEY,          //bit 0 is set up as Reset
-             output logic [6:0]  HEX0, HEX1,
+             output logic [6:0]  HEX0, HEX1,HEX2, HEX3, HEX4, HEX5, HEX6,
              // VGA Interface 
              output logic [7:0]  VGA_R,        //VGA Red
                                  VGA_G,        //VGA Green
@@ -65,10 +65,10 @@ module lab8( input               CLOCK_50,
     logic hpi_r, hpi_w, hpi_cs, hpi_reset; */
     
 	 logic frame_clk;
-	 //logic is_ball;
 	 logic [9:0] DrawX, DrawY;
-	 //p1x, p1y;
-	 //logic [0:4978][0:23] p1_stand;
+	 logic [9:0] p1x, p1y;
+	 logic [9:0] action, direction;
+	 
 	 logic is_player1;
 	 
 	 logic [18:0] read_address;
@@ -78,8 +78,10 @@ module lab8( input               CLOCK_50,
 	 logic [7:0] keyCode; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
 	 logic press;     //press indicates whether the key was pressed or released.
 	 
+	 
+	 
+	 
 	 //Instantiaze PS/2
-
 	 keyboard      keyB(
 								.Clk(CLOCK_50),
 								.psClk(PS2_CLK), 
@@ -102,10 +104,7 @@ module lab8( input               CLOCK_50,
 	 
 	 
 	 
-	 
-	 
-	 
-	 
+	
 	 
     // TODO: Fill in the connections for the rest of the modules 
     VGA_controller vga_controller_instance(
@@ -125,9 +124,8 @@ module lab8( input               CLOCK_50,
     color_mapper color_instance(
 										.DrawX(DrawX),		//might not be write
 										.DrawY(DrawY),		//
-										//.p1_stand(p1_stand),
 										.p1_w(10'd60),
-										.p1_h(10'd83),
+										.p1_h(10'd73),
 										.is_player1(is_player1),
 										.p1x(p1x),
 										.p1y(p1y),
@@ -135,7 +133,9 @@ module lab8( input               CLOCK_50,
 										.VGA_G(VGA_G), 
 										.VGA_B(VGA_B),
 										.data(data_Out),
-										.read_address(read_address)
+										.read_address(read_address),
+										.action(action),
+										.direction(direction)
 										);   
 		
 		
@@ -148,15 +148,18 @@ module lab8( input               CLOCK_50,
 		
 		
 		player1       		p1(
-									.frame_clk(frame_clk),
-									.Reset(Reset),
+									.frame_clk(VGA_VS),
+									.Reset(Reset_h),
 									.Clk(Clk),
-									//.p1x(p1x),
-									//.ply(p1y),
+									.p1x(p1x),
+									.p1y(p1y),
 									.is_player(is_player1),
 									.keycode(keyCode),
 									.DrawX(DrawX),
-									.DrawY(DrawY)
+									.DrawY(DrawY),
+									.press(press),
+									.action(action),
+									.direction(direction)
 									);
 		
 		
@@ -198,6 +201,8 @@ module lab8( input               CLOCK_50,
     // Display keycode on hex display
     HexDriver hex_inst_0 (keyCode[3:0], HEX0);
     HexDriver hex_inst_1 (keyCode[7:4], HEX1);
+	 HexDriver hex_inst_2 (p1x[9:5], HEX2);
+    HexDriver hex_inst_3 (p1x[4:1], HEX3);
     
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

@@ -20,14 +20,15 @@ module  color_mapper ( //input              is_ball,            // Whether curre
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
                        input 			[9:0] p1x, p1y,
-							  //input			[0:4978][0:23] p1_stand, //sprite standing
 							  input        [23:0] data,
+							  input 			[9:0] action, direction,
 							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
 							  output logic [18:0] read_address
                      );
     
     logic [7:0] Red, Green, Blue;
-	 //logic [0:23] color;
+	 
+	 logic [9:0] tot_w;
 	 
 	 
     
@@ -35,17 +36,65 @@ module  color_mapper ( //input              is_ball,            // Whether curre
     assign VGA_R = Red;
     assign VGA_G = Green;
     assign VGA_B = Blue;
+	 
+	 assign tot_w = 10'd547;
+	 
+	 //always_ff @ ()
     
 	 
     // Assign color based on is_ball signal
     always_comb
     begin
-		read_address = (DrawX-p1x) + (DrawY-p1y)*p1_w;
+	 if(action == 10'd9)
+	 begin
+		if(direction == 10'd1) 
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w;
+		end
+		else //flip sprite
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w;
+		end
+	  end
+	  
+	 else if(action == 10'd0)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w;
+		end
+	  end
+	  
+	 else if(action == 10'd1)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*p1_w;
+		end
+	  end
+	  else
+		read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w; //defualt standing... sprite #9
+			
         if (is_player1 == 1'b1)
         begin
+				/*
+				 if(action == 10'd1)
+				   begin
+						
+					end
+				
+				*/
             //get color from sprite
 				//if color is green, pick the background color
-				if(data == 24'h33d42)
+				/*if(data == 24'h33d42)
 				begin
 					Red = 8'hff; 
 					Green = 8'hff;
@@ -57,14 +106,27 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 						Red = data[23:16];
 						Green = data[15:8];
 						Blue = data[7:0];
+				end*/
+				
+				if(data == 24'hff0ff)
+				begin
+					Red = 8'hff; 
+					Green = 8'hff;
+					Blue = 8'hff;
 				end
-				/*
+				//otherwise get the color of the sprite
+				/*else
+				begin
+						Red = data[23:16];
+						Green = data[15:8];
+						Blue = data[7:0];
+				end*/
 				else
 				begin
 						Red = 8'h00;
 						Green = 8'h00;
 						Blue = 8'h00;
-				end*/
+				end
 				
         end
         else 
