@@ -39,7 +39,6 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 
 	 assign tot_w = 10'd547;
 	 
-	 //always_ff @ ()
     
 	 
     // Assign color based on is_ball signal
@@ -80,6 +79,103 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*p1_w;
 		end
 	  end
+	  
+	  else if(action == 10'd2)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 2*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 2*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd3)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 3*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 3*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd4)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 4*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 4*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd5)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 4*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 4*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd6)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 5*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 5*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd7)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 6*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 6*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd8)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 7*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 7*p1_h*p1_w;
+		end
+	  end
+	  
+	  else if(action == 10'd9)
+	 begin
+		if(direction == 10'd1) //flip sprite
+		begin
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + 8*p1_h*p1_w;
+		end
+		else //direction == 10'd1
+		begin
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + 8*p1_h*p1_w;
+		end
+	  end
+	  
 	  else
 		read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w; //defualt standing... sprite #9
 			

@@ -28,7 +28,6 @@ action = 1
 action = 9
 
 
-
 */
 
 
@@ -40,7 +39,6 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 
 
 
-			//do we need this???
     // Detect rising edge of frame_clk
     logic frame_clk_delayed, frame_clk_rising_edge;
     always_ff @ (posedge Clk) begin
@@ -50,7 +48,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 
 	 always_ff @ (posedge Clk)
 	 begin
-		if(counter == 10'd60)
+		if(counter == 10'd900)
 			counter <= 10'd0;
 		else
 			counter <= counter + 10'd1;
@@ -80,8 +78,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  direction <= dir_in;
 			  action <= act_in;
 			  act <= act_in;
-			  //px_pos <= px_c;
-			  //py_pos <= py_center; 
+		
         end
     end
 	 
@@ -98,10 +95,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
         begin
-            // Be careful when using comparators with "logic" datatype because compiler treats 
-            //   both sides of the operator as UNSIGNED numbers.
-            // e.g. Ball_Y_Pos - Ball_Size <= Ball_Y_Min 
-            // If Ball_Y_Pos is 0, then Ball_Y_Pos - Ball_Size will not be -4, but rather a large positive number.
+            
 				
 				
 				
@@ -126,9 +120,23 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 
 				  if(act == 10'd9)
 					act_in = 10'd0;
-				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) && counter > 20)
+				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) ) 
 					act_in = 10'd1;
-				  else if(act == 10'd1 && px_mot == (~(px_step) + 1'b1) && counter > 40)
+				  else if(act == 10'd1 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd2;
+				  else if(act == 10'd2 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd3;
+				  else if(act == 10'd3 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd4;
+					else if(act == 10'd4 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd5;
+					else if(act == 10'd5 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd6;
+					else if(act == 10'd6 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd7;
+					else if(act == 10'd7 && px_mot == (~(px_step) + 1'b1) ) 
+					act_in = 10'd8;
+					else if(act == 10'd8 && px_mot == (~(px_step) + 1'b1) ) 
 					act_in = 10'd9;
 				  else
 					act_in = act;
@@ -143,9 +151,23 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 				  
 				  if(act == 10'd9)
 					act_in = 10'd0;
-				  else if(act == 10'd0 && px_mot == px_step  && counter > 20)
+				  else if(act == 10'd0 && px_mot == px_step )
 					act_in = 10'd1;
-				  else if(act == 10'd1 && px_mot == px_step && counter > 40)
+				  else if(act == 10'd1 && px_mot == px_step )
+					act_in = 10'd2;
+					else if(act == 10'd2 && px_mot == px_step )
+					act_in = 10'd3;
+					else if(act == 10'd3 && px_mot == px_step )
+					act_in = 10'd4;
+					else if(act == 10'd4 && px_mot == px_step )
+					act_in = 10'd5;
+					else if(act == 10'd5 && px_mot == px_step )
+					act_in = 10'd6;
+					else if(act == 10'd6 && px_mot == px_step )
+					act_in = 10'd7;
+					else if(act == 10'd7 && px_mot == px_step )
+					act_in = 10'd8;
+					else if(act == 10'd8 && px_mot == px_step )
 					act_in = 10'd9;
 				  else
 					act_in = act;
