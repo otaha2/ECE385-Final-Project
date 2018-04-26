@@ -14,7 +14,7 @@ module  frameROM
 );
 
 // mem has width of 24 bits and a total of 4980 addresses
-logic [23:0] stick_figure [0:80408];
+logic [23:0] stick_figure [0:75599];
 
 initial
 begin

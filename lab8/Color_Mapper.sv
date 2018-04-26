@@ -37,7 +37,7 @@ module  color_mapper ( //input              is_ball,            // Whether curre
     assign VGA_G = Green;
     assign VGA_B = Blue;
 	 
-	 assign tot_w = 10'd547;
+	 assign tot_w = 10'd540;
 	 
     
 	 
@@ -48,11 +48,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction == 10'd1) 
 		begin
-			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w;
+			read_address = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 2*p1_w;
 		end
 		else //flip sprite
 		begin
-			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w;
+			read_address = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 2*p1_w;
 		end
 	  end
 	  

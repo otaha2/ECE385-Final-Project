@@ -17,7 +17,7 @@ parameter [9:0] py_max = 10'd479;     // Bottommost point on the Y axis
 parameter [9:0] px_step = 10'd5;      // Step size on the X axis
 parameter [9:0] py_step = 10'd5;      // Step size on the Y axis
 parameter [9:0] Player_Width = 10'd60;        // Player Width
-parameter [9:0] Player_Height = 10'd73;		//Player Height
+parameter [9:0] Player_Height = 10'd70;		//Player Height
 
 
 /*
@@ -118,7 +118,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 				 if(keycode == 8'h1c && press == 1'b1)			//a, left!!
 				  begin
 				  //counter = counter + 10'd1;
-					counter_in = counter + 1;
+					counter_in = counter + 10'd1;
 				  if(act == 10'd9)
 					act_in = 10'd0;
 				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2)
@@ -158,14 +158,14 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					end
 					else if(act == 10'd7 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
 					begin
-					act_in = 10'd8;
-					counter_in = 10'd0;
-					end
-					else if(act == 10'd8 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
-					begin
 					act_in = 10'd9;
 					counter_in = 10'd0;
 					end
+					/*else if(act == 10'd8 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					begin
+					act_in = 10'd9;
+					counter_in = 10'd0;
+					end*/
 					else
 					begin
 					act_in = act;
@@ -177,30 +177,59 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 				  end
 				 else if(keycode == 8'h23 && press == 1'b1)			//d, Right!!
 				  begin
-				  //counter = counter + 10'd1;
+				  counter_in = counter + 10'd1;
 				  
 				  if(act == 10'd9)
 					act_in = 10'd0;
-				  else if(act == 10'd0 && px_mot == px_step )
+				  else if(act == 10'd0 && px_mot == px_step && counter == 10'd2)
+				  begin
 					act_in = 10'd1;
-				  else if(act == 10'd1 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+				  else if(act == 10'd1 && px_mot == px_step && counter == 10'd2)
+				  begin
 					act_in = 10'd2;
-					else if(act == 10'd2 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd2 && px_mot == px_step && counter == 10'd2)
+					begin
 					act_in = 10'd3;
-					else if(act == 10'd3 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd3 && px_mot == px_step && counter == 10'd2)
+					begin
 					act_in = 10'd4;
-					else if(act == 10'd4 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd4 && px_mot == px_step && counter == 10'd2)
+					begin
 					act_in = 10'd5;
-					else if(act == 10'd5 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd5 && px_mot == px_step && counter == 10'd2)
+					begin
 					act_in = 10'd6;
-					else if(act == 10'd6 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd6 && px_mot == px_step && counter == 10'd2)
+					begin
 					act_in = 10'd7;
-					else if(act == 10'd7 && px_mot == px_step )
-					act_in = 10'd8;
-					else if(act == 10'd8 && px_mot == px_step )
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd7 && px_mot == px_step && counter == 10'd2)
+					begin
 					act_in = 10'd9;
+					counter_in = 10'd0;
+					end
+					/*else if(act == 10'd8 && px_mot == px_step && counter == 10'd2) 
+					begin
+					act_in = 10'd9;
+					counter_in = 10'd0;
+					end*/
 				  else
+				  begin
 					act_in = act;
+					end
 				  
 					py_mot_in = 10'd0;
 					px_mot_in = px_step;
@@ -220,6 +249,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					px_mot_in = 10'd0; //px_mot;
 					dir_in = dir;
 					act_in = 10'd9;
+					counter_in = 10'd0;
 					
 				  end
 				
