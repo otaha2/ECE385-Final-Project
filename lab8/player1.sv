@@ -2,15 +2,15 @@ module player1(input frame_clk, Reset, Clk, press,
 					input [7:0] keycode,
 					input [9:0] DrawX, DrawY,
 					output logic [9:0] p1x, p1y,
-					output logic is_player,
-					output logic [9:0] action, direction //1 is right, 0 is left. used to know whether or not to flip the sprite 
+					output logic is_player1,
+					output logic [9:0] action1, direction1 //1 is right, 0 is left. used to know whether or not to flip the sprite 
 					);
 					
 					
 parameter [9:0] px_center = 10'd280;
 parameter [9:0] py_center = 10'd400;
 
-parameter [9:0] px_min = 10'd0;       // Leftmost point on the X axis
+parameter [9:0] px_min = 10'd1;       // Leftmost point on the X axis
 parameter [9:0] px_max = 10'd639;     // Rightmost point on the X axis
 parameter [9:0] py_min = 10'd1;       // Topmost point on the Y axis
 parameter [9:0] py_max = 10'd479;     // Bottommost point on the Y axis
@@ -25,7 +25,15 @@ ACTION KEY
 walking:
 action = 0
 action = 1
+action = ...
 action = 9
+
+punch:
+action = 9
+action = 12
+		 = 13
+		 = 14
+		 = 11
 
 
 */
@@ -75,8 +83,8 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  p1x <= px_pos_in ;
 			  p1y <= py_pos_in; 
 			  dir <= dir_in;
-			  direction <= dir_in;
-			  action <= act_in;
+			  direction1 <= dir_in;
+			  action1 <= act_in;
 			  act <= act_in;
 		
         end
@@ -175,7 +183,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					px_mot_in = (~(px_step) + 1'b1);
 					dir_in = 10'd0;
 				  end
-				 else if(keycode == 8'h23 && press == 1'b1)			//d, Right!!
+				 else if(keycode == 8'h23 && press == 1'b1)			//d, Right!! 
 				  begin
 				  counter_in = counter + 10'd1;
 				  
@@ -236,6 +244,41 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					dir_in = 10'd1;
 					
 				  end
+				 else if(keycode == 8'h29 && press == 1'b1) //punch
+				 begin
+					counter_in = counter + 10'd1;
+					
+					if(act == 10'd9)
+					act_in = 10'd12;
+					else if(act == 10'd12 && counter == 10'd4)
+					begin
+					act_in = 10'd13;
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd13 && counter == 10'd4)
+					begin
+					act_in = 10'd14;
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd14 && counter == 10'd4)
+					begin
+					act_in = 10'd11;
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd11 && counter == 10'd4)
+					begin
+					act_in = 10'd9;
+					counter_in = 10'd0;
+					end
+					else
+					begin
+					act_in = act;
+					end
+					
+					px_mot_in = 10'd0;
+					py_mot_in = 10'd0;
+					dir_in = dir;
+				 end
 				 else
 				  begin
 					/*if(py_mot_in == (~(py_step) + 1'b1)) //if the last motion was an up motion, the player must come back down (gravity)
@@ -268,12 +311,12 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 				  end
            
 				//X boundary conditions 
-				else if( px_pos + Player_Width >= px_max )  // Player is at the right edge, stop moving
+				else if( px_pos + Player_Width >= px_max && px_mot_in == px_step)  // Player is at the right edge, stop moving
 				   begin
                 px_mot_in = 10'd0;  
 					 py_mot_in = 10'd0; 
 					end
-			   else if ( px_pos <= px_min )  // Ball is at the left edge, stop moving
+			   else if (px_pos - Player_Width <= px_min && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving
 				   begin
                 px_mot_in = 10'd0;
 					 py_mot_in = 10'd0; 
@@ -296,9 +339,9 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 	 assign Height = Player_Height;
     always_comb begin
         if ( (DrawX >= px_pos) && (DrawX <= (px_pos + Width)) && (DrawY >= py_pos) && (DrawY <= py_pos + Height) ) 
-            is_player = 1'b1;
+            is_player1 = 1'b1;
         else
-            is_player = 1'b0;
+            is_player1 = 1'b0;
     end
 	 
 	 

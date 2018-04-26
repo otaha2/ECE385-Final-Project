@@ -66,13 +66,13 @@ module lab8( input               CLOCK_50,
     
 	 logic frame_clk;
 	 logic [9:0] DrawX, DrawY;
-	 logic [9:0] p1x, p1y;
-	 logic [9:0] action, direction;
+	 logic [9:0] p1x, p1y, p2x, p2y;
+	 logic [9:0] action1, direction1, action2, direction2;
 	 
-	 logic is_player1;
+	 logic is_player1, is_player2;
 	 
-	 logic [18:0] read_address;
-	 logic [23:0] data_Out;
+	 logic [18:0] read_address1, read_address2;
+	 logic [23:0] data_Out1, data_Out2;
 	
 	 
 	 logic [7:0] keyCode; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
@@ -127,15 +127,22 @@ module lab8( input               CLOCK_50,
 										.p1_w(10'd60),
 										.p1_h(10'd70),
 										.is_player1(is_player1),
+										.is_player2(is_player2),
 										.p1x(p1x),
 										.p1y(p1y),
+										.p2x(p2x),
+										.p2y(p2y),
 										.VGA_R(VGA_R),
 										.VGA_G(VGA_G), 
 										.VGA_B(VGA_B),
-										.data(data_Out),
-										.read_address(read_address),
-										.action(action),
-										.direction(direction)
+										.data1(data_Out1),
+										.read_address1(read_address1),
+										.data2(data_Out2),
+										.read_address2(read_address2),
+										.action1(action1),
+										.action2(action2),
+										.direction1(direction1),
+										.direction2(direction2)
 										);   
 		
 		
@@ -153,21 +160,40 @@ module lab8( input               CLOCK_50,
 									.Clk(Clk),
 									.p1x(p1x),
 									.p1y(p1y),
-									.is_player(is_player1),
+									.is_player1(is_player1),
 									.keycode(keyCode),
 									.DrawX(DrawX),
 									.DrawY(DrawY),
 									.press(press),
-									.action(action),
-									.direction(direction)
+									.action1(action1),
+									.direction1(direction1)
 									);
+									
+		player2       		p2(
+									.frame_clk(VGA_VS),
+									.Reset(Reset_h),
+									.Clk(Clk),
+									.p2x(p2x),
+									.p2y(p2y),
+									.is_player2(is_player2),
+									.keycode(keyCode),
+									.DrawX(DrawX),
+									.DrawY(DrawY),
+									.press(press),
+									.action2(action2),
+									.direction2(direction2)
+									);
+									
+									
 		
 		
 		
 		frameROM 			 rom(
-									.read_address(read_address),
+									.read_address1(read_address1),
+									.read_address2(read_address2),
 									.Clk(Clk),
-									.data_Out(data_Out)
+									.data_Out1(data_Out1),
+									.data_Out2(data_Out2)
 									);
 		
 		
@@ -203,6 +229,7 @@ module lab8( input               CLOCK_50,
     HexDriver hex_inst_1 (keyCode[7:4], HEX1);
 	 HexDriver hex_inst_2 (p1x[9:5], HEX2);
     HexDriver hex_inst_3 (p1x[4:1], HEX3);
+	 HexDriver hex_inst_4 (press, HEX4);
     
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

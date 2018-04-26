@@ -7,10 +7,10 @@
 module  frameROM
 (
 
-		input [18:0] read_address,
+		input [18:0] read_address1, read_address2,
 		input Clk,
 
-		output logic [23:0] data_Out
+		output logic [23:0] data_Out1, data_Out2
 );
 
 // mem has width of 24 bits and a total of 4980 addresses
@@ -25,7 +25,8 @@ end
 
 always_ff @ (posedge Clk) 
 begin
-	data_Out <= stick_figure[read_address];
+	data_Out1 <= stick_figure[read_address1];
+	data_Out2 <= stick_figure[read_address2];
 	//data_Out <= stand1[read_address];
 end
 

@@ -80,11 +80,11 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  py_pos <= py_pos_in;
 			  px_mot <= px_mot_in;
 			  py_mot <= py_mot_in; 
-			  p1x <= px_pos_in ;
-			  p1y <= py_pos_in; 
+			  p2x <= px_pos_in ;
+			  p2y <= py_pos_in; 
 			  dir <= dir_in;
-			  direction <= dir_in;
-			  action <= act_in;
+			  direction2 <= dir_in;
+			  action2 <= act_in;
 			  act <= act_in;
 		
         end
@@ -123,7 +123,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					//Ball_Y_Motion_in = Ball_Y_Step;
 				  //end
 				  
-				 if(keycode == 8'h1c && press == 1'b1)			//a, left!!
+				 if(keycode == 8'h6b && press == 1'b1)			//a, left!!
 				  begin
 				  //counter = counter + 10'd1;
 					counter_in = counter + 10'd1;
@@ -183,7 +183,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					px_mot_in = (~(px_step) + 1'b1);
 					dir_in = 10'd0;
 				  end
-				 else if(keycode == 8'h23 && press == 1'b1)			//d, Right!! 
+				 else if(keycode == 8'h74 && press == 1'b1)			//d, Right!! 
 				  begin
 				  counter_in = counter + 10'd1;
 				  
@@ -244,7 +244,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					dir_in = 10'd1;
 					
 				  end
-				 else if(keycode == 8'h29 && press == 1'b1) //punch
+				 else if(keycode == 8'h70 && press == 1'b1) //punch
 				 begin
 					counter_in = counter + 10'd1;
 					
@@ -339,9 +339,9 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 	 assign Height = Player_Height;
     always_comb begin
         if ( (DrawX >= px_pos) && (DrawX <= (px_pos + Width)) && (DrawY >= py_pos) && (DrawY <= py_pos + Height) ) 
-            is_player = 1'b1;
+            is_player2 = 1'b1;
         else
-            is_player = 1'b0;
+            is_player2 = 1'b0;
     end
 	 
 	 
