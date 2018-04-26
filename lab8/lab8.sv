@@ -125,7 +125,7 @@ module lab8( input               CLOCK_50,
 										.DrawX(DrawX),		//might not be write
 										.DrawY(DrawY),		//
 										.p1_w(10'd60),
-										.p1_h(10'd80),
+										.p1_h(10'd70),
 										.is_player1(is_player1),
 										.p1x(p1x),
 										.p1y(p1y),

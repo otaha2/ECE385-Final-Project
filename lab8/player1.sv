@@ -33,7 +33,7 @@ action = 9
 
 
 logic [9:0] px_pos, py_pos, px_mot, py_mot;
-logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in, counter;
+logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in, counter, counter_in;
 
 //assign counter = 10'd0;
 
@@ -48,10 +48,10 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 
 	 always_ff @ (posedge Clk)
 	 begin
-		if(counter == 10'd900)
+		if(Reset)
 			counter <= 10'd0;
 		else
-			counter <= counter + 10'd1;
+			counter <= counter_in;
 	 end
 	 
 	 
@@ -91,6 +91,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
         py_mot_in = py_mot;
 		  dir_in = dir;
 		  act_in = act;
+		  counter_in = counter;
         
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
@@ -117,29 +118,58 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 				 if(keycode == 8'h1c && press == 1'b1)			//a, left!!
 				  begin
 				  //counter = counter + 10'd1;
-
+					counter_in = counter + 1;
 				  if(act == 10'd9)
 					act_in = 10'd0;
-				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) ) 
+				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2)
+				 begin 
 					act_in = 10'd1;
-				  else if(act == 10'd1 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+				  else if(act == 10'd1 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+				  begin
 					act_in = 10'd2;
-				  else if(act == 10'd2 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+				  else if(act == 10'd2 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+				  begin
 					act_in = 10'd3;
-				  else if(act == 10'd3 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+				  else if(act == 10'd3 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+				  begin
 					act_in = 10'd4;
-					else if(act == 10'd4 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd4 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					begin
 					act_in = 10'd5;
-					else if(act == 10'd5 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd5 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					begin
 					act_in = 10'd6;
-					else if(act == 10'd6 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd6 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					begin
 					act_in = 10'd7;
-					else if(act == 10'd7 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd7 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					begin
 					act_in = 10'd8;
-					else if(act == 10'd8 && px_mot == (~(px_step) + 1'b1) ) 
+					counter_in = 10'd0;
+					end
+					else if(act == 10'd8 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					begin
 					act_in = 10'd9;
-				  else
+					counter_in = 10'd0;
+					end
+					else
+					begin
 					act_in = act;
+					end
 				  
 					py_mot_in = 10'd0;
 					px_mot_in = (~(px_step) + 1'b1);
