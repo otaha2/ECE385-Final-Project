@@ -1,4 +1,4 @@
-module player1(input frame_clk, Reset, Clk, press,
+module player2(input frame_clk, Reset, Clk, press,
 					input [7:0] keycode,
 					input [9:0] DrawX, DrawY,
 					output logic [9:0] p2x, p2y,

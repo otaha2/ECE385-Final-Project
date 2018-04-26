@@ -16,7 +16,7 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( //input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
-							  input			is_player1, is_player2
+							  input			is_player1, is_player2,
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
                        input 			[9:0] p1x, p1y, p2x, p2y,
