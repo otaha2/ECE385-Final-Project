@@ -1,5 +1,5 @@
 PowerPlay Power Analyzer report for lab8
-Wed Apr 25 23:06:59 2018
+Thu Apr 26 10:52:39 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -66,17 +66,17 @@ agreement for further details.
 +-------------------------------------------------------------------------------------------+
 ; PowerPlay Power Analyzer Summary                                                          ;
 +----------------------------------------+--------------------------------------------------+
-; PowerPlay Power Analyzer Status        ; Successful - Wed Apr 25 23:06:59 2018            ;
+; PowerPlay Power Analyzer Status        ; Successful - Thu Apr 26 10:52:39 2018            ;
 ; Quartus II 64-Bit Version              ; 15.0.0 Build 145 04/22/2015 SJ Web Edition       ;
 ; Revision Name                          ; lab8                                             ;
 ; Top-level Entity Name                  ; lab8                                             ;
 ; Family                                 ; Cyclone IV E                                     ;
 ; Device                                 ; EP4CE115F29C7                                    ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 216.82 mW                                        ;
-; Core Dynamic Thermal Power Dissipation ; 38.47 mW                                         ;
-; Core Static Thermal Power Dissipation  ; 102.05 mW                                        ;
-; I/O Thermal Power Dissipation          ; 76.29 mW                                         ;
+; Total Thermal Power Dissipation        ; 239.53 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 54.82 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 102.27 mW                                        ;
+; I/O Thermal Power Dissipation          ; 82.44 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -164,7 +164,7 @@ agreement for further details.
 ;     VCCD                                    ; 1.20 V                    ;
 ;     2.5 V I/O Standard                      ; 2.5 V                     ;
 ;                                             ;                           ;
-; Auto computed junction temperature          ; 26.4 degrees Celsius      ;
+; Auto computed junction temperature          ; 26.6 degrees Celsius      ;
 ;     Ambient temperature                     ; 25.0 degrees Celsius      ;
 ;     Junction-to-Case thermal resistance     ; 3.90 degrees Celsius/Watt ;
 ;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt ;
@@ -188,48 +188,53 @@ agreement for further details.
 ; Block Type                 ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
 +----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 ; PLL                        ; 1.45 mW                           ; 1.45 mW                     ; --                             ; 0.00 mW                       ;    3.125                                                  ;
-; M9K                        ; 8.60 mW                           ; 7.73 mW                     ; --                             ; 0.86 mW                       ;    4.168                                                  ;
+; M9K                        ; 17.02 mW                          ; 15.16 mW                    ; --                             ; 1.86 mW                       ;    4.175                                                  ;
 ; Embedded multiplier block  ; 0.09 mW                           ; 0.09 mW                     ; --                             ; 0.00 mW                       ;    1.172                                                  ;
-; Embedded multiplier output ; 0.01 mW                           ; 0.00 mW                     ; --                             ; 0.01 mW                       ;    1.563                                                  ;
-; Combinational cell         ; 6.63 mW                           ; 1.13 mW                     ; --                             ; 5.49 mW                       ;    3.869                                                  ;
-; Clock control block        ; 20.15 mW                          ; 0.00 mW                     ; --                             ; 20.15 mW                      ;   53.125                                                  ;
-; Register cell              ; 1.50 mW                           ; 0.72 mW                     ; --                             ; 0.78 mW                       ;    5.513                                                  ;
-; I/O                        ; 46.35 mW                          ; 1.74 mW                     ; 44.55 mW                       ; 0.06 mW                       ;    1.811                                                  ;
+; Embedded multiplier output ; 0.02 mW                           ; 0.00 mW                     ; --                             ; 0.02 mW                       ;    1.563                                                  ;
+; Combinational cell         ; 13.42 mW                          ; 1.92 mW                     ; --                             ; 11.50 mW                      ;    3.539                                                  ;
+; Clock control block        ; 20.58 mW                          ; 0.00 mW                     ; --                             ; 20.58 mW                      ;   53.125                                                  ;
+; Register cell              ; 2.18 mW                           ; 0.98 mW                     ; --                             ; 1.20 mW                       ;    5.648                                                  ;
+; I/O                        ; 52.50 mW                          ; 5.44 mW                     ; 47.01 mW                       ; 0.06 mW                       ;    4.370                                                  ;
 +----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                ;
-+---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------+
-; Compilation Hierarchy Node                  ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                    ;
-+---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------+
-; |lab8                                       ; 84.76 mW (66.37 mW)                  ; 12.86 mW (1.77 mW)              ; 44.55 mW (44.55 mW)               ; 27.35 mW (20.05 mW)               ; |lab8                                                                                                  ;
-;     |hard_block:auto_generated_inst         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|hard_block:auto_generated_inst                                                                   ;
-;     |color_mapper:color_instance            ; 5.36 mW (5.26 mW)                    ; 0.64 mW (0.56 mW)               ; --                                ; 4.72 mW (4.71 mW)                 ; |lab8|color_mapper:color_instance                                                                      ;
-;         |lpm_mult:Mult21                    ; 0.10 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult21                                                      ;
-;             |mult_pgt:auto_generated        ; 0.10 mW (0.10 mW)                    ; 0.09 mW (0.09 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult21|mult_pgt:auto_generated                              ;
-;     |HexDriver:hex_inst_0                   ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_0                                                                             ;
-;     |HexDriver:hex_inst_1                   ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_1                                                                             ;
-;     |HexDriver:hex_inst_2                   ; 0.05 mW (0.05 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|HexDriver:hex_inst_2                                                                             ;
-;     |HexDriver:hex_inst_3                   ; 0.05 mW (0.05 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|HexDriver:hex_inst_3                                                                             ;
-;     |keyboard:keyB                          ; 0.19 mW (0.17 mW)                    ; 0.13 mW (0.11 mW)               ; --                                ; 0.06 mW (0.05 mW)                 ; |lab8|keyboard:keyB                                                                                    ;
-;         |Dreg:Dreg_instance1                ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance1                                                                ;
-;         |Dreg:Dreg_instance2                ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                ;
-;         |reg_11:reg_A                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_A                                                                       ;
-;         |reg_11:reg_B                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_B                                                                       ;
-;     |player1:p1                             ; 0.53 mW (0.53 mW)                    ; 0.33 mW (0.33 mW)               ; --                                ; 0.20 mW (0.20 mW)                 ; |lab8|player1:p1                                                                                       ;
-;     |player2:p2                             ; 0.96 mW (0.96 mW)                    ; 0.49 mW (0.49 mW)               ; --                                ; 0.46 mW (0.46 mW)                 ; |lab8|player2:p2                                                                                       ;
-;     |frameROM:rom                           ; 9.31 mW (0.00 mW)                    ; 7.94 mW (0.00 mW)               ; --                                ; 1.37 mW (0.00 mW)                 ; |lab8|frameROM:rom                                                                                     ;
-;         |altsyncram:stick_figure_rtl_0      ; 9.31 mW (0.00 mW)                    ; 7.94 mW (0.00 mW)               ; --                                ; 1.37 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0                                                       ;
-;             |altsyncram_2q61:auto_generated ; 9.31 mW (8.82 mW)                    ; 7.94 mW (7.77 mW)               ; --                                ; 1.37 mW (1.05 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_2q61:auto_generated                        ;
-;                 |mux_3qb:mux2               ; 0.28 mW (0.28 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_2q61:auto_generated|mux_3qb:mux2           ;
-;                 |decode_u9a:rden_decode     ; 0.21 mW (0.21 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.20 mW (0.20 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_2q61:auto_generated|decode_u9a:rden_decode ;
-;     |vga_clk:vga_clk_instance               ; 1.60 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.15 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance                                                                         ;
-;         |altpll:altpll_component            ; 1.60 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.15 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ;
-;             |vga_clk_altpll:auto_generated  ; 1.60 mW (1.60 mW)                    ; 1.45 mW (1.45 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                   ;
-;     |VGA_controller:vga_controller_instance ; 0.27 mW (0.27 mW)                    ; 0.07 mW (0.07 mW)               ; --                                ; 0.20 mW (0.20 mW)                 ; |lab8|VGA_controller:vga_controller_instance                                                           ;
-+---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                  ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                  ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                      ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------+
+; |lab8                                       ; 107.26 mW (72.94 mW)                 ; 25.04 mW (5.45 mW)              ; 47.01 mW (47.01 mW)               ; 35.21 mW (20.48 mW)               ; |lab8                                                                                                    ;
+;     |hard_block:auto_generated_inst         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|hard_block:auto_generated_inst                                                                     ;
+;     |color_mapper:color_instance            ; 11.52 mW (11.41 mW)                  ; 1.19 mW (1.10 mW)               ; --                                ; 10.32 mW (10.30 mW)               ; |lab8|color_mapper:color_instance                                                                        ;
+;         |lpm_mult:Mult21                    ; 0.11 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult21                                                        ;
+;             |mult_pgt:auto_generated        ; 0.11 mW (0.11 mW)                    ; 0.09 mW (0.09 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult21|mult_pgt:auto_generated                                ;
+;     |HexDriver:hex_inst_0                   ; 0.05 mW (0.05 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|HexDriver:hex_inst_0                                                                               ;
+;     |HexDriver:hex_inst_1                   ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_1                                                                               ;
+;     |HexDriver:hex_inst_2                   ; 0.07 mW (0.07 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.06 mW (0.06 mW)                 ; |lab8|HexDriver:hex_inst_2                                                                               ;
+;     |HexDriver:hex_inst_3                   ; 0.08 mW (0.08 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.07 mW (0.07 mW)                 ; |lab8|HexDriver:hex_inst_3                                                                               ;
+;     |HexDriver:hex_inst_5                   ; 0.05 mW (0.05 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|HexDriver:hex_inst_5                                                                               ;
+;     |HexDriver:hex_inst_6                   ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_6                                                                               ;
+;     |keyboard:keyB                          ; 0.17 mW (0.15 mW)                    ; 0.12 mW (0.11 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |lab8|keyboard:keyB                                                                                      ;
+;         |Dreg:Dreg_instance1                ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance1                                                                  ;
+;         |Dreg:Dreg_instance2                ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                  ;
+;         |reg_11:reg_A                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_A                                                                         ;
+;         |reg_11:reg_B                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_B                                                                         ;
+;     |KeyPress:keykey                        ; 0.13 mW (0.13 mW)                    ; 0.09 mW (0.09 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|KeyPress:keykey                                                                                    ;
+;     |player1:p1                             ; 1.02 mW (1.02 mW)                    ; 0.58 mW (0.58 mW)               ; --                                ; 0.44 mW (0.44 mW)                 ; |lab8|player1:p1                                                                                         ;
+;     |player2:p2                             ; 0.89 mW (0.89 mW)                    ; 0.47 mW (0.47 mW)               ; --                                ; 0.42 mW (0.42 mW)                 ; |lab8|player2:p2                                                                                         ;
+;     |frameROM:rom                           ; 18.34 mW (0.00 mW)                   ; 15.56 mW (0.00 mW)              ; --                                ; 2.78 mW (0.00 mW)                 ; |lab8|frameROM:rom                                                                                       ;
+;         |altsyncram:stick_figure_rtl_0      ; 18.34 mW (0.00 mW)                   ; 15.56 mW (0.00 mW)              ; --                                ; 2.78 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0                                                         ;
+;             |altsyncram_aoo1:auto_generated ; 18.34 mW (17.40 mW)                  ; 15.56 mW (15.22 mW)             ; --                                ; 2.78 mW (2.18 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated                          ;
+;                 |mux_3qb:mux4               ; 0.27 mW (0.27 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|mux_3qb:mux4             ;
+;                 |mux_3qb:mux5               ; 0.27 mW (0.27 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|mux_3qb:mux5             ;
+;                 |decode_u9a:rden_decode_a   ; 0.17 mW (0.17 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.16 mW (0.16 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|decode_u9a:rden_decode_a ;
+;                 |decode_u9a:rden_decode_b   ; 0.23 mW (0.23 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.23 mW (0.23 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|decode_u9a:rden_decode_b ;
+;     |vga_clk:vga_clk_instance               ; 1.60 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.15 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance                                                                           ;
+;         |altpll:altpll_component            ; 1.60 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.15 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                   ;
+;             |vga_clk_altpll:auto_generated  ; 1.60 mW (1.60 mW)                    ; 1.45 mW (1.45 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                     ;
+;     |VGA_controller:vga_controller_instance ; 0.32 mW (0.32 mW)                    ; 0.07 mW (0.07 mW)               ; --                                ; 0.25 mW (0.25 mW)                 ; |lab8|VGA_controller:vga_controller_instance                                                             ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
@@ -240,8 +245,8 @@ agreement for further details.
 +-----------------+-----------------------+--------------------------+
 ; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
 +-----------------+-----------------------+--------------------------+
-; CLOCK_50        ; 50.00                 ; 38.38                    ;
-; No clock domain ; 0.00                  ; 0.10                     ;
+; CLOCK_50        ; 50.00                 ; 54.71                    ;
+; No clock domain ; 0.00                  ; 0.11                     ;
 +-----------------+-----------------------+--------------------------+
 
 
@@ -250,10 +255,10 @@ agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCINT         ; 73.75 mA                ; 31.09 mA                  ; 42.67 mA                 ; 73.75 mA                         ;
-; VCCIO          ; 13.16 mA                ; 0.58 mA                   ; 12.57 mA                 ; 13.16 mA                         ;
-; VCCA           ; 35.84 mA                ; 0.27 mA                   ; 35.57 mA                 ; 35.84 mA                         ;
-; VCCD           ; 4.92 mA                 ; 0.64 mA                   ; 4.29 mA                  ; 4.92 mA                          ;
+; VCCINT         ; 90.00 mA                ; 45.14 mA                  ; 44.86 mA                 ; 90.00 mA                         ;
+; VCCIO          ; 14.48 mA                ; 1.91 mA                   ; 12.57 mA                 ; 14.48 mA                         ;
+; VCCA           ; 35.85 mA                ; 0.27 mA                   ; 35.57 mA                 ; 35.85 mA                         ;
+; VCCD           ; 4.95 mA                 ; 0.64 mA                   ; 4.31 mA                  ; 4.95 mA                          ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -267,11 +272,11 @@ agreement for further details.
 ; 1        ; 2.5V          ; 1.57 mA             ; 0.00 mA               ; 1.57 mA              ;
 ; 2        ; 2.5V          ; 1.71 mA             ; 0.03 mA               ; 1.68 mA              ;
 ; 3        ; 2.5V          ; 1.50 mA             ; 0.00 mA               ; 1.50 mA              ;
-; 4        ; 2.5V          ; 1.73 mA             ; 0.12 mA               ; 1.60 mA              ;
-; 5        ; 2.5V          ; 1.67 mA             ; 0.11 mA               ; 1.56 mA              ;
+; 4        ; 2.5V          ; 1.95 mA             ; 0.35 mA               ; 1.60 mA              ;
+; 5        ; 2.5V          ; 1.71 mA             ; 0.15 mA               ; 1.56 mA              ;
 ; 6        ; 2.5V          ; 1.57 mA             ; 0.03 mA               ; 1.53 mA              ;
 ; 7        ; 2.5V          ; 1.53 mA             ; 0.02 mA               ; 1.51 mA              ;
-; 8        ; 2.5V          ; 1.88 mA             ; 0.27 mA               ; 1.61 mA              ;
+; 8        ; 2.5V          ; 2.94 mA             ; 1.33 mA               ; 1.61 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
 
@@ -280,7 +285,7 @@ agreement for further details.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 2.5V          ; 13.16 mA                ; 0.58 mA                   ; 12.57 mA                 ; 13.16 mA                         ;
+; 2.5V          ; 14.48 mA                ; 1.91 mA                   ; 12.57 mA                 ; 14.48 mA                         ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -300,16 +305,16 @@ agreement for further details.
 ;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.0%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;             ;              ;               ;
 ; Vectorless estimation                                                                  ;              ;             ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 2671 (98.5%) ; 138 (77.1%) ; 178 (100.0%) ; 2355 (100.0%) ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 229 (8.4%)   ; 85 (47.5%)  ; 20 (11.2%)   ; 124 (5.3%)    ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 2671 (98.5%) ; 138 (77.1%) ; 178 (100.0%) ; 2355 (100.0%) ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 4420 (99.1%) ; 138 (77.1%) ; 218 (100.0%) ; 4064 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 185 (4.1%)   ; 63 (35.2%)  ; 20 (9.2%)    ; 102 (2.5%)    ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 4420 (99.1%) ; 138 (77.1%) ; 218 (100.0%) ; 4064 (100.0%) ;
 ;                                                                                        ;              ;             ;              ;               ;
 ; Default assignment                                                                     ;              ;             ;              ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.1%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 1 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 41 (1.5%)    ; 40 (22.3%)  ; 0 (0.0%)     ; 1 (0.0%)      ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.0%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 1 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 41 (0.9%)    ; 40 (22.3%)  ; 0 (0.0%)     ; 1 (0.0%)      ;
 ;                                                                                        ;              ;             ;              ;               ;
 ; Assumed 0                                                                              ;              ;             ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 39 (1.4%)    ; 39 (21.8%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 39 (0.9%)    ; 39 (21.8%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
 
 
@@ -327,7 +332,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit PowerPlay Power Analyzer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Apr 25 23:06:47 2018
+    Info: Processing started: Thu Apr 26 10:52:23 2018
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off lab8 -c lab8
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -719,7 +724,7 @@ Warning (332049): Ignored set_false_path at lab8.sdc(264): Argument <from> is an
     Info (332050): set_false_path -from [get_keepers {sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1]}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_go}]
 Warning (332049): Ignored set_false_path at lab8.sdc(264): Argument <to> is an empty collection
 Warning (332060): Node: PS2_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register keyboard:keyB|reg_11:reg_A|Data_Out[3] is being clocked by PS2_CLK
+    Info (13166): Register keyboard:keyB|reg_11:reg_B|Data_Out[3] is being clocked by PS2_CLK
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: vga_clk_instance|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
@@ -730,12 +735,12 @@ Info (223001): Completed Vectorless Power Activity Estimation
 Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 3.879 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 216.82 mW
+Info (215049): Average toggle rate for this design is 3.742 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 239.53 mW
 Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 226 warnings
-    Info: Peak virtual memory: 854 megabytes
-    Info: Processing ended: Wed Apr 25 23:06:59 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 863 megabytes
+    Info: Processing ended: Thu Apr 26 10:52:39 2018
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -1,5 +1,6 @@
 module player2(input frame_clk, Reset, Clk, press,
 					input [7:0] keycode,
+					input [7:0] keypress,
 					input [9:0] DrawX, DrawY,
 					output logic [9:0] p2x, p2y,
 					output logic is_player2,
@@ -123,7 +124,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					//Ball_Y_Motion_in = Ball_Y_Step;
 				  //end
 				  
-				 if(keycode == 8'h6b && press == 1'b1)			//a, left!!
+				 if(keypress[2] == 1)			//a, left!!
 				  begin
 				  //counter = counter + 10'd1;
 					counter_in = counter + 10'd1;
@@ -183,7 +184,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					px_mot_in = (~(px_step) + 1'b1);
 					dir_in = 10'd0;
 				  end
-				 else if(keycode == 8'h74 && press == 1'b1)			//d, Right!! 
+				 else if(keypress[1] == 1)			//d, Right!! 
 				  begin
 				  counter_in = counter + 10'd1;
 				  
@@ -244,7 +245,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					dir_in = 10'd1;
 					
 				  end
-				 else if(keycode == 8'h70 && press == 1'b1) //punch
+				 else if(keypress[0] == 1) //punch
 				 begin
 					counter_in = counter + 10'd1;
 					

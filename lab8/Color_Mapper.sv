@@ -402,23 +402,28 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	  
 	  else
 		read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w; //defualt standing... sprite #9
+		
+		
+		
+		
 			
         if (is_player1 == 1'b1)
         begin
-				
 				if(data1 == 24'hff0ff)
 				begin
-					Red = 8'hff; 
-					Green = 8'hff;
-					Blue = 8'hff;
+					if(is_player2 == 1'b1 && data2 != 24'hff0ff)
+					begin
+						Red = 8'h00;
+						Green = 8'h00;
+						Blue = 8'hff;
+					end
+					else
+					begin
+						Red = 8'hff; 
+						Green = 8'hff;
+						Blue = 8'hff;
+					end
 				end
-				//otherwise get the color of the sprite
-				/*else
-				begin
-						Red = data[23:16];
-						Green = data[15:8];
-						Blue = data[7:0];
-				end*/
 				else
 				begin
 						Red = 8'h00;
@@ -427,32 +432,22 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 				end
 				
         end
-        else 
-        begin
-            // Background with nice color gradient
-				
-				// White Background
-            Red = 8'hff; 
-            Green = 8'hff;
-            Blue = 8'hff;
-        end
 		  
-		  if (is_player2 == 1'b1)
+		  
+		  
+		  
+		  
+		  
+		  
+		  else if (is_player2 == 1'b1)
         begin
 				
 				if(data2 == 24'hff0ff)
 				begin
-					Red = 8'hff; 
-					Green = 8'hff;
-					Blue = 8'hff;
+						Red = 8'hff; 
+						Green = 8'hff;
+						Blue = 8'hff;
 				end
-				//otherwise get the color of the sprite
-				/*else
-				begin
-						Red = data[23:16];
-						Green = data[15:8];
-						Blue = data[7:0];
-				end*/
 				else
 				begin
 						Red = 8'h00;
@@ -461,15 +456,39 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 				end
 				
         end
+		  
+		  
+		  
+		  
         else 
         begin
-            // Background with nice color gradient
 				
 				// White Background
             Red = 8'hff; 
             Green = 8'hff;
             Blue = 8'hff;
         end
-    end 
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+    end //for big comb block
+	 
+	 
+	 
+	 //otherwise get the color of the sprite
+				/*else
+				begin
+						Red = data[23:16];
+						Green = data[15:8];
+						Blue = data[7:0];
+				end*/
     
 endmodule

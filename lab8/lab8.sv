@@ -75,7 +75,7 @@ module lab8( input               CLOCK_50,
 	 logic [23:0] data_Out1, data_Out2;
 	
 	 
-	 logic [7:0] keyCode; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
+	 logic [7:0] keyCode, keypress; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
 	 logic press;     //press indicates whether the key was pressed or released.
 	 
 	 
@@ -89,6 +89,13 @@ module lab8( input               CLOCK_50,
 								.reset(Reset_h),
 								.keyCode(keyCode),
 								.press(press)    
+								);
+								
+	KeyPress			keykey(
+								.Clk(Clk),
+								.keycode(keyCode),
+								.press(press),
+								.keypress(keypress)
 								);
 	 
 
@@ -162,6 +169,7 @@ module lab8( input               CLOCK_50,
 									.p1y(p1y),
 									.is_player1(is_player1),
 									.keycode(keyCode),
+									.keypress(keypress),
 									.DrawX(DrawX),
 									.DrawY(DrawY),
 									.press(press),
@@ -177,6 +185,7 @@ module lab8( input               CLOCK_50,
 									.p2y(p2y),
 									.is_player2(is_player2),
 									.keycode(keyCode),
+									.keypress(keypress),
 									.DrawX(DrawX),
 									.DrawY(DrawY),
 									.press(press),
@@ -227,9 +236,12 @@ module lab8( input               CLOCK_50,
     // Display keycode on hex display
     HexDriver hex_inst_0 (keyCode[3:0], HEX0);
     HexDriver hex_inst_1 (keyCode[7:4], HEX1);
-	 HexDriver hex_inst_2 (p1x[9:5], HEX2);
-    HexDriver hex_inst_3 (p1x[4:1], HEX3);
+	 HexDriver hex_inst_2 (action1[3:0], HEX2);
+    HexDriver hex_inst_3 (action2[3:0], HEX3);
 	 HexDriver hex_inst_4 (press, HEX4);
+	 HexDriver hex_inst_5 (keypress[3:0], HEX5);
+	 HexDriver hex_inst_6 (keypress[7:4], HEX6);
+	 
     
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!
