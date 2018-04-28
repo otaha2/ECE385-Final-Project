@@ -1,10 +1,11 @@
-module player2(input frame_clk, Reset, Clk, press,
+module player2(input frame_clk, Reset, Clk, press, hit1, hit2,
 					input [7:0] keycode,
 					input [7:0] keypress,
 					input [9:0] DrawX, DrawY,
-					output logic [9:0] p2x, p2y,
+					output logic [9:0] p2x, p2y, 
 					output logic is_player2,
-					output logic [9:0] action2, direction2 //1 is right, 0 is left. used to know whether or not to flip the sprite 
+					output logic [9:0] action2, direction2, //1 is right, 0 is left. used to know whether or not to flip the sprite 
+					output logic [9:0] health2
 					);
 					
 					
@@ -42,7 +43,7 @@ action = 12
 
 
 logic [9:0] px_pos, py_pos, px_mot, py_mot;
-logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in, counter, counter_in;
+logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in, counter, counter_in, health, health_in;
 
 //assign counter = 10'd0;
 
@@ -74,6 +75,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  px_mot <= 10'd0;
 			  py_mot <= 10'd0;
 			  act <= 10'd9;
+			  health = 10'd100;
         end
         else
         begin
@@ -87,6 +89,9 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  direction2 <= dir_in;
 			  action2 <= act_in;
 			  act <= act_in;
+			  health <= health_in;
+			  health2 <= health_in;
+			  
 		
         end
     end
@@ -101,6 +106,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 		  dir_in = dir;
 		  act_in = act;
 		  counter_in = counter;
+		  health_in = health;
         
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
@@ -124,48 +130,51 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					//Ball_Y_Motion_in = Ball_Y_Step;
 				  //end
 				  
-				 if(keypress[2] == 1)			//a, left!!
+				 if(keypress[2] == 1 && keypress[0] != 1 && act >= 10'd0 && act <= 10'd9)			//a, left!
 				  begin
-				  //counter = counter + 10'd1;
 					counter_in = counter + 10'd1;
+					py_mot_in = 10'd0;
+					px_mot_in = (~(px_step) + 1'b1);
+					dir_in = 10'd0;
+					
 				  if(act == 10'd9)
 					act_in = 10'd0;
-				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2)
+				  else if(act == 10'd0 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2)
 				 begin 
 					act_in = 10'd1;
 					counter_in = 10'd0;
 					end
-				  else if(act == 10'd1 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+				  else if(act == 10'd1 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 				  begin
 					act_in = 10'd2;
 					counter_in = 10'd0;
 					end
-				  else if(act == 10'd2 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+				  else if(act == 10'd2 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 				  begin
 					act_in = 10'd3;
 					counter_in = 10'd0;
 					end
-				  else if(act == 10'd3 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+				  else if(act == 10'd3 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 				  begin
 					act_in = 10'd4;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd4 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					else if(act == 10'd4 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 					begin
 					act_in = 10'd5;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd5 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					else if(act == 10'd5 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 					begin
 					act_in = 10'd6;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd6 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					else if(act == 10'd6 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 					begin
 					act_in = 10'd7;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd7 && px_mot == (~(px_step) + 1'b1) && counter == 10'd2) 
+					else if(act == 10'd7 && px_mot == (~(px_step) + 1'b1) && counter >= 10'd2) 
 					begin
 					act_in = 10'd9;
 					counter_in = 10'd0;
@@ -178,54 +187,56 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					else
 					begin
 					act_in = act;
+					//counter_in = 10'd0;
 					end
 				  
-					py_mot_in = 10'd0;
-					px_mot_in = (~(px_step) + 1'b1);
-					dir_in = 10'd0;
+					
 				  end
-				 else if(keypress[1] == 1)			//d, Right!! 
+				 else if(keypress[1] == 1 && keypress[0] != 1 && act >= 10'd0 && act <= 10'd9)			//d, Right!! 
 				  begin
 				  counter_in = counter + 10'd1;
-				  
+				  	py_mot_in = 10'd0;
+					px_mot_in = px_step;
+					dir_in = 10'd1;
+					
 				  if(act == 10'd9)
 					act_in = 10'd0;
-				  else if(act == 10'd0 && px_mot == px_step && counter == 10'd2)
+				  else if(act == 10'd0 && px_mot == px_step && counter >= 10'd2)
 				  begin
 					act_in = 10'd1;
 					counter_in = 10'd0;
 					end
-				  else if(act == 10'd1 && px_mot == px_step && counter == 10'd2)
+				  else if(act == 10'd1 && px_mot == px_step && counter >= 10'd2)
 				  begin
 					act_in = 10'd2;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd2 && px_mot == px_step && counter == 10'd2)
+					else if(act == 10'd2 && px_mot == px_step && counter >= 10'd2)
 					begin
 					act_in = 10'd3;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd3 && px_mot == px_step && counter == 10'd2)
+					else if(act == 10'd3 && px_mot == px_step && counter >= 10'd2)
 					begin
 					act_in = 10'd4;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd4 && px_mot == px_step && counter == 10'd2)
+					else if(act == 10'd4 && px_mot == px_step && counter >= 10'd2)
 					begin
 					act_in = 10'd5;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd5 && px_mot == px_step && counter == 10'd2)
+					else if(act == 10'd5 && px_mot == px_step && counter >= 10'd2)
 					begin
 					act_in = 10'd6;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd6 && px_mot == px_step && counter == 10'd2)
+					else if(act == 10'd6 && px_mot == px_step && counter >= 10'd2)
 					begin
 					act_in = 10'd7;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd7 && px_mot == px_step && counter == 10'd2)
+					else if(act == 10'd7 && px_mot == px_step && counter >= 10'd2)
 					begin
 					act_in = 10'd9;
 					counter_in = 10'd0;
@@ -238,35 +249,33 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 				  else
 				  begin
 					act_in = act;
+					//counter_in = 10'd0;
 					end
 				  
-					py_mot_in = 10'd0;
-					px_mot_in = px_step;
-					dir_in = 10'd1;
 					
 				  end
 				 else if(keypress[0] == 1) //punch
 				 begin
 					counter_in = counter + 10'd1;
 					
-					if(act == 10'd9)
+					if(act < 10'd11 || act > 10'd14)
 					act_in = 10'd12;
-					else if(act == 10'd12 && counter == 10'd4)
+					else if(act == 10'd12 && counter == 10'd3)
 					begin
 					act_in = 10'd13;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd13 && counter == 10'd4)
+					else if(act == 10'd13 && counter == 10'd3)
 					begin
 					act_in = 10'd14;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd14 && counter == 10'd4)
+					else if(act == 10'd14 && counter == 10'd3)
 					begin
 					act_in = 10'd11;
 					counter_in = 10'd0;
 					end
-					else if(act == 10'd11 && counter == 10'd4)
+					else if(act == 10'd11 && counter == 10'd3)
 					begin
 					act_in = 10'd9;
 					counter_in = 10'd0;
@@ -324,7 +333,14 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 					end
 					 
 				
-				 
+			 if(hit1 == 1'b1)
+					health_in = health - 10'd1;
+				else
+					health_in = health; 
+			
+			
+			if(health <= 10'd0)
+				health_in = 10'd0;
         
             // Update the Players's position with its motion
             px_pos_in = px_pos + px_mot;

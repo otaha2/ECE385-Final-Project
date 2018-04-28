@@ -67,7 +67,7 @@ module lab8( input               CLOCK_50,
 	 logic frame_clk;
 	 logic [9:0] DrawX, DrawY;
 	 logic [9:0] p1x, p1y, p2x, p2y;
-	 logic [9:0] action1, direction1, action2, direction2;
+	 logic [9:0] action1, direction1, action2, direction2, health1, health2;
 	 
 	 logic is_player1, is_player2;
 	 
@@ -77,6 +77,8 @@ module lab8( input               CLOCK_50,
 	 
 	 logic [7:0] keyCode, keypress; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
 	 logic press;     //press indicates whether the key was pressed or released.
+	 
+	 logic hit1, hit2;
 	 
 	 
 	 
@@ -149,16 +151,28 @@ module lab8( input               CLOCK_50,
 										.action1(action1),
 										.action2(action2),
 										.direction1(direction1),
-										.direction2(direction2)
+										.direction2(direction2),
+										.hit1(hit1),
+									   .hit2(hit2),
+										.health1(health1),
+									   .health2(health2)
 										);   
 		
 		
 
 
-	/*	sprite_table         (
-									.clk(Clk),
-									.p1_stand(p1_stand)
-									);    */
+	  Frame_control  collision(
+									.p1x(p1x),
+									.p1y(p1y),
+									.p2x(p2x),
+									.p2y(p2y),
+									.action1(action1),
+									.action2(action2),
+									.direction1(direction1),
+									.direction2(direction2),
+									.hit1(hit1),
+									.hit2(hit2)
+									);    
 		
 		
 		player1       		p1(
@@ -174,7 +188,10 @@ module lab8( input               CLOCK_50,
 									.DrawY(DrawY),
 									.press(press),
 									.action1(action1),
-									.direction1(direction1)
+									.direction1(direction1),
+									.hit1(hit1),
+									.hit2(hit2),
+									.health1(health1)
 									);
 									
 		player2       		p2(
@@ -190,7 +207,10 @@ module lab8( input               CLOCK_50,
 									.DrawY(DrawY),
 									.press(press),
 									.action2(action2),
-									.direction2(direction2)
+									.direction2(direction2),
+									.hit1(hit1),
+									.hit2(hit2),
+									.health2(health2)
 									);
 									
 									
@@ -234,13 +254,13 @@ module lab8( input               CLOCK_50,
 		
     
     // Display keycode on hex display
-    HexDriver hex_inst_0 (keyCode[3:0], HEX0);
-    HexDriver hex_inst_1 (keyCode[7:4], HEX1);
+    HexDriver hex_inst_0 (hit1, HEX0); //(keyCode[3:0], HEX0);
+    HexDriver hex_inst_1 (hit2, HEX1); //(keyCode[7:4], HEX1);
 	 HexDriver hex_inst_2 (action1[3:0], HEX2);
     HexDriver hex_inst_3 (action2[3:0], HEX3);
 	 HexDriver hex_inst_4 (press, HEX4);
-	 HexDriver hex_inst_5 (keypress[3:0], HEX5);
-	 HexDriver hex_inst_6 (keypress[7:4], HEX6);
+	 HexDriver hex_inst_5 (p1x[3:0], HEX5);
+	 HexDriver hex_inst_6 (p2x[3:0], HEX6);
 	 
     
     /**************************************************************************************

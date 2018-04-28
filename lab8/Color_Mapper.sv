@@ -16,10 +16,10 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( //input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
-							  input			is_player1, is_player2,
+							  input			is_player1, is_player2, hit1, hit2,
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
-                       input 			[9:0] p1x, p1y, p2x, p2y,
+                       input 			[9:0] p1x, p1y, p2x, p2y, health1, health2,
 							  input        [23:0] data1, data2,
 							  input 			[9:0] action1, action2, direction1, direction2,
 							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
@@ -434,11 +434,6 @@ module  color_mapper ( //input              is_ball,            // Whether curre
         end
 		  
 		  
-		  
-		  
-		  
-		  
-		  
 		  else if (is_player2 == 1'b1)
         begin
 				
@@ -457,7 +452,21 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 				
         end
 		  
+			//player 1 health bar
+		  else if( (DrawX > 10'd50) && (DrawX <= 10'd50 + health1) && (DrawY >= 10'd20) && (DrawY <= 10'd40))
+		  begin
+				Red = 8'hff;
+				Green = 8'h00;
+				Blue = 8'h00;
+		  end
 		  
+		  //player 2 health bar
+		  else if( (DrawX > 10'd490) && (DrawX <= 10'd490 + health2) && (DrawY >= 10'd20) && (DrawY <= 10'd40))
+		  begin
+				Red = 8'hff;
+				Green = 8'h00;
+				Blue = 8'h00;
+		  end
 		  
 		  
         else 
