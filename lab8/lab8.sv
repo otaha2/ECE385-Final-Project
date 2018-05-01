@@ -78,7 +78,10 @@ module lab8( input               CLOCK_50,
 	 logic [7:0] keyCode, keypress; //keyCode outputs a value corresponding to the specific key (see Scan Codes in Resources),
 	 logic press;     //press indicates whether the key was pressed or released.
 	 
-	 logic hit1, hit2;
+	 logic hit1, hit2, p2_won, p1_won;
+	 
+	 logic [10:0]	end_addr;
+	 logic [7:0]	end_data;
 	 
 	 
 	 
@@ -155,7 +158,11 @@ module lab8( input               CLOCK_50,
 										.hit1(hit1),
 									   .hit2(hit2),
 										.health1(health1),
-									   .health2(health2)
+									   .health2(health2),
+										.p2_won(p2_won),
+										.p1_won(p1_won),
+										.font_addr(end_addr),
+										.font_data(end_data)
 										);   
 		
 		
@@ -191,7 +198,8 @@ module lab8( input               CLOCK_50,
 									.direction1(direction1),
 									.hit1(hit1),
 									.hit2(hit2),
-									.health1(health1)
+									.health1(health1),
+									.p2_won(p2_won)
 									);
 									
 		player2       		p2(
@@ -210,7 +218,8 @@ module lab8( input               CLOCK_50,
 									.direction2(direction2),
 									.hit1(hit1),
 									.hit2(hit2),
-									.health2(health2)
+									.health2(health2),
+									.p1_won(p1_won)
 									);
 									
 									
@@ -224,6 +233,11 @@ module lab8( input               CLOCK_50,
 									.data_Out1(data_Out1),
 									.data_Out2(data_Out2)
 									);
+									
+	   font_rom 			 fonts(
+										.addr(end_addr),
+										.data(end_data)
+										);
 		
 		
 		
@@ -260,7 +274,7 @@ module lab8( input               CLOCK_50,
     HexDriver hex_inst_3 (action2[3:0], HEX3);
 	 HexDriver hex_inst_4 (press, HEX4);
 	 HexDriver hex_inst_5 (p1x[3:0], HEX5);
-	 HexDriver hex_inst_6 (p2x[3:0], HEX6);
+	 HexDriver hex_inst_6 (p1x[7:4], HEX6);
 	 
     
     /**************************************************************************************

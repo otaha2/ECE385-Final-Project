@@ -3,7 +3,7 @@ module player2(input frame_clk, Reset, Clk, press, hit1, hit2,
 					input [7:0] keypress,
 					input [9:0] DrawX, DrawY,
 					output logic [9:0] p2x, p2y, 
-					output logic is_player2,
+					output logic is_player2, p1_won,
 					output logic [9:0] action2, direction2, //1 is right, 0 is left. used to know whether or not to flip the sprite 
 					output logic [9:0] health2
 					);
@@ -42,10 +42,11 @@ action = 12
 
 
 
-logic [9:0] px_pos, py_pos, px_mot, py_mot;
+logic [9:0] px_pos;
+logic [9:0] py_pos, px_mot, py_mot;
 logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in, counter, counter_in, health, health_in;
+logic p1_win_in, p1_win;
 
-//assign counter = 10'd0;
 
 
 
@@ -76,6 +77,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  py_mot <= 10'd0;
 			  act <= 10'd9;
 			  health = 10'd100;
+			  p1_win <= 1'b0;
         end
         else
         begin
@@ -91,7 +93,8 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  act <= act_in;
 			  health <= health_in;
 			  health2 <= health_in;
-			  
+			  p1_win <= p1_win_in;
+			  p1_won <= p1_win_in;
 		
         end
     end
@@ -107,6 +110,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 		  act_in = act;
 		  counter_in = counter;
 		  health_in = health;
+		  p1_win_in = p1_win;
         
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
@@ -326,7 +330,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
                 px_mot_in = 10'd0;  
 					 py_mot_in = 10'd0; 
 					end
-			   else if (px_pos - Player_Width <= px_min && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving
+			   else if (px_pos <= 10'd5 && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving
 				   begin
                 px_mot_in = 10'd0;
 					 py_mot_in = 10'd0; 
@@ -340,7 +344,12 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			
 			
 			if(health <= 10'd0)
+			begin
 				health_in = 10'd0;
+				p1_win_in = 1'b1;
+			end
+			else
+				p1_win_in = 1'b0;
         
             // Update the Players's position with its motion
             px_pos_in = px_pos + px_mot;

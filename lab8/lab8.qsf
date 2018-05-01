@@ -590,6 +590,7 @@ set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name POWER_USE_INPUT_FILES OFF
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name SYSTEMVERILOG_FILE font_rom.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Muxes.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ram.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Ps2/keyboard.sv

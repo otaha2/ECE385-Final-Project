@@ -3,7 +3,7 @@ module player1(input frame_clk, Reset, Clk, press, hit1, hit2,
 					input [7:0] keypress,
 					input [9:0] DrawX, DrawY,
 					output logic [9:0] p1x, p1y,
-					output logic is_player1,
+					output logic is_player1, p2_won,
 					output logic [9:0] action1, direction1, //1 is right, 0 is left. used to know whether or not to flip the sprite
 					output logic [9:0] health1
 					);
@@ -12,7 +12,7 @@ module player1(input frame_clk, Reset, Clk, press, hit1, hit2,
 parameter [9:0] px_center = 10'd280;
 parameter [9:0] py_center = 10'd400;
 
-parameter [9:0] px_min = 10'd1;       // Leftmost point on the X axis
+parameter [9:0] px_min = 10'd5;       // Leftmost point on the X axis
 parameter [9:0] px_max = 10'd639;     // Rightmost point on the X axis
 parameter [9:0] py_min = 10'd1;       // Topmost point on the Y axis
 parameter [9:0] py_max = 10'd479;     // Bottommost point on the Y axis
@@ -42,11 +42,11 @@ action = 12
 
 
 
-logic [9:0] px_pos, py_pos, px_mot, py_mot;
+logic [9:0] px_pos;
+logic [9:0] py_pos, px_mot, py_mot;
 logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in, counter, counter_in, health, health_in;
 
-//assign counter = 10'd0;
-
+logic p2_win_in, p2_win;
 
 
     // Detect rising edge of frame_clk
@@ -76,6 +76,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  py_mot <= 10'd0;
 			  act <= 10'd9;
 			  health <= 10'd100;
+			  p2_win <= 1'b0;
         end
         else
         begin
@@ -91,6 +92,8 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 			  act <= act_in;
 			  health <= health_in;
 			  health1 <= health_in;
+			  p2_win <= p2_win_in;
+			  p2_won <= p2_win_in;
 		
         end
     end
@@ -106,6 +109,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
 		  act_in = act;
 		  counter_in = counter;
 		  health_in = health;
+		  p2_win_in = p2_win;
         
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
@@ -328,7 +332,7 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
                 px_mot_in = 10'd0;  
 					 py_mot_in = 10'd0; 
 					end
-			   else if (px_pos - Player_Width <= px_min && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving
+			   else if (px_pos <= px_min && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving && px_mot_in == (~(px_step) + 1'b1)
 				   begin
                 px_mot_in = 10'd0;
 					 py_mot_in = 10'd0; 
@@ -343,7 +347,13 @@ logic [9:0] px_pos_in, py_pos_in, px_mot_in, py_mot_in, dir_in, dir, act, act_in
         
 		  
 			if(health <= 10'd0)
+			begin
 				health_in = 10'd0;
+				 p2_win_in = 1'b1;
+			end
+			else
+				p2_win_in = 1'b0;
+			
 		  
             // Update the Players's position with its motion
             px_pos_in = px_pos + px_mot;

@@ -16,20 +16,22 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( //input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
-							  input			is_player1, is_player2, hit1, hit2,
+							  input			is_player1, is_player2, hit1, hit2, p1_won, p2_won,
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
                        input 			[9:0] p1x, p1y, p2x, p2y, health1, health2,
 							  input        [23:0] data1, data2,
 							  input 			[9:0] action1, action2, direction1, direction2,
+							  input		   [7:0]	font_data,
+							  output logic [10:0] font_addr,
 							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
 							  output logic [18:0] read_address1, read_address2
+							  
                      );
     
     logic [7:0] Red, Green, Blue;
-	 
 	 logic [9:0] tot_w;
-	 
+	 logic P; 
 	 
     
     // Output colors to VGA
@@ -48,11 +50,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction1 == 10'd1) 
 		begin
-			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w ;
+			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w - 2*tot_w;
 		end
 		else //flip sprite
 		begin
-			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w ;
+			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w - 2*tot_w;
 		end
 	  end
 	  
@@ -168,11 +170,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction1 == 10'd1) //flip sprite
 		begin
-			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 2*p1_w;
+			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 2*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 2*p1_w;
+			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 2*p1_w - 2*tot_w;
 		end
 	  end
 	  
@@ -180,11 +182,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction1 == 10'd1) //flip sprite
 		begin
-			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 3*p1_w;
+			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 3*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 3*p1_w;
+			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 3*p1_w - 2*tot_w;
 		end
 	  end
 	  
@@ -192,11 +194,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction1 == 10'd1) //flip sprite
 		begin
-			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 4*p1_w;
+			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 4*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 4*p1_w;
+			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 4*p1_w - 2*tot_w;
 		end
 	  end
 	  
@@ -204,30 +206,16 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction1 == 10'd1) //flip sprite
 		begin
-			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 5*p1_w;
+			read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w + 5*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 5*p1_w;
+			read_address1 = (p1_w -(DrawX-p1x)) + (DrawY-p1y)*tot_w + p1_h*tot_w + 5*p1_w - 2*tot_w;
 		end
 	  end
 	  
 	  else
-		read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w; //defualt standing... sprite #9
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		read_address1 = (DrawX-p1x) + (DrawY-p1y)*tot_w + p1_h*tot_w - 2*tot_w;            //defualt standing... sprite #9
 		
 		
 		
@@ -236,11 +224,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction2 == 10'd1) 
 		begin
-			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w ;
+			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w - 2*tot_w;
 		end
 		else //flip sprite
 		begin
-			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w ;
+			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w - 2*tot_w ;
 		end
 	  end
 	  
@@ -356,11 +344,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction2 == 10'd1) //flip sprite
 		begin
-			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 2*p1_w;
+			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w - 2*tot_w + 2*p1_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 2*p1_w;
+			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 2*p1_w - 2*tot_w;
 		end
 	  end
 	  
@@ -368,11 +356,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction2 == 10'd1) //flip sprite
 		begin
-			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 3*p1_w;
+			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 3*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 3*p1_w;
+			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 3*p1_w - 2*tot_w;
 		end
 	  end
 	  
@@ -380,11 +368,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction2 == 10'd1) //flip sprite
 		begin
-			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 4*p1_w;
+			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 4*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 4*p1_w;
+			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 4*p1_w - 2*tot_w;
 		end
 	  end
 	  
@@ -392,22 +380,62 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	 begin
 		if(direction2 == 10'd1) //flip sprite
 		begin
-			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 5*p1_w;
+			read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w + 5*p1_w - 2*tot_w;
 		end
 		else //direction == 10'd1
 		begin
-			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 5*p1_w;
+			read_address2 = (p1_w -(DrawX-p2x)) + (DrawY-p2y)*tot_w + p1_h*tot_w + 5*p1_w - 2*tot_w;
 		end
 	  end
+	
 	  
 	  else
 		read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w; //defualt standing... sprite #9
 		
 		
+		//Font Display
+		
+	  if(p1_won == 1'b1 || p2_won == 1'b1)
+		  begin
+				if( (DrawX > 10'd100) && (DrawX <= 10'd108) && (DrawY >= 10'd20) && (DrawY <= 10'd36) )	
+					begin
+					font_addr = DrawY - 10'd20 + 16*'h50;      //P =x50
+					P = 1'b1; 
+					end
+				else
+					P = 1'b0; 
+		  end   
 		
 		
-			
-        if (is_player1 == 1'b1)
+		
+		
+		
+		
+		
+		  if(P == 1'b1)
+		  begin
+					//font_addr = DrawY - 10'd20 + 16*'h50;      //P =x50
+					if(font_data[DrawX - 10'd100] == 1'b1)
+					   begin
+						Red = 8'h00;
+						Green = 8'h00;
+						Blue = 8'hff;
+					   end
+					else
+						begin
+						Red = 8'h00;
+						Green = 8'h00;
+						Blue = 8'h00;
+						end
+		  end
+		  else if(p1_won == 1'b1 || p2_won == 1'b1)
+		  begin
+						Red = 8'h00;
+						Green = 8'h00;
+						Blue = 8'h00;
+		  end
+		  
+        else if (is_player1 == 1'b1)
         begin
 				if(data1 == 24'hff0ff)
 				begin
