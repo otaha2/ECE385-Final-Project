@@ -82,8 +82,10 @@ module lab8( input               CLOCK_50,
 	 
 	 logic [10:0]	end_addr;
 	 logic [7:0]	end_data;
-	 
-	 
+	 logic [18:0] start_address;
+	 logic [3:0] start_data;
+	
+	 logic is_start;
 	 
 	 
 	 //Instantiaze PS/2
@@ -162,7 +164,10 @@ module lab8( input               CLOCK_50,
 										.p2_won(p2_won),
 										.p1_won(p1_won),
 										.font_addr(end_addr),
-										.font_data(end_data)
+										.font_data(end_data),
+										.is_start(is_start),
+										.start_address(start_address),
+										.start_data(start_data)
 										);   
 		
 		
@@ -231,7 +236,9 @@ module lab8( input               CLOCK_50,
 									.read_address2(read_address2),
 									.Clk(Clk),
 									.data_Out1(data_Out1),
-									.data_Out2(data_Out2)
+									.data_Out2(data_Out2),
+									.start_address(start_address),
+									.start_data(start_data)
 									);
 									
 	   font_rom 			 fonts(
@@ -241,7 +248,12 @@ module lab8( input               CLOCK_50,
 		
 		
 		
-		
+		Start					s_screen(
+										  .Clk(Clk),
+										  .Reset(Reset_h),
+										  .keyCode(keyCode),
+										  .is_start(is_start)
+											);
 		
 		
 		
@@ -270,8 +282,8 @@ module lab8( input               CLOCK_50,
     // Display keycode on hex display
     HexDriver hex_inst_0 (hit1, HEX0); //(keyCode[3:0], HEX0);
     HexDriver hex_inst_1 (hit2, HEX1); //(keyCode[7:4], HEX1);
-	 HexDriver hex_inst_2 (action1[3:0], HEX2);
-    HexDriver hex_inst_3 (action2[3:0], HEX3);
+	 HexDriver hex_inst_2 (keyCode[3:0], HEX2);
+    HexDriver hex_inst_3 (keyCode[7:4], HEX3);
 	 HexDriver hex_inst_4 (press, HEX4);
 	 HexDriver hex_inst_5 (p1x[3:0], HEX5);
 	 HexDriver hex_inst_6 (p1x[7:4], HEX6);

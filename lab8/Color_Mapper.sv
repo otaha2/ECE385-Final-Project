@@ -16,22 +16,23 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( //input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
-							  input			is_player1, is_player2, hit1, hit2, p1_won, p2_won,
+							  input			is_player1, is_player2, hit1, hit2, p1_won, p2_won, is_start,
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
                        input 			[9:0] p1x, p1y, p2x, p2y, health1, health2,
 							  input        [23:0] data1, data2,
 							  input 			[9:0] action1, action2, direction1, direction2,
-							  input		   [7:0]	font_data,
+							  input		   [7:0]	font_data, 
+							  input        [3:0] start_data,
 							  output logic [10:0] font_addr,
 							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
-							  output logic [18:0] read_address1, read_address2
+							  output logic [18:0] read_address1, read_address2, start_address
 							  
                      );
     
     logic [7:0] Red, Green, Blue;
 	 logic [9:0] tot_w;
-	 logic P; 
+	 logic P, L, A, Y, E, R, ONE, TWO, W, I, N, S; 
 	 
     
     // Output colors to VGA
@@ -46,6 +47,11 @@ module  color_mapper ( //input              is_ball,            // Whether curre
     // Assign color based on is_ball signal
     always_comb
     begin
+	 
+	 start_address = DrawY*10'd640 + DrawX; 
+	 
+	 
+	 
 	 if(action1 == 10'd9)
 	 begin
 		if(direction1 == 10'd1) 
@@ -395,45 +401,164 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 		
 		//Font Display
 		
-	  if(p1_won == 1'b1 || p2_won == 1'b1)
-		  begin
-				if( (DrawX > 10'd100) && (DrawX <= 10'd108) && (DrawY >= 10'd20) && (DrawY <= 10'd36) )	
+
+		if( (DrawX >= 10'd264) && (DrawX < 10'd272) && (DrawY >= 10'd232) && (DrawY < 10'd248) )	
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h50;      //P =x50
+				P = 1'b1; 
+			end
+		else if( (DrawX >= 10'd274) && (DrawX < 10'd282) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h4c;      //L =x4c
+				L = 1'b1; 
+			end
+		else if( (DrawX >= 10'd284) && (DrawX < 10'd292) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h41;      //A =x41
+				A = 1'b1; 
+			end
+		else if( (DrawX >= 10'd294) && (DrawX < 10'd302) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h59;      //Y =x59
+				Y = 1'b1; 
+			end
+		else if( (DrawX >= 10'd304) && (DrawX < 10'd312) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h45;      //E =x45
+				E = 1'b1; 
+			end
+		else if( (DrawX >= 10'd314) && (DrawX < 10'd322) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h52;      //R =x52
+				R = 1'b1; 
+			end
+		else if( (DrawX >= 10'd324) && (DrawX < 10'd332) && (DrawY >= 10'd232) && (DrawY < 10'd248) && p1_won == 1'b1 )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h31;      //1 =x31
+				ONE = 1'b1; 
+			end
+		else if( (DrawX >= 10'd324) && (DrawX < 10'd332) && (DrawY >= 10'd232) && (DrawY < 10'd248) && p2_won == 1'b1 )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h32;      //2 =x32
+				TWO = 1'b1; 
+			end
+		else if( (DrawX >= 10'd338) && (DrawX < 10'd346) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h57;      //W =x57
+				W = 1'b1; 
+			end
+		else if( (DrawX >= 10'd348) && (DrawX < 10'd356) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h49;      //I =x49
+				I = 1'b1; 
+			end
+		else if( (DrawX >= 10'd358) && (DrawX < 10'd366) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h4e;      //N =x4e
+				N = 1'b1; 
+			end
+		else if( (DrawX >= 10'd368) && (DrawX < 10'd376) && (DrawY >= 10'd232) && (DrawY < 10'd248) )
+			begin
+				font_addr = DrawY - 10'd232 + 16*'h53;      //S =x53
+				S = 1'b1; 
+			end
+				
+		else
+			begin
+				font_addr = 10'b0; 
+				P = 1'b0; 
+				L = 1'b0; 
+				A = 1'b0;
+				Y = 1'b0;
+				E = 1'b0;
+				R = 1'b0;
+				ONE = 1'b0;
+				TWO = 1'b0; 
+				W = 1'b0;
+				I = 1'b0;
+				N = 1'b0;
+				S = 1'b0;
+			end
+			
+			
+	 
+	
+	
+		
+		  if(is_start == 1'b1)
+		   begin
+				if(start_data == 3'd0)
 					begin
-					font_addr = DrawY - 10'd20 + 16*'h50;      //P =x50
-					P = 1'b1; 
-					end
-				else
-					P = 1'b0; 
-		  end   
-		
-		
-		
-		
-		
-		
-		
-		  if(P == 1'b1)
-		  begin
-					//font_addr = DrawY - 10'd20 + 16*'h50;      //P =x50
-					if(font_data[DrawX - 10'd100] == 1'b1)
-					   begin
-						Red = 8'h00;
-						Green = 8'h00;
+						Red = 8'h80;
+						Green = 8'hf2;
 						Blue = 8'hff;
-					   end
-					else
-						begin
+					end
+				else if(start_data == 3'd1)
+					begin
 						Red = 8'h00;
 						Green = 8'h00;
 						Blue = 8'h00;
-						end
-		  end
+					end
+				else if(start_data == 3'd2)
+					begin
+						Red = 8'h32;
+						Green = 8'h59;
+						Blue = 8'h96;
+					end
+				else if(start_data == 3'd3)
+					begin
+						Red = 8'h60;
+						Green = 8'hc1;
+						Blue = 8'hfb;
+					end
+				else if(start_data == 3'd4)
+					begin
+						Red = 8'h1d;
+						Green = 8'h4a;
+						Blue = 8'h5d;
+					end
+				else if(start_data == 3'd5)
+					begin
+						Red = 8'h5d;
+						Green = 8'h8a;
+						Blue = 8'hdf;
+					end
+				else if(start_data == 3'd6)
+					begin
+						Red = 8'h77;
+						Green = 8'h9e;
+						Blue = 8'hdf;
+					end
+				else if(start_data == 3'd7)
+					begin
+						Red = 8'h2d;
+						Green = 8'h48;
+						Blue = 8'h7f;
+					end
+				else 
+					begin
+						Red = 8'h00;
+						Green = 8'h00;
+						Blue = 8'h00;
+					end
+			end
+
 		  else if(p1_won == 1'b1 || p2_won == 1'b1)
 		  begin
+			if(font_data[10'd8 - DrawX - 10'd264] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+			else
+			     begin
 						Red = 8'h00;
 						Green = 8'h00;
 						Blue = 8'h00;
-		  end
+					end
+		  end    
+		  
 		  
         else if (is_player1 == 1'b1)
         begin
@@ -506,26 +631,259 @@ module  color_mapper ( //input              is_ball,            // Whether curre
             Blue = 8'hff;
         end
 		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+		 
 		  
 		  
     end //for big comb block
 	 
 	 
 	 
-	 //otherwise get the color of the sprite
-				/*else
-				begin
-						Red = data[23:16];
-						Green = data[15:8];
-						Blue = data[7:0];
-				end*/
+			/*
+		  if(p1_won == 1'b1 || p2_won == 1'b1)
+		  begin
+					if((DrawX >= 10'd264) && (DrawX < 10'd272) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+					
+						if(font_data[10'd8 - DrawX - 10'd264] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd274) && (DrawX < 10'd282) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd274] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd284) && (DrawX < 10'd292) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd284] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd294) && (DrawX < 10'd302) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd294] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd304) && (DrawX < 10'd312) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd304] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd314) && (DrawX < 10'd322) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd314] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd324) && (DrawX < 10'd332) && (DrawY >= 10'd232) && (DrawY < 10'd248) && p1_won == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd324] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if( (DrawX >= 10'd324) && (DrawX < 10'd332) && (DrawY >= 10'd232) && (DrawY < 10'd248) && p2_won == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd324] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd338) && (DrawX < 10'd346) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd338] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd348) && (DrawX < 10'd356) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd348] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd358) && (DrawX < 10'd366) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd358] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if((DrawX >= 10'd368) && (DrawX < 10'd376) && (DrawY >= 10'd232) && (DrawY < 10'd248))
+					begin
+						if(font_data[10'd8 - DrawX - 10'd368] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else
+						begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'h00;
+						end
+		  end  */
+	 
+	 
+	 /*
+	 
+	 if(P == 1'b1)
+					begin
+					
+						if(font_data[10'd8 - DrawX - 10'd264] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(L == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd274] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(A == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd284] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(Y == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd294] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(E == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd304] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(R == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd314] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(ONE == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd324] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if( TWO == 1'b1 )
+					begin
+						if(font_data[10'd8 - DrawX - 10'd324] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(W == 1'b1 )
+					begin
+						if(font_data[10'd8 - DrawX - 10'd338] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if( I == 1'b1 )
+					begin
+						if(font_data[10'd8 - DrawX - 10'd348] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if( N == 1'b1 )
+					begin
+						if(font_data[10'd8 - DrawX - 10'd358] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else if(S == 1'b1)
+					begin
+						if(font_data[10'd8 - DrawX - 10'd368] == 1'b1)
+					   begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'hff;
+					   end
+					end
+					else
+						begin
+							Red = 8'h00;
+							Green = 8'h00;
+							Blue = 8'h00;
+						end
+	 
+	 */
+
+	 
+	 
+	 
+	 
+	 
+	
     
 endmodule

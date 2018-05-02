@@ -65,6 +65,87 @@ endmodule
 
 
 
+module Start(
+				input Clk, Reset,
+				input [7:0] keyCode,
+				output logic is_start
+				);		
+				
+				
+				
+logic is_start_in;	
+				
+always_ff @ (posedge Clk)
+    begin
+        if (Reset)
+        begin
+        is_start <= 1'b1;
+        end
+		  
+        else
+        begin
+		  is_start <= is_start_in;
+        end
+    end
+				
+				
+always_comb
+	begin
+	is_start_in = is_start;
+	
+	if(keyCode == 8'h5A)     //enter key
+		is_start_in = 1'b0; 
+	
+	end
+	
+
+endmodule 
+
+
+module  End(
+				input Clk, Reset,
+				input [9:0] DrawY, DrawX
+				//output logic 	
+				);
+
+//player1 wins 
+
+logic [3:0] end_out;
+
+/*
+always_ff @ (posedge Clk)
+    begin
+        if (Reset)
+        begin
+        P <= 1'b1;
+        end
+		  
+        else
+        begin
+		  is_start <= is_start_in;
+        end
+    end
+				
+				
+always_comb
+	begin
+	is_start_in = is_start;
+	
+	if(keyCode == 8'h5A)     //enter key
+		is_start_in = 1'b0; 
+	
+	end
+ 
+*/
+
+
+endmodule
+
+
+
+
+
+
 
 
 
