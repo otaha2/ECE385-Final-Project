@@ -82,8 +82,8 @@ module lab8( input               CLOCK_50,
 	 
 	 logic [10:0]	end_addr;
 	 logic [7:0]	end_data;
-	 logic [18:0] start_address;
-	 logic [3:0] start_data;
+	 logic [18:0] start_address, pipe_address;
+	 logic [3:0] start_data, pipe_data;
 	
 	 logic is_start;
 	 
@@ -167,7 +167,9 @@ module lab8( input               CLOCK_50,
 										.font_data(end_data),
 										.is_start(is_start),
 										.start_address(start_address),
-										.start_data(start_data)
+										.start_data(start_data),
+										.pipe_address(pipe_address),
+										.pipe_data(pipe_data)
 										);   
 		
 		
@@ -238,7 +240,9 @@ module lab8( input               CLOCK_50,
 									.data_Out1(data_Out1),
 									.data_Out2(data_Out2),
 									.start_address(start_address),
-									.start_data(start_data)
+									.start_data(start_data),
+									.pipe_data(pipe_data),
+									.pipe_address(pipe_address)
 									);
 									
 	   font_rom 			 fonts(

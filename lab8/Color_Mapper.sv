@@ -23,10 +23,10 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 							  input        [23:0] data1, data2,
 							  input 			[9:0] action1, action2, direction1, direction2,
 							  input		   [7:0]	font_data, 
-							  input        [3:0] start_data,
+							  input        [3:0] start_data, pipe_data,
 							  output logic [10:0] font_addr,
 							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
-							  output logic [18:0] read_address1, read_address2, start_address
+							  output logic [18:0] read_address1, read_address2, start_address, pipe_address
 							  
                      );
     
@@ -398,7 +398,17 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 	  else
 		read_address2 = (DrawX-p2x) + (DrawY-p2y)*tot_w + p1_h*tot_w; //defualt standing... sprite #9
 		
-		
+		//pipe
+		if(DrawX >= 10'd555 && DrawX < 10'd640 && DrawY >= 10'd390 && DrawY <= 10'd480)
+		begin
+			pipe_address = DrawX - 10'd555 + (DrawY - 10'd390)*10'd85;
+		end
+		else if(DrawX >= 10'd0 && DrawX < 10'd85 && DrawY >= 10'd390 && DrawY <= 10'd480)
+		begin
+			pipe_address = (10'd85 - (DrawX - 10'd0)) + (DrawY - 10'd390)*10'd85;
+		end
+		else
+			pipe_address = DrawX - 10'd555 + (DrawY - 10'd390)*10'd85;
 		//Font Display
 		
 
@@ -558,7 +568,64 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 						Blue = 8'h00;
 					end
 		  end    
-		  
+		  //draw pipe
+		  else if((DrawX >= 10'd555 && DrawX < 10'd640 && DrawY >= 10'd390 && DrawY <= 10'd480) || (DrawX >= 10'd0 && DrawX < 10'd85 && DrawY >= 10'd390 && DrawY <= 10'd480))
+		  begin
+			if(pipe_data == 0)
+			begin
+				Red = 8'hff;
+				Green = 8'hff;
+				Blue = 8'hff;
+			end
+			else if(pipe_data == 1)
+			begin
+				Red = 8'h00;
+				Green = 8'h00;
+				Blue = 8'h00;
+			end
+			else if(pipe_data == 2)
+			begin
+				Red = 8'hff;
+				Green = 8'hff;
+				Blue = 8'hff;
+			end
+			else if(pipe_data == 3)
+			begin
+				Red = 8'h00;
+				Green = 8'hf8;
+				Blue = 8'h0d;
+			end
+			else if(pipe_data == 4)
+			begin
+				Red = 8'h01;
+				Green = 8'h80;
+				Blue = 8'h06;
+			end
+			else if(pipe_data == 5)
+			begin
+				Red = 8'h0a;
+				Green = 8'h5e;
+				Blue = 8'h07;
+			end
+			else if(pipe_data == 6)
+			begin
+				Red = 8'h06;
+				Green = 8'hcb;
+				Blue = 8'h00;
+			end
+			else if(pipe_data == 7)
+			begin
+				Red = 8'h07;
+				Green = 8'h43;
+				Blue = 8'h09;
+			end
+			else
+				begin
+				Red = 8'hff;
+				Green = 8'hff;
+				Blue = 8'hff;
+				end
+		  end
 		  
         else if (is_player1 == 1'b1)
         begin
@@ -608,17 +675,47 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 			//player 1 health bar
 		  else if( (DrawX > 10'd50) && (DrawX <= 10'd50 + health1) && (DrawY >= 10'd20) && (DrawY <= 10'd40))
 		  begin
-				Red = 8'hff;
-				Green = 8'h00;
-				Blue = 8'h00;
+				if(health1 > 10'd60 && health1 <= 10'd100)
+				begin
+					Red = 8'h00;
+					Green = 8'hff;
+					Blue = 8'h00;
+				end
+				else if(health1 <= 10'd60 && health1 > 10'd20)
+				begin
+					Red = 8'hf4;
+					Green = 8'h8c;
+					Blue = 8'h42;
+				end
+				else
+				begin
+					Red = 8'hff;
+					Green = 8'h00;
+					Blue = 8'h00;
+				end
 		  end
 		  
 		  //player 2 health bar
 		  else if( (DrawX > 10'd490) && (DrawX <= 10'd490 + health2) && (DrawY >= 10'd20) && (DrawY <= 10'd40))
 		  begin
-				Red = 8'hff;
-				Green = 8'h00;
-				Blue = 8'h00;
+				if(health2 > 10'd60 && health2 <= 10'd100)
+				begin
+					Red = 8'h00;
+					Green = 8'hff;
+					Blue = 8'h00;
+				end
+				else if(health2 <= 10'd60 && health2 > 10'd20)
+				begin
+					Red = 8'hf4;
+					Green = 8'h8c;
+					Blue = 8'h42;
+				end
+				else
+				begin
+					Red = 8'hff;
+					Green = 8'h00;
+					Blue = 8'h00;
+				end
 		  end
 		  
 		  

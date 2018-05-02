@@ -9,11 +9,11 @@ module player2(input frame_clk, Reset, Clk, press, hit1, hit2,
 					);
 					
 					
-parameter [9:0] px_center = 10'd320;
+parameter [9:0] px_center = 10'd400;
 parameter [9:0] py_center = 10'd400;
 
-parameter [9:0] px_min = 10'd1;       // Leftmost point on the X axis
-parameter [9:0] px_max = 10'd639;     // Rightmost point on the X axis
+parameter [9:0] px_min = 10'd85;       // Leftmost point on the X axis
+parameter [9:0] px_max = 10'd555;     // Rightmost point on the X axis
 parameter [9:0] py_min = 10'd1;       // Topmost point on the Y axis
 parameter [9:0] py_max = 10'd479;     // Bottommost point on the Y axis
 parameter [9:0] px_step = 10'd5;      // Step size on the X axis
@@ -78,6 +78,7 @@ logic p1_win_in, p1_win;
 			  act <= 10'd9;
 			  health = 10'd100;
 			  p1_win <= 1'b0;
+			  dir <= 1'b0;
         end
         else
         begin
@@ -325,15 +326,19 @@ logic p1_win_in, p1_win;
 				  end
            
 				//X boundary conditions 
-				else if( px_pos + Player_Width >= px_max && px_mot_in == px_step)  // Player is at the right edge, stop moving
+				else if(px_pos >= px_max && px_mot_in == px_step)  // Player is at the right edge, stop moving
 				   begin
-                px_mot_in = 10'd0;  
-					 py_mot_in = 10'd0; 
+                px_mot_in = px_step;  
+					 py_mot_in = 10'd0;
+					 px_pos_in = 10'd85;
+					 dir_in = 1'b1; 
 					end
-			   else if (px_pos <= 10'd5 && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving
+			   else if (px_pos + Player_Width <= px_min && px_mot_in == (~(px_step) + 1'b1))  // Ball is at the left edge, stop moving && px_mot_in == (~(px_step) + 1'b1)
 				   begin
-                px_mot_in = 10'd0;
+                px_mot_in = (~(px_step) + 1'b1);
 					 py_mot_in = 10'd0; 
+					 px_pos_in = 10'd555;
+					 dir_in = 1'b0;
 					end
 					 
 				
@@ -352,8 +357,21 @@ logic p1_win_in, p1_win;
 				p1_win_in = 1'b0;
         
             // Update the Players's position with its motion
-            px_pos_in = px_pos + px_mot;
-            py_pos_in = py_pos + py_mot;
+            if((px_pos < px_max && px_pos + Player_Width > px_min))
+				begin
+					px_pos_in = px_pos + px_mot;
+					py_pos_in = py_pos + py_mot;
+				end
+				else if(px_pos >= px_max && px_mot_in == px_step)
+				begin
+					px_pos_in = 10'd85;
+					py_pos_in = py_pos + py_mot;
+				end
+				else 
+				begin
+					px_pos_in = 10'd554 - Player_Width;
+					py_pos_in = py_pos + py_mot;
+				end
 				
         end
 	  end
