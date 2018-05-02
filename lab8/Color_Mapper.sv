@@ -16,17 +16,17 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( //input              is_ball,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
-							  input			is_player1, is_player2, hit1, hit2, p1_won, p2_won, is_start,
+							  input			is_player1, is_player2, hit1, hit2, p1_won, p2_won, is_start, is_combo1, is_combo2, draw_combo1, draw_combo2,
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
 							  input			[9:0] p1_h, p1_w, //player height and width
-                       input 			[9:0] p1x, p1y, p2x, p2y, health1, health2,
+                       input 			[9:0] p1x, p1y, p2x, p2y, health1, health2, combo1_x, combo1_y, combo2_x, combo2_y,
 							  input        [23:0] data1, data2,
-							  input 			[9:0] action1, action2, direction1, direction2,
+							  input 			[9:0] action1, action2, direction1, direction2, combo1_direction, combo2_direction,
 							  input		   [7:0]	font_data, 
-							  input        [3:0] start_data, pipe_data,
+							  input        [3:0] start_data, pipe_data, combo1_data, combo2_data,
 							  output logic [10:0] font_addr,
 							  output logic [7:0] VGA_R, VGA_G, VGA_B, // VGA RGB output
-							  output logic [18:0] read_address1, read_address2, start_address, pipe_address
+							  output logic [18:0] read_address1, read_address2, start_address, pipe_address, combo1_address, combo2_address
 							  
                      );
     
@@ -409,9 +409,37 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 		end
 		else
 			pipe_address = DrawX - 10'd555 + (DrawY - 10'd390)*10'd85;
+			
+			
+		//combo1 address
+		if(is_combo1 == 1'b1 && combo1_direction == 1'b1)
+		begin
+			combo1_address = DrawX - combo1_x + (DrawY - combo1_y)*10'd40;
+		end
+		else if(is_combo1 == 1'b1 && combo1_direction == 1'b0)
+		begin
+			combo1_address = (10'd40 - (DrawX - combo1_x)) + (DrawY - combo1_y)*10'd40;
+		end
+		else
+			combo1_address = DrawX - combo1_x + (DrawY - combo1_y)*10'd40;
+			
+			
+		//combo2 address
+		
+		if(is_combo2 == 1'b1 && combo2_direction == 1'b1)
+		begin
+			combo2_address = DrawX - combo2_x + (DrawY - combo2_y)*10'd40;
+		end
+		else if(is_combo2 == 1'b1 && combo2_direction == 1'b0)
+		begin
+			combo2_address = (10'd40 - (DrawX - combo2_x)) + (DrawY - combo2_y)*10'd40;
+		end
+		else
+			combo2_address = DrawX - combo2_x + (DrawY - combo2_y)*10'd40;
+		
+			
 		//Font Display
 		
-
 		if( (DrawX >= 10'd264) && (DrawX < 10'd272) && (DrawY >= 10'd232) && (DrawY < 10'd248) )	
 			begin
 				font_addr = DrawY - 10'd232 + 16*'h50;      //P =x50
@@ -627,6 +655,131 @@ module  color_mapper ( //input              is_ball,            // Whether curre
 				end
 		  end
 		  
+		  
+		  
+		  //draw combo1
+		  else if(is_combo1 && draw_combo1 == 1'b1)
+		  begin
+			if(combo1_data == 0)
+			begin
+				Red = 8'h00;
+				Green = 8'h00;
+				Blue = 8'h00;
+			end
+			else if(combo1_data == 1)
+			begin
+				Red = 8'hff;
+				Green = 8'h40;
+				Blue = 8'h40;
+			end
+			else if(combo1_data == 2)
+			begin
+				Red = 8'hff;
+				Green = 8'h95;
+				Blue = 8'h40;
+			end
+			else if(combo1_data == 3)
+			begin
+				Red = 8'hff;
+				Green = 8'hd7;
+				Blue = 8'h42;
+			end
+			else if(combo1_data == 4)
+			begin
+				Red = 8'hff;
+				Green = 8'h85;
+				Blue = 8'h40;
+			end
+			else if(combo1_data == 5)
+			begin
+				Red = 8'hff;
+				Green = 8'h67;
+				Blue = 8'h40;
+			end
+			else if(combo1_data == 6)
+			begin
+				Red = 8'hff;
+				Green = 8'h9c;
+				Blue = 8'h45;
+			end
+			else if(combo1_data == 7)
+			begin
+				Red = 8'hff;
+				Green = 8'hd1;
+				Blue = 8'h42;
+			end
+			else
+			begin
+				Red = 8'h00;
+				Green = 8'h00;
+				Blue = 8'h00;
+			end
+		  end
+		  
+		  
+		  
+		  
+		  //draw combo2
+		  else if(is_combo2 && draw_combo2 == 1'b1)
+		  begin
+			if(combo2_data == 0)
+			begin
+				Red = 8'h00;
+				Green = 8'h00;
+				Blue = 8'h00;
+			end
+			else if(combo2_data == 1)
+			begin
+				Red = 8'hff;
+				Green = 8'h40;
+				Blue = 8'h40;
+			end
+			else if(combo2_data == 2)
+			begin
+				Red = 8'hff;
+				Green = 8'h95;
+				Blue = 8'h40;
+			end
+			else if(combo2_data == 3)
+			begin
+				Red = 8'hff;
+				Green = 8'hd7;
+				Blue = 8'h42;
+			end
+			else if(combo2_data == 4)
+			begin
+				Red = 8'hff;
+				Green = 8'h85;
+				Blue = 8'h40;
+			end
+			else if(combo2_data == 5)
+			begin
+				Red = 8'hff;
+				Green = 8'h67;
+				Blue = 8'h40;
+			end
+			else if(combo2_data == 6)
+			begin
+				Red = 8'hff;
+				Green = 8'h9c;
+				Blue = 8'h45;
+			end
+			else if(combo2_data == 7)
+			begin
+				Red = 8'hff;
+				Green = 8'hd1;
+				Blue = 8'h42;
+			end
+			else
+			begin
+				Red = 8'h00;
+				Green = 8'h00;
+				Blue = 8'h00;
+			end
+		  end
+		  
+		  
+		  //draw Player 1
         else if (is_player1 == 1'b1)
         begin
 				if(data1 == 24'hff0ff)

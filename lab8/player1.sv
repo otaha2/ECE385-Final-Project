@@ -1,4 +1,4 @@
-module player1(input frame_clk, Reset, Clk, press, hit1, hit2,
+module player1(input frame_clk, Reset, Clk, press, hit1, hit2, draw_combo2, combo_hit1,
 					input [7:0] keycode,
 					input [7:0] keypress,
 					input [9:0] DrawX, DrawY,
@@ -345,11 +345,12 @@ logic p2_win_in, p2_win;
 					 
 			 
 			
-			 if(hit2 == 1'b1)
-					health_in = health - 10'd1;
+			 if(draw_combo2 == 1'b1 && combo_hit1 == 1'b1)
+				health_in = health - 10'd15;
+			 else if(hit2 == 1'b1)
+				health_in = health - 10'd1;
 			 else
-					health_in = health; 
-        
+				health_in = health;
 		  
 			if(health <= 10'd0)
 			begin

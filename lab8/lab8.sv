@@ -82,10 +82,16 @@ module lab8( input               CLOCK_50,
 	 
 	 logic [10:0]	end_addr;
 	 logic [7:0]	end_data;
-	 logic [18:0] start_address, pipe_address;
-	 logic [3:0] start_data, pipe_data;
+	 logic [18:0] start_address, pipe_address, combo1_address, combo2_address;
+	 logic [3:0] start_data, pipe_data, combo1_data, combo2_data;
 	
 	 logic is_start;
+	 
+	 logic [9:0] combo1_x, combo1_y, combo1_direction;
+	 logic draw_combo1, is_combo1, combo_hit2;
+	 
+	 logic [9:0] combo2_x, combo2_y, combo2_direction;
+	 logic draw_combo2, is_combo2, combo_hit1;
 	 
 	 
 	 //Instantiaze PS/2
@@ -169,7 +175,21 @@ module lab8( input               CLOCK_50,
 										.start_address(start_address),
 										.start_data(start_data),
 										.pipe_address(pipe_address),
-										.pipe_data(pipe_data)
+										.pipe_data(pipe_data),
+										.combo1_x(combo1_x), 
+										.combo1_y(combo1_y), 
+										.combo1_direction(combo1_direction),
+										.draw_combo1(draw_combo1), 
+										.is_combo1(is_combo1),
+										.combo2_x(combo2_x), 
+										.combo2_y(combo2_y), 
+										.combo2_direction(combo2_direction),
+										.draw_combo2(draw_combo2), 
+										.is_combo2(is_combo2),
+										.combo1_address(combo1_address),
+										.combo2_address(combo2_address),
+										.combo1_data(combo1_data),
+										.combo2_data(combo2_data)
 										);   
 		
 		
@@ -206,7 +226,9 @@ module lab8( input               CLOCK_50,
 									.hit1(hit1),
 									.hit2(hit2),
 									.health1(health1),
-									.p2_won(p2_won)
+									.p2_won(p2_won),
+									.combo_hit1(combo_hit1),
+									.draw_combo2(draw_combo2)
 									);
 									
 		player2       		p2(
@@ -226,10 +248,53 @@ module lab8( input               CLOCK_50,
 									.hit1(hit1),
 									.hit2(hit2),
 									.health2(health2),
-									.p1_won(p1_won)
+									.p1_won(p1_won),
+									.combo_hit2(combo_hit2),
+									.draw_combo1(draw_combo1)
 									);
 									
-									
+		Combo1				comboP1(
+											.frame_clk(VGA_VS),
+											.Clk(Clk),
+											.Reset(Reset_h),
+											.keypress(keypress),
+											.p2x(p2x), 
+											.p2y(p2y),
+											.p1x(p1x),
+											.p1y(p1y),
+											.player_direction(direction1),
+											.combo_x(combo1_x), 
+											.combo_y(combo1_y), 
+											.combo_direction(combo1_direction),
+											.draw_combo(draw_combo1), 
+											.is_combo(is_combo1), 
+											.combo_hit2(combo_hit2),
+											.DrawX(DrawX),
+											.DrawY(DrawY)
+										  );
+										  
+										  
+		Combo2				comboP2(
+											.frame_clk(VGA_VS),
+											.Clk(Clk),
+											.Reset(Reset_h),
+											.keypress(keypress),
+											.p1x(p1x), 
+											.p1y(p1y),
+											.p2x(p2x), 
+											.p2y(p2y),
+											.player_direction(direction2),
+											.combo_x(combo2_x), 
+											.combo_y(combo2_y), 
+											.combo_direction(combo2_direction),
+											.draw_combo(draw_combo2), 
+											.is_combo(is_combo2), 
+											.combo_hit1(combo_hit1),
+											.DrawX(DrawX),
+											.DrawY(DrawY)
+											
+										  );
+										
 		
 		
 		
@@ -242,7 +307,11 @@ module lab8( input               CLOCK_50,
 									.start_address(start_address),
 									.start_data(start_data),
 									.pipe_data(pipe_data),
-									.pipe_address(pipe_address)
+									.pipe_address(pipe_address),
+									.combo1_address(combo1_address),
+									.combo2_address(combo2_address),
+									.combo1_data(combo1_data),
+									.combo2_data(combo2_data)
 									);
 									
 	   font_rom 			 fonts(
@@ -259,8 +328,7 @@ module lab8( input               CLOCK_50,
 										  .is_start(is_start)
 											);
 		
-		
-		
+
 		
 		
 		
@@ -284,7 +352,7 @@ module lab8( input               CLOCK_50,
 		
     
     // Display keycode on hex display
-    HexDriver hex_inst_0 (hit1, HEX0); //(keyCode[3:0], HEX0);
+    HexDriver hex_inst_0 (draw_combo2, HEX0); //(keyCode[3:0], HEX0);
     HexDriver hex_inst_1 (hit2, HEX1); //(keyCode[7:4], HEX1);
 	 HexDriver hex_inst_2 (keyCode[3:0], HEX2);
     HexDriver hex_inst_3 (keyCode[7:4], HEX3);
