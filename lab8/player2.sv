@@ -10,7 +10,7 @@ module player2(input frame_clk, Reset, Clk, press, hit1, hit2, combo_hit2, draw_
 					
 					
 parameter [9:0] px_center = 10'd400;
-parameter [9:0] py_center = 10'd400;
+parameter [9:0] py_center = 10'd364;
 
 parameter [9:0] px_min = 10'd85;       // Leftmost point on the X axis
 parameter [9:0] px_max = 10'd555;     // Rightmost point on the X axis
@@ -342,7 +342,7 @@ logic p1_win_in, p1_win;
 					end
 					 
 				
-			 if(draw_combo1 == 1'b1 && combo_hit2 == 1'b1)
+			 if(combo_hit2 == 1'b1)
 				health_in = health - 10'd15;
 			 else if(hit1 == 1'b1)
 				health_in = health - 10'd1;
@@ -350,7 +350,7 @@ logic p1_win_in, p1_win;
 				health_in = health;
 			
 			
-			if(health <= 10'd0)
+			if(health <= 10'd0 || health > 100)
 			begin
 				health_in = 10'd0;
 				p1_win_in = 1'b1;
@@ -369,9 +369,14 @@ logic p1_win_in, p1_win;
 					px_pos_in = 10'd85;
 					py_pos_in = py_pos + py_mot;
 				end
-				else 
+				else if( px_pos + Player_Width <= px_min && px_mot_in == (~px_step) + 1'b1 )
 				begin
-					px_pos_in = 10'd554 - Player_Width;
+					px_pos_in = 10'd555 - Player_Width;
+					py_pos_in = py_pos + py_mot;
+				end
+				else
+				begin
+					px_pos_in = px_pos + px_mot;
 					py_pos_in = py_pos + py_mot;
 				end
 				

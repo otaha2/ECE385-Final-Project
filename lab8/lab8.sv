@@ -93,6 +93,8 @@ module lab8( input               CLOCK_50,
 	 logic [9:0] combo2_x, combo2_y, combo2_direction;
 	 logic draw_combo2, is_combo2, combo_hit1;
 	 
+	 logic [3:0] output2;
+	 
 	 
 	 //Instantiaze PS/2
 	 keyboard      keyB(
@@ -251,6 +253,7 @@ module lab8( input               CLOCK_50,
 									.p1_won(p1_won),
 									.combo_hit2(combo_hit2),
 									.draw_combo1(draw_combo1)
+									
 									);
 									
 		Combo1				comboP1(
@@ -291,7 +294,8 @@ module lab8( input               CLOCK_50,
 											.is_combo(is_combo2), 
 											.combo_hit1(combo_hit1),
 											.DrawX(DrawX),
-											.DrawY(DrawY)
+											.DrawY(DrawY),
+											.output2(output2)
 											
 										  );
 										
@@ -353,7 +357,7 @@ module lab8( input               CLOCK_50,
     
     // Display keycode on hex display
     HexDriver hex_inst_0 (draw_combo2, HEX0); //(keyCode[3:0], HEX0);
-    HexDriver hex_inst_1 (hit2, HEX1); //(keyCode[7:4], HEX1);
+    HexDriver hex_inst_1 (output2[3:0], HEX1); //(keyCode[7:4], HEX1);
 	 HexDriver hex_inst_2 (keyCode[3:0], HEX2);
     HexDriver hex_inst_3 (keyCode[7:4], HEX3);
 	 HexDriver hex_inst_4 (press, HEX4);

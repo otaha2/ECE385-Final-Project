@@ -1,5 +1,5 @@
 Flow report for lab8
-Wed May 02 16:14:22 2018
+Thu May 03 01:15:26 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed May 02 16:14:11 2018      ;
+; Flow Status                        ; Successful - Thu May 03 01:15:15 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; lab8                                       ;
 ; Top-level Entity Name              ; lab8                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 5,914 / 114,480 ( 5 % )                    ;
-;     Total combinational functions  ; 5,874 / 114,480 ( 5 % )                    ;
-;     Dedicated logic registers      ; 304 / 114,480 ( < 1 % )                    ;
-; Total registers                    ; 304                                        ;
+; Total logic elements               ; 6,237 / 114,480 ( 5 % )                    ;
+;     Total combinational functions  ; 6,174 / 114,480 ( 5 % )                    ;
+;     Dedicated logic registers      ; 362 / 114,480 ( < 1 % )                    ;
+; Total registers                    ; 362                                        ;
 ; Total pins                         ; 142 / 529 ( 27 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 3,048,000 / 3,981,312 ( 77 % )             ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/02/2018 16:10:36 ;
+; Start date & time ; 05/03/2018 01:12:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab8                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name     ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 216273107254448.152529543606892       ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176581592262938.152532794311980       ; --            ; --              ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --              ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                             ; --            ; --              ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; None                                  ; --            ; --              ; eda_simulation ;
@@ -108,12 +108,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:02     ; 1.0                     ; 804 MB              ; 00:01:17                           ;
-; Fitter                    ; 00:01:48     ; 1.7                     ; 1536 MB             ; 00:02:18                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 733 MB              ; 00:00:07                           ;
-; PowerPlay Power Analyzer  ; 00:00:22     ; 1.0                     ; 912 MB              ; 00:00:22                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.6                     ; 954 MB              ; 00:00:09                           ;
-; Total                     ; 00:03:28     ; --                      ; --                  ; 00:04:13                           ;
+; Analysis & Synthesis      ; 00:00:50     ; 1.0                     ; 808 MB              ; 00:01:09                           ;
+; Fitter                    ; 00:01:25     ; 1.7                     ; 1570 MB             ; 00:01:56                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 730 MB              ; 00:00:06                           ;
+; PowerPlay Power Analyzer  ; 00:00:18     ; 1.0                     ; 912 MB              ; 00:00:19                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.5                     ; 954 MB              ; 00:00:08                           ;
+; Total                     ; 00:02:47     ; --                      ; --                  ; 00:03:38                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,11 +122,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-HNNC193  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-HNNC193  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-HNNC193  ; Windows 7 ; 6.2        ; x86_64         ;
-; PowerPlay Power Analyzer  ; DESKTOP-HNNC193  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-HNNC193  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-DV7VFM3  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-DV7VFM3  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-DV7VFM3  ; Windows 7 ; 6.2        ; x86_64         ;
+; PowerPlay Power Analyzer  ; DESKTOP-DV7VFM3  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-DV7VFM3  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
