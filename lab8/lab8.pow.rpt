@@ -1,5 +1,5 @@
 PowerPlay Power Analyzer report for lab8
-Thu May 03 01:15:15 2018
+Thu May 03 10:18:52 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -53,12 +53,12 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
+;     Processor 2            ;   5.9%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -66,17 +66,17 @@ agreement for further details.
 +-------------------------------------------------------------------------------------------+
 ; PowerPlay Power Analyzer Summary                                                          ;
 +----------------------------------------+--------------------------------------------------+
-; PowerPlay Power Analyzer Status        ; Successful - Thu May 03 01:15:15 2018            ;
+; PowerPlay Power Analyzer Status        ; Successful - Thu May 03 10:18:52 2018            ;
 ; Quartus II 64-Bit Version              ; 15.0.0 Build 145 04/22/2015 SJ Web Edition       ;
 ; Revision Name                          ; lab8                                             ;
 ; Top-level Entity Name                  ; lab8                                             ;
 ; Family                                 ; Cyclone IV E                                     ;
 ; Device                                 ; EP4CE115F29C7                                    ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 313.59 mW                                        ;
-; Core Dynamic Thermal Power Dissipation ; 138.97 mW                                        ;
+; Total Thermal Power Dissipation        ; 312.92 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 135.97 mW                                        ;
 ; Core Static Thermal Power Dissipation  ; 102.85 mW                                        ;
-; I/O Thermal Power Dissipation          ; 71.78 mW                                         ;
+; I/O Thermal Power Dissipation          ; 74.10 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -188,13 +188,13 @@ agreement for further details.
 ; Block Type                 ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
 +----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 ; PLL                        ; 1.45 mW                           ; 1.45 mW                     ; --                             ; 0.00 mW                       ;    3.125                                                  ;
-; M9K                        ; 19.84 mW                          ; 16.71 mW                    ; --                             ; 3.13 mW                       ;    4.731                                                  ;
-; Embedded multiplier block  ; 0.12 mW                           ; 0.12 mW                     ; --                             ; 0.00 mW                       ;    1.392                                                  ;
-; Embedded multiplier output ; 0.03 mW                           ; 0.00 mW                     ; --                             ; 0.03 mW                       ;    1.855                                                  ;
-; Combinational cell         ; 74.83 mW                          ; 29.39 mW                    ; --                             ; 45.44 mW                      ;   32.257                                                  ;
-; Clock control block        ; 35.87 mW                          ; 0.00 mW                     ; --                             ; 35.87 mW                      ;   53.125                                                  ;
-; Register cell              ; 6.75 mW                           ; 2.07 mW                     ; --                             ; 4.68 mW                       ;    5.887                                                  ;
-; I/O                        ; 41.85 mW                          ; 6.70 mW                     ; 35.08 mW                       ; 0.07 mW                       ;    5.243                                                  ;
+; M9K                        ; 20.68 mW                          ; 17.56 mW                    ; --                             ; 3.12 mW                       ;    4.684                                                  ;
+; Embedded multiplier block  ; 0.12 mW                           ; 0.12 mW                     ; --                             ; 0.00 mW                       ;    1.318                                                  ;
+; Embedded multiplier output ; 0.03 mW                           ; 0.00 mW                     ; --                             ; 0.03 mW                       ;    1.758                                                  ;
+; Combinational cell         ; 70.64 mW                          ; 27.19 mW                    ; --                             ; 43.45 mW                      ;   30.498                                                  ;
+; Clock control block        ; 36.24 mW                          ; 0.00 mW                     ; --                             ; 36.24 mW                      ;   53.125                                                  ;
+; Register cell              ; 6.75 mW                           ; 2.23 mW                     ; --                             ; 4.52 mW                       ;    5.887                                                  ;
+; I/O                        ; 44.17 mW                          ; 8.99 mW                     ; 35.11 mW                       ; 0.07 mW                       ;    6.829                                                  ;
 +----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
@@ -204,56 +204,56 @@ agreement for further details.
 +---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Compilation Hierarchy Node                              ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                       ;
 +---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |lab8                                                   ; 180.74 mW (77.62 mW)                 ; 56.45 mW (6.70 mW)              ; 35.08 mW (35.08 mW)               ; 89.22 mW (35.83 mW)               ; |lab8                                                                                                                                                     ;
+; |lab8                                                   ; 180.07 mW (80.27 mW)                 ; 57.54 mW (9.01 mW)              ; 35.11 mW (35.11 mW)               ; 87.43 mW (36.15 mW)               ; |lab8                                                                                                                                                     ;
 ;     |hard_block:auto_generated_inst                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|hard_block:auto_generated_inst                                                                                                                      ;
-;     |Frame_control:collision                            ; 0.23 mW (0.23 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.08 mW (0.08 mW)                 ; |lab8|Frame_control:collision                                                                                                                             ;
-;     |color_mapper:color_instance                        ; 25.19 mW (24.96 mW)                  ; 2.77 mW (2.61 mW)               ; --                                ; 22.42 mW (22.34 mW)               ; |lab8|color_mapper:color_instance                                                                                                                         ;
+;     |Frame_control:collision                            ; 0.22 mW (0.22 mW)                    ; 0.15 mW (0.15 mW)               ; --                                ; 0.07 mW (0.07 mW)                 ; |lab8|Frame_control:collision                                                                                                                             ;
+;     |color_mapper:color_instance                        ; 25.04 mW (24.82 mW)                  ; 2.53 mW (2.37 mW)               ; --                                ; 22.52 mW (22.46 mW)               ; |lab8|color_mapper:color_instance                                                                                                                         ;
 ;         |lpm_mult:Mult21                                ; 0.15 mW (0.00 mW)                    ; 0.12 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult21                                                                                                         ;
 ;             |mult_pgt:auto_generated                    ; 0.15 mW (0.15 mW)                    ; 0.12 mW (0.12 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult21|mult_pgt:auto_generated                                                                                 ;
-;         |lpm_mult:Mult47                                ; 0.08 mW (0.00 mW)                    ; 0.03 mW (0.00 mW)               ; --                                ; 0.05 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47                                                                                                         ;
-;             |multcore:mult_core                         ; 0.08 mW (0.04 mW)                    ; 0.03 mW (0.02 mW)               ; --                                ; 0.05 mW (0.02 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core                                                                                      ;
-;                 |mpar_add:padder                        ; 0.04 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder                                                                      ;
-;                     |lpm_add_sub:adder[0]               ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;
-;                         |add_sub_kgh:auto_generated     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_kgh:auto_generated                      ;
+;         |lpm_mult:Mult47                                ; 0.07 mW (0.00 mW)                    ; 0.04 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47                                                                                                         ;
+;             |multcore:mult_core                         ; 0.07 mW (0.03 mW)                    ; 0.04 mW (0.02 mW)               ; --                                ; 0.03 mW (0.01 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core                                                                                      ;
+;                 |mpar_add:padder                        ; 0.03 mW (0.00 mW)                    ; 0.02 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder                                                                      ;
+;                     |lpm_add_sub:adder[0]               ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;
+;                         |add_sub_kgh:auto_generated     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_kgh:auto_generated                      ;
 ;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ;
 ;                         |add_sub_kgh:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_kgh:auto_generated                      ;
-;                     |mpar_add:sub_par_add               ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;
-;                         |lpm_add_sub:adder[0]           ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;
-;                             |add_sub_ogh:auto_generated ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ogh:auto_generated ;
-;     |Combo1:comboP1                                     ; 0.94 mW (0.94 mW)                    ; 0.58 mW (0.58 mW)               ; --                                ; 0.36 mW (0.36 mW)                 ; |lab8|Combo1:comboP1                                                                                                                                      ;
-;     |Combo2:comboP2                                     ; 1.04 mW (1.04 mW)                    ; 0.65 mW (0.65 mW)               ; --                                ; 0.39 mW (0.39 mW)                 ; |lab8|Combo2:comboP2                                                                                                                                      ;
-;     |font_rom:fonts                                     ; 44.57 mW (44.57 mW)                  ; 23.86 mW (23.86 mW)             ; --                                ; 20.70 mW (20.70 mW)               ; |lab8|font_rom:fonts                                                                                                                                      ;
-;     |HexDriver:hex_inst_1                               ; 0.05 mW (0.05 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|HexDriver:hex_inst_1                                                                                                                                ;
-;     |HexDriver:hex_inst_2                               ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|HexDriver:hex_inst_2                                                                                                                                ;
-;     |HexDriver:hex_inst_3                               ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|HexDriver:hex_inst_3                                                                                                                                ;
-;     |HexDriver:hex_inst_5                               ; 0.05 mW (0.05 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |lab8|HexDriver:hex_inst_5                                                                                                                                ;
-;     |HexDriver:hex_inst_6                               ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_6                                                                                                                                ;
-;     |keyboard:keyB                                      ; 0.16 mW (0.14 mW)                    ; 0.11 mW (0.09 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |lab8|keyboard:keyB                                                                                                                                       ;
+;                     |mpar_add:sub_par_add               ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;
+;                         |lpm_add_sub:adder[0]           ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;
+;                             |add_sub_ogh:auto_generated ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|color_mapper:color_instance|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ogh:auto_generated ;
+;     |Combo1:comboP1                                     ; 1.10 mW (1.10 mW)                    ; 0.66 mW (0.66 mW)               ; --                                ; 0.44 mW (0.44 mW)                 ; |lab8|Combo1:comboP1                                                                                                                                      ;
+;     |Combo2:comboP2                                     ; 1.19 mW (1.19 mW)                    ; 0.73 mW (0.73 mW)               ; --                                ; 0.47 mW (0.47 mW)                 ; |lab8|Combo2:comboP2                                                                                                                                      ;
+;     |font_rom:fonts                                     ; 41.13 mW (41.13 mW)                  ; 22.39 mW (22.39 mW)             ; --                                ; 18.74 mW (18.74 mW)               ; |lab8|font_rom:fonts                                                                                                                                      ;
+;     |HexDriver:hex_inst_1                               ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_1                                                                                                                                ;
+;     |HexDriver:hex_inst_2                               ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|HexDriver:hex_inst_2                                                                                                                                ;
+;     |HexDriver:hex_inst_3                               ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_3                                                                                                                                ;
+;     |HexDriver:hex_inst_5                               ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|HexDriver:hex_inst_5                                                                                                                                ;
+;     |HexDriver:hex_inst_6                               ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|HexDriver:hex_inst_6                                                                                                                                ;
+;     |keyboard:keyB                                      ; 0.19 mW (0.17 mW)                    ; 0.12 mW (0.11 mW)               ; --                                ; 0.07 mW (0.07 mW)                 ; |lab8|keyboard:keyB                                                                                                                                       ;
 ;         |Dreg:Dreg_instance1                            ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance1                                                                                                                   ;
 ;         |Dreg:Dreg_instance2                            ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|Dreg:Dreg_instance2                                                                                                                   ;
 ;         |reg_11:reg_A                                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_A                                                                                                                          ;
 ;         |reg_11:reg_B                                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |lab8|keyboard:keyB|reg_11:reg_B                                                                                                                          ;
-;     |KeyPress:keykey                                    ; 0.29 mW (0.29 mW)                    ; 0.09 mW (0.09 mW)               ; --                                ; 0.20 mW (0.20 mW)                 ; |lab8|KeyPress:keykey                                                                                                                                     ;
-;     |player1:p1                                         ; 1.47 mW (1.47 mW)                    ; 0.72 mW (0.72 mW)               ; --                                ; 0.75 mW (0.75 mW)                 ; |lab8|player1:p1                                                                                                                                          ;
-;     |player2:p2                                         ; 1.20 mW (1.20 mW)                    ; 0.59 mW (0.59 mW)               ; --                                ; 0.61 mW (0.61 mW)                 ; |lab8|player2:p2                                                                                                                                          ;
-;     |frameROM:rom                                       ; 23.56 mW (2.01 mW)                   ; 18.64 mW (1.32 mW)              ; --                                ; 4.92 mW (0.69 mW)                 ; |lab8|frameROM:rom                                                                                                                                        ;
-;         |altsyncram:fire_ball_rtl_0                     ; 0.86 mW (0.00 mW)                    ; 0.80 mW (0.00 mW)               ; --                                ; 0.06 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:fire_ball_rtl_0                                                                                                             ;
-;             |altsyncram_vgo1:auto_generated             ; 0.86 mW (0.86 mW)                    ; 0.80 mW (0.80 mW)               ; --                                ; 0.06 mW (0.06 mW)                 ; |lab8|frameROM:rom|altsyncram:fire_ball_rtl_0|altsyncram_vgo1:auto_generated                                                                              ;
-;         |altsyncram:start_screen_rtl_0                  ; 3.74 mW (0.00 mW)                    ; 2.63 mW (0.00 mW)               ; --                                ; 1.11 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0                                                                                                          ;
-;             |altsyncram_tp61:auto_generated             ; 3.74 mW (3.46 mW)                    ; 2.63 mW (2.48 mW)               ; --                                ; 1.11 mW (0.97 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0|altsyncram_tp61:auto_generated                                                                           ;
-;                 |mux_tob:mux2                           ; 0.22 mW (0.22 mW)                    ; 0.12 mW (0.12 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0|altsyncram_tp61:auto_generated|mux_tob:mux2                                                              ;
-;                 |decode_aaa:rden_decode                 ; 0.05 mW (0.05 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0|altsyncram_tp61:auto_generated|decode_aaa:rden_decode                                                    ;
-;         |altsyncram:stick_figure_rtl_0                  ; 16.95 mW (0.00 mW)                   ; 13.88 mW (0.00 mW)              ; --                                ; 3.07 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0                                                                                                          ;
-;             |altsyncram_aoo1:auto_generated             ; 16.95 mW (16.02 mW)                  ; 13.88 mW (13.51 mW)             ; --                                ; 3.07 mW (2.52 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated                                                                           ;
-;                 |mux_3qb:mux4                           ; 0.29 mW (0.29 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|mux_3qb:mux4                                                              ;
-;                 |mux_3qb:mux5                           ; 0.30 mW (0.30 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.12 mW (0.12 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|mux_3qb:mux5                                                              ;
-;                 |decode_u9a:rden_decode_a               ; 0.18 mW (0.18 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.17 mW (0.17 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|decode_u9a:rden_decode_a                                                  ;
-;                 |decode_u9a:rden_decode_b               ; 0.16 mW (0.16 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|decode_u9a:rden_decode_b                                                  ;
-;     |Start:s_screen                                     ; 0.05 mW (0.05 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |lab8|Start:s_screen                                                                                                                                      ;
-;     |vga_clk:vga_clk_instance                           ; 1.56 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.11 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance                                                                                                                            ;
-;         |altpll:altpll_component                        ; 1.56 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.11 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                                                                    ;
-;             |vga_clk_altpll:auto_generated              ; 1.56 mW (1.56 mW)                    ; 1.45 mW (1.45 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                                                                      ;
-;     |VGA_controller:vga_controller_instance             ; 2.70 mW (2.70 mW)                    ; 0.06 mW (0.06 mW)               ; --                                ; 2.64 mW (2.64 mW)                 ; |lab8|VGA_controller:vga_controller_instance                                                                                                              ;
+;     |KeyPress:keykey                                    ; 0.17 mW (0.17 mW)                    ; 0.08 mW (0.08 mW)               ; --                                ; 0.08 mW (0.08 mW)                 ; |lab8|KeyPress:keykey                                                                                                                                     ;
+;     |player1:p1                                         ; 1.47 mW (1.47 mW)                    ; 0.73 mW (0.73 mW)               ; --                                ; 0.74 mW (0.74 mW)                 ; |lab8|player1:p1                                                                                                                                          ;
+;     |player2:p2                                         ; 1.21 mW (1.21 mW)                    ; 0.66 mW (0.66 mW)               ; --                                ; 0.55 mW (0.55 mW)                 ; |lab8|player2:p2                                                                                                                                          ;
+;     |frameROM:rom                                       ; 23.66 mW (1.17 mW)                   ; 18.92 mW (0.75 mW)              ; --                                ; 4.73 mW (0.42 mW)                 ; |lab8|frameROM:rom                                                                                                                                        ;
+;         |altsyncram:fire_ball_rtl_0                     ; 0.83 mW (0.00 mW)                    ; 0.80 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:fire_ball_rtl_0                                                                                                             ;
+;             |altsyncram_vgo1:auto_generated             ; 0.83 mW (0.83 mW)                    ; 0.80 mW (0.80 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |lab8|frameROM:rom|altsyncram:fire_ball_rtl_0|altsyncram_vgo1:auto_generated                                                                              ;
+;         |altsyncram:start_screen_rtl_0                  ; 3.91 mW (0.00 mW)                    ; 2.68 mW (0.00 mW)               ; --                                ; 1.23 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0                                                                                                          ;
+;             |altsyncram_tp61:auto_generated             ; 3.91 mW (3.57 mW)                    ; 2.68 mW (2.53 mW)               ; --                                ; 1.23 mW (1.04 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0|altsyncram_tp61:auto_generated                                                                           ;
+;                 |mux_tob:mux2                           ; 0.23 mW (0.23 mW)                    ; 0.11 mW (0.11 mW)               ; --                                ; 0.12 mW (0.12 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0|altsyncram_tp61:auto_generated|mux_tob:mux2                                                              ;
+;                 |decode_aaa:rden_decode                 ; 0.11 mW (0.11 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.08 mW (0.08 mW)                 ; |lab8|frameROM:rom|altsyncram:start_screen_rtl_0|altsyncram_tp61:auto_generated|decode_aaa:rden_decode                                                    ;
+;         |altsyncram:stick_figure_rtl_0                  ; 17.75 mW (0.00 mW)                   ; 14.69 mW (0.00 mW)              ; --                                ; 3.06 mW (0.00 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0                                                                                                          ;
+;             |altsyncram_aoo1:auto_generated             ; 17.75 mW (16.79 mW)                  ; 14.69 mW (14.32 mW)             ; --                                ; 3.06 mW (2.47 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated                                                                           ;
+;                 |mux_3qb:mux4                           ; 0.31 mW (0.31 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.13 mW (0.13 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|mux_3qb:mux4                                                              ;
+;                 |mux_3qb:mux5                           ; 0.32 mW (0.32 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.14 mW (0.14 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|mux_3qb:mux5                                                              ;
+;                 |decode_u9a:rden_decode_a               ; 0.14 mW (0.14 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.13 mW (0.13 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|decode_u9a:rden_decode_a                                                  ;
+;                 |decode_u9a:rden_decode_b               ; 0.20 mW (0.20 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.18 mW (0.18 mW)                 ; |lab8|frameROM:rom|altsyncram:stick_figure_rtl_0|altsyncram_aoo1:auto_generated|decode_u9a:rden_decode_b                                                  ;
+;     |Start:s_screen                                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |lab8|Start:s_screen                                                                                                                                      ;
+;     |vga_clk:vga_clk_instance                           ; 1.60 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.15 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance                                                                                                                            ;
+;         |altpll:altpll_component                        ; 1.60 mW (0.00 mW)                    ; 1.45 mW (0.00 mW)               ; --                                ; 0.15 mW (0.00 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component                                                                                                    ;
+;             |vga_clk_altpll:auto_generated              ; 1.60 mW (1.60 mW)                    ; 1.45 mW (1.45 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |lab8|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated                                                                      ;
+;     |VGA_controller:vga_controller_instance             ; 2.61 mW (2.61 mW)                    ; 0.06 mW (0.06 mW)               ; --                                ; 2.55 mW (2.55 mW)                 ; |lab8|VGA_controller:vga_controller_instance                                                                                                              ;
 +---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
@@ -265,7 +265,7 @@ agreement for further details.
 +-----------------+-----------------------+--------------------------+
 ; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
 +-----------------+-----------------------+--------------------------+
-; CLOCK_50        ; 50.00                 ; 138.81                   ;
+; CLOCK_50        ; 50.00                 ; 135.82                   ;
 ; No clock domain ; 0.00                  ; 0.15                     ;
 +-----------------+-----------------------+--------------------------+
 
@@ -275,8 +275,8 @@ agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCINT         ; 150.70 mA               ; 115.41 mA                 ; 35.28 mA                 ; 150.70 mA                        ;
-; VCCIO          ; 14.94 mA                ; 2.36 mA                   ; 12.57 mA                 ; 14.94 mA                         ;
+; VCCINT         ; 148.50 mA               ; 113.19 mA                 ; 35.31 mA                 ; 148.50 mA                        ;
+; VCCIO          ; 15.76 mA                ; 3.19 mA                   ; 12.57 mA                 ; 15.76 mA                         ;
 ; VCCA           ; 35.86 mA                ; 0.27 mA                   ; 35.59 mA                 ; 35.86 mA                         ;
 ; VCCD           ; 5.03 mA                 ; 0.64 mA                   ; 4.39 mA                  ; 5.03 mA                          ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
@@ -292,11 +292,11 @@ agreement for further details.
 ; 1        ; 2.5V          ; 1.57 mA             ; 0.00 mA               ; 1.57 mA              ;
 ; 2        ; 2.5V          ; 1.71 mA             ; 0.03 mA               ; 1.68 mA              ;
 ; 3        ; 2.5V          ; 1.50 mA             ; 0.00 mA               ; 1.50 mA              ;
-; 4        ; 2.5V          ; 1.84 mA             ; 0.24 mA               ; 1.60 mA              ;
+; 4        ; 2.5V          ; 1.83 mA             ; 0.23 mA               ; 1.60 mA              ;
 ; 5        ; 2.5V          ; 1.68 mA             ; 0.12 mA               ; 1.56 mA              ;
 ; 6        ; 2.5V          ; 1.60 mA             ; 0.07 mA               ; 1.53 mA              ;
 ; 7        ; 2.5V          ; 1.53 mA             ; 0.02 mA               ; 1.51 mA              ;
-; 8        ; 2.5V          ; 3.50 mA             ; 1.88 mA               ; 1.61 mA              ;
+; 8        ; 2.5V          ; 4.33 mA             ; 2.71 mA               ; 1.61 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
 
@@ -305,7 +305,7 @@ agreement for further details.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 2.5V          ; 14.94 mA                ; 2.36 mA                   ; 12.57 mA                 ; 14.94 mA                         ;
+; 2.5V          ; 15.76 mA                ; 3.19 mA                   ; 12.57 mA                 ; 15.76 mA                         ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -325,9 +325,9 @@ agreement for further details.
 ;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.0%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;             ;              ;               ;
 ; Vectorless estimation                                                                  ;              ;             ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 9117 (99.5%) ; 138 (77.1%) ; 362 (100.0%) ; 8617 (100.0%) ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 190 (2.1%)   ; 66 (36.9%)  ; 20 (5.5%)    ; 104 (1.2%)    ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 9117 (99.5%) ; 138 (77.1%) ; 362 (100.0%) ; 8617 (100.0%) ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 9238 (99.5%) ; 138 (77.1%) ; 362 (100.0%) ; 8738 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 190 (2.0%)   ; 66 (36.9%)  ; 20 (5.5%)    ; 104 (1.2%)    ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 9238 (99.5%) ; 138 (77.1%) ; 362 (100.0%) ; 8738 (100.0%) ;
 ;                                                                                        ;              ;             ;              ;               ;
 ; Default assignment                                                                     ;              ;             ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.0%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 1 (0.0%)      ;
@@ -352,7 +352,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit PowerPlay Power Analyzer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu May 03 01:14:57 2018
+    Info: Processing started: Thu May 03 10:18:34 2018
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off lab8 -c lab8
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -744,7 +744,7 @@ Warning (332049): Ignored set_false_path at lab8.sdc(264): Argument <from> is an
     Info (332050): set_false_path -from [get_keepers {sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1]}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_go}]
 Warning (332049): Ignored set_false_path at lab8.sdc(264): Argument <to> is an empty collection
 Warning (332060): Node: PS2_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register keyboard:keyB|reg_11:reg_A|Data_Out[6] is being clocked by PS2_CLK
+    Info (13166): Register keyboard:keyB|reg_11:reg_A|Data_Out[9] is being clocked by PS2_CLK
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: vga_clk_instance|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
@@ -755,12 +755,12 @@ Info (223001): Completed Vectorless Power Activity Estimation
 Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 28.616 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 313.59 mW
+Info (215049): Average toggle rate for this design is 27.160 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 312.92 mW
 Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 226 warnings
-    Info: Peak virtual memory: 912 megabytes
-    Info: Processing ended: Thu May 03 01:15:16 2018
-    Info: Elapsed time: 00:00:19
+    Info: Peak virtual memory: 915 megabytes
+    Info: Processing ended: Thu May 03 10:18:52 2018
+    Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:19
 
 

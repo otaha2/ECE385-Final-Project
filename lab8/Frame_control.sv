@@ -143,9 +143,9 @@ endmodule
 
 
 module Combo1(
-				input frame_clk, Clk, Reset, 
+				input frame_clk, Clk, Reset, make_combo2,
 				input [7:0] keypress, 
-				input [9:0] p2x, p2y, p1x, p1y, player_direction, DrawX, DrawY,
+				input [9:0] p2x, p2y, p1x, p1y, player_direction, DrawX, DrawY, combo2_x, combo2_y,
 				output logic [9:0] combo_x, combo_y, combo_direction, 
 				output logic draw_combo, is_combo, combo_hit2
 
@@ -260,6 +260,11 @@ always_ff @ (posedge Clk)
 		  //counter_in = 10'd0;
 		  end
 		  //right
+		  else if(combo_seq == 10'd1 && (keypress[4] == 1 || keypress[7] == 1))
+		  begin
+			combo_seq_in = 10'd0;
+			counter_in = 10'd0;
+		  end
 		  else if(combo_seq == 10'd1 && keypress[5] == 1 ) //&& counter <= 10'd5000
 		  begin
 		  combo_seq_in = 10'd2;
@@ -327,7 +332,9 @@ always_ff @ (posedge Clk)
 		  //make_combo_in = 10'd0;
 		  combo_mot_in = 10'd0;
 		  
-		  if(keypress[7:4] == 4'h0)
+		  if(keypress[7:4] == 4'hf)
+		  combo_seq_in = 10'd0;
+		  else if(keypress[7:4] == 4'h0)
 			combo_seq_in = combo_seq;
 		  else if(combo_seq == 1 && keypress[6] == 1)
 			combo_seq_in = combo_seq;
@@ -369,6 +376,16 @@ always_ff @ (posedge Clk)
              make_combo_in = 1'b0;
              combo_mot_in = 10'd0; 
 			end
+			else if(combo_pos + combo_width >= combo2_x && combo_pos < combo2_x && make_combo2 == 1)
+			begin
+				make_combo_in = 10'b0;
+				combo_mot_in = 10'd0;
+			end
+			else if(combo_pos <= combo2_x + combo_width && combo_pos + combo_width > combo2_x + combo_width && make_combo2 == 1)
+			begin
+				make_combo_in = 10'b0;
+				combo_mot_in = 10'd0;
+			end
 			else if (make_combo == 1)
 			begin
 				make_combo_in = make_combo;
@@ -377,7 +394,7 @@ always_ff @ (posedge Clk)
 			
 			
 			// Update the Combo's position with its motion
-			if(make_combo_in == 1'b1 && (keypress[5] == 1 || keypress[6] == 1))
+			if(make_combo_in == 1'b1 && (keypress[5] == 1 || keypress[6] == 1) && make_combo == 1'b0)
 			begin
 				if(keypress[5] == 1)
 				begin
@@ -419,9 +436,9 @@ endmodule
 
 
 module Combo2(
-				input frame_clk, Clk, Reset, 
+				input frame_clk, Clk, Reset, make_combo1,
 				input [7:0] keypress, 
-				input [9:0] p1x, p1y, p2x, p2y, player_direction, DrawX, DrawY,
+				input [9:0] p1x, p1y, p2x, p2y, player_direction, DrawX, DrawY, combo1_x, combo1_y,
 				output logic [9:0] combo_x, combo_y, combo_direction, 
 				output logic draw_combo, is_combo, combo_hit1, 
 				output logic [3:0] output2
@@ -607,7 +624,9 @@ always_ff @ (posedge Clk)
 		  //make_combo_in = 10'd0;
 		  combo_mot_in = 10'd0;
 		  
-		  if(keypress[3:0] == 4'h0)
+		  if(keypress[3:0] == 4'hf)
+			combo_seq_in = 10'd0;
+		  else if(keypress[3:0] == 4'h0)
 			combo_seq_in = combo_seq;
 		  else if(combo_seq == 1 && keypress[2] == 1)
 			combo_seq_in = combo_seq;
@@ -649,6 +668,16 @@ always_ff @ (posedge Clk)
              make_combo_in = 1'b0;
              combo_mot_in = 10'd0; 
 			end
+			else if(combo_pos + combo_width >= combo1_x && combo_pos < combo1_x && make_combo1 == 1)
+			begin
+				make_combo_in = 10'b0;
+				combo_mot_in = 10'd0;
+			end
+			else if(combo_pos <= combo1_x + combo_width && combo_pos + combo_width > combo1_x + combo_width && make_combo1 == 1)
+			begin
+				make_combo_in = 10'b0;
+				combo_mot_in = 10'd0;
+			end
 			else if (make_combo == 1)
 			begin
 				make_combo_in = make_combo;
@@ -657,7 +686,7 @@ always_ff @ (posedge Clk)
 			
 			
 			// Update the Combo's position with its motion
-			if(make_combo_in == 1'b1 && (keypress[1] == 1 || keypress[2] == 1))
+			if(make_combo_in == 1'b1 && (keypress[1] == 1 || keypress[2] == 1) && make_combo == 1'b0)
 			begin
 			if(keypress[1] == 1)
 				begin
